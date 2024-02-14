@@ -1,0 +1,121 @@
+
+body {
+font-family: 'Montserrat', sans-serif;
+padding-top: 60px; 
+background-image: url("../images/bac.jpg"); 
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+overflow: hidden;
+}
+header {
+position: fixed;
+top: 0; 
+width: 100%; 
+background-color: white; 
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-bottom: 2px solid #7ED957;
+padding: 10px 20px;
+margin-left: -10px;
+z-index: 1000; 
+
+}
+.logo {
+width: 300px; 
+height: auto; 
+margin-top: 10px;
+margin-bottom: 10px;
+}
+.menu-button {
+background-color: #7ED957;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+margin-right: 50px;
+}
+
+.container {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin-top: 0px;
+}
+
+
+h1 {
+text-align: center;
+margin-bottom: 20px;
+}
+
+h2 {
+margin-top: 30px;
+color: #7ED957;
+}
+
+.form-group {
+margin-bottom: 20px;
+}
+
+label {
+display: block;
+font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+width: 100%;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+button {
+background-color: #7ED957;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+margin-top: 20px;
+}
+
+.form-group textarea {
+width: 100%;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+resize: vertical; 
+}
+
+.box {
+width: 70%;
+max-width: 600px;
+background-color: white;
+border-radius: 10px;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+padding-top: 20px;
+padding-left: 50px;
+padding-right: 60px;
+padding-bottom: 50px;
+overflow-y: auto; 
+max-height: 70vh; 
+}
+
+.centered-logo {
+display: flex;
+justify-content: center;
+align-items: center;
+margin-bottom: 10px;
+}
+.centered-logo img {
+width: 70px;
+height: auto; 
+}
+

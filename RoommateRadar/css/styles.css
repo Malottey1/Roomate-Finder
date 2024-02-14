@@ -1,0 +1,115 @@
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #7ED957;
+    padding: 10px 20px;
+    margin-bottom: -50px;
+}
+.logo {
+    width: 300px; 
+    height: auto; 
+    margin-bottom: 10px;
+}
+.menu-button {
+    background-color: #7ED957;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh; 
+}
+.centered-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.centered-logo img {
+    width: 70px; 
+    height: auto; 
+}
+.login-box {
+    border: 2px solid #7ED957;
+    border-radius: 10px;
+    width: 500px;
+    padding: 30px;
+}
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.input-group {
+    margin-bottom: 15px;
+}
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.input-group input[type="text"],
+.input-group input[type="password"],
+.input-group input[type="checkbox"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.forgot-password {
+    text-align: right;
+    margin-bottom: 15px;
+}
+.forgot-password a {
+    color: #7ED957;
+}
+button[type="submit"] {
+    background-color: #7ED957;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+background-color: #7ED957;
+color: white;
+padding: 15px 30px; 
+border: none;
+border-radius: 10px;
+cursor: pointer;
+transition: transform 0.2s; 
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-3px); 
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh; 
+}
+
+.input-group.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+.input-group.checkbox-group input[type="checkbox"] {
+    margin-right: -480px; 
+}
+
