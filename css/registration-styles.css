@@ -2,7 +2,7 @@
 body {
 font-family: 'Montserrat', sans-serif;
 padding-top: 60px; 
-background-image: url("../images/bac.jpg"); 
+background-image: url("..assets/images/bac.jpg"); 
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
