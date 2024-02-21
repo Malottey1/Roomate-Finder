@@ -1,0 +1,275 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    background-color: #ffff;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .fa.fa-bell {
+    font-size: 24px; /* Adjust the size as needed */
+}
+
+.notification-bell {
+    position: relative;
+    margin-right: 20px;
+  }
+
+.notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.profile-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+  }
+
+.top {
+    position: relative;
+}
+
+.top .text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+    transform: translateX(-50%);
+    top: 10px;
+    left: 50%;
+}
+
+.top .text .upper {
+    font-size: 40px;
+    font-weight: 600;
+    color: #7ED957;
+}
+
+.top .text .lower {
+    font-size: 14px;
+    font-weight: 200;
+}
+
+footer {
+    width: 100%;
+    background-color: black;
+    padding-top: 20px;
+    color: white;
+    text-align: right;
+    padding-bottom: 200px;
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+    margin-right: 20px ;
+}
+
+.main-image {
+    width: 100%;
+    height: calc(100vh - 150px);
+    display: block;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1.2fr 3fr;
+    padding: 0px 20px;
+}
+
+.grid-container {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 50px;
+}
+
+@media screen and (max-width: 876px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.grid-container .card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 25px 35px;
+}
+
+.grid-container .card img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.grid-container .card .lower .icons {
+    display: flex;
+    flex-direction: row;
+}
+
+.grid-container .card .lower {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.grid-container .card .lower .name{
+    font-weight: bold;
+}
+
+.grid-container .card .location{
+    font-family: 'Poppins', sans-serif;
+    font-weight: thin;
+    font-size: 10px;
+}
+
+.material-symbols-outlined {
+    color: #7ED957; /* Change the color to red */
+}
+
+.material-symbols-outlined:hover{
+    cursor: pointer;
+}
+
+.filter-container {
+    padding: 20px 0px 0px 50px;
+}
+
+.filter-container .move-in-check {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.check-text {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    font-size: 11px;
+}
+
+.filter-container .lease-duration {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.filter-container .section {
+    display: flex;
+    flex-direction: column;
+    vertical-align: center;
+    padding: 15px 0px 35px 0px;
+    position: relative;
+    gap: 10px;
+}
+
+.section input[type="range"] {
+    border-radius: 0px;
+    border: none;
+    accent-color: #7ED957;
+    outline: none;
+    width: 250px;
+    height: 4px;
+}
+
+.filter-container .section label{
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.filter-container .section:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to left, white 40%, #7ED957 60%);
+}
+
+.filter-container {
+    background-color: white;
+}
+
+.filter-container form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.gender-radio input[type="radio"] {
+    display: none;
+}
+
+.gender-radio label {
+    display: inline-block;
+    padding: 2px 5px;
+    margin: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    border: 2px solid #7ED957;
+    border-radius: 0;
+}
+
+.gender-radio input[type="radio"]:checked + label {
+    background-color: #7ED957;
+    color: white;
+    }
+
+/* Square radio button appearance */
+.gender-radio input[type="radio"] + label::before {
+    content: "";
+    display: inline-block;
+    width: 0px; /* Adjust size as needed */
+    height: 0px; /* Adjust size as needed */
+    margin-right: 10px; /* Adjust spacing */
+    border: 2px solid #ccc;
+    border-radius: 0;
+    vertical-align: middle;
+}
+
+.gender-radio input[type="radio"]:checked + label::before {
+    background-color: #7ED957;
+}
+
+.submit-btn {
+    padding: 7px 15px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background-color: #7ED957;
+    border: none;
+    border-radius: 5px;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.submit-btn:hover {
+    cursor: pointer;
+}
+
