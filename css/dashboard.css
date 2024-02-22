@@ -1,0 +1,186 @@
+body {
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    
+  }
+  header {
+    background-color: #ffff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    width: 250px;
+    height: auto;
+  }
+  .buttons {
+    display: flex;
+    gap: 10px;
+  }
+  .register-button {
+    background-color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .login-button {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  img.centered-image {
+    max-width: 100%; /* Ensure the image doesn't exceed the viewport width */
+    max-height: 100%; /* Ensure the image doesn't exceed the viewport height */
+    height: auto;
+    width: auto;
+    margin-top: 100px;
+    margin-left: 140px;
+    margin-right: -1000px;
+    border-radius: 15px;
+    margin-bottom: 100px;
+  }
+
+  .horizontal-strip {
+    background-color: #7ed957; /* Blue background color */
+    color: white; /* White text color */
+    padding: 5px;
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+    margin-bottom: 50px;
+  }
+
+  .heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px; /* Add margin-top for spacing */
+    margin-left: 100px;
+    margin-bottom: 50px;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 50px;
+    margin-bottom: 70px ;
+  }
+  .image-container img {
+    width: 357px; /* Set width to 30% for each image */
+    height: 512px;
+    margin: 40px;
+    cursor: pointer;
+    border: 2px solid transparent; /* Initially, no border */
+    border-radius: 10px;
+    margin-bottom: 10px ;
+  }
+
+
+.image-container img:last-child {
+  margin-right: 0; /* Remove margin from the last image */
+}
+
+  .image-container img:hover {
+    border-color: green; /* Change border color to green on hover */
+  }
+
+  .image-details {
+    margin-top: -30px;
+    margin-left: 0px;
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .get-started-button {
+    background-color: white;
+    color: black;
+    padding: 10px 40px;
+    border: 2px solid green;
+    cursor: pointer;
+    margin-top: 20px;
+    justify-content: center;
+    margin-bottom: 60px;
+  }
+
+
+  footer {
+    width: 100%;
+    background-color: black;
+    padding-top: 20px;
+    color: white;
+    text-align: right;
+    padding-bottom: 200px;
+  }
+
+  footer a{
+    color: white;
+    text-decoration: none;
+    margin-right: 20px ;
+  }
+
+  .content-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%; 
+    margin-top: 50px;
+    margin-left: 120px;
+    margin-bottom: 50px;
+  }
+  .content-item {
+    text-align: center;
+    width: 10%; 
+  }
+
+  .content-item p {
+    width: 400px;
+    margin-left: -120px;
+  }
+
+  .content-item img {
+    width: 100%;
+    height: auto;
+    margin-left: 20px;
+    margin-bottom: 10px; 
+  }
+
+  .user-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .notification-bell {
+    position: relative;
+    margin-right: 20px;
+  }
+  
+  .notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+  }
+  
