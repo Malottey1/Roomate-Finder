@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="pre-message.css">
+  <link rel="stylesheet" type="text/css" href="../css/pre-message.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <title>Website Header</title>
@@ -11,17 +11,17 @@
 <body>
   <header class="top-bar">
     <div class="white-bar">
-      <img src="images/5.png" alt="Logo" class="logo">
+      <img src="../assets/images/roommate_logo.png" alt="Logo" class="logo">
       <div class="icons">
         <i class="fa fa-search"></i>
-        <img src="images/portrait1.jpg" alt="Profile Photo" class="profile-photo">
+        <img src="../assets/images/profile-photo.jpeg" alt="Profile Photo" class="profile-photo">
       </div>
     </div>
   </header>
 
   <div class="message-container">
     <div class="message">
-      <img src='WhatsApp Image 2024-02-22 at 19.41.16.jpeg'>
+      <img src='../assets/images/Image 202.jpeg'>
     </div>
 </div>
 
@@ -63,5 +63,19 @@
       <a href="#">About Us</a>
     </div>
   </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get all message buttons
+        const messageButtons = document.querySelectorAll('.message-button');
+
+        // Add click event listeners to each message button
+        messageButtons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                // Redirect to message.html when a message button is clicked
+                window.location.href = 'message.html';
+            });
+        });
+    });
+</script>
 </body>
 </html>

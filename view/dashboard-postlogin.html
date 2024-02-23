@@ -15,11 +15,11 @@
 <header>
   <img src="../assets/images/roommate_logo.png" alt="Logo" class="logo">
   <div class="user-info">
-    <div class="notification-bell">
+    <div class="notification-bell" id="notificationBell">
       <i class="fa fa-bell"></i> 
       <span class="notification-badge">3</span> 
     </div>
-    <img src="../assets/images/profile-photo.jpg" alt="Profile Photo" class="profile-photo">
+    <img src="../assets/images/profile-photo.jpeg" alt="Profile Photo" class="profile-photo">
   </div>
   
 </header>
@@ -51,7 +51,7 @@
 </div>
 
 
-<center><button class="get-started-button">Get Started</button></center>
+<center><button class="get-started-button" id="getStartedButton">Get Started</button></center>
 
 
 <div class="horizontal-strip">
@@ -81,5 +81,24 @@
   </div>
 </footer>
 
+<script>
+  // Get the notification bell element
+  const notificationBell = document.getElementById('notificationBell');
+
+  // Add a click event listener to the notification bell
+  notificationBell.addEventListener('click', function() {
+      // Redirect to the message.html page
+      window.location.href = '../view/message.html';
+  });
+
+  // Get the Get Started button element
+  const getStartedButton = document.getElementById('getStartedButton');
+
+  // Add a click event listener to the Get Started button
+  getStartedButton.addEventListener('click', function() {
+      // Redirect to the roommate-listings.html page
+      window.location.href = '../view/roommate-listings.html';
+    });
+</script>
 </body>
 </html>

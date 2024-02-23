@@ -16,7 +16,7 @@
     <header>
         <img src="../assets/images/roommate_logo.png" alt="Logo" class="logo">
         <div class="user-info">
-          <div class="notification-bell">
+          <div class="notification-bell" id="notification-bell">
             <i class="fa fa-bell"></i> 
             <span class="notification-badge">3</span> 
           </div>
@@ -262,6 +262,19 @@
           <a href="#">About Us</a>
         </div>
       </footer>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the notification bell element
+            const notificationBell = document.querySelector('.notification-bell');
+    
+            // Add a click event listener to the notification bell
+            notificationBell.addEventListener('click', function() {
+                // Redirect to the message.html page
+                window.location.href = '../view/pre-message.html';
+            });
+        });
+    </script>
     
 </body>
 </html>
