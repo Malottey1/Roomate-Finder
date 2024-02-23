@@ -11,7 +11,7 @@
 <body>
     <header>
         <img src="../assets/images/5.png" alt="Logo" class="logo">
-        <button class="menu-button">Sign-In</button>
+        <button id="signInButton" class="menu-button">Sign-In</button>
     </header>
         <div class="container">
             <div class="box">
@@ -111,8 +111,24 @@
                     <label for="socialMedia">Social Media Links (optional):</label>
                     <input type="text" id="socialMedia" name="socialMedia">
                 </div>
-                    <button type="submit">Submit</button>
+                    <button id="registerButton" type="submit">Submit</button>
                 </div>
         </div>
+    <script>
+        const signInButton = document.getElementById('signInButton');
+
+        signInButton.addEventListener('click', function() {
+            window.location.href = '../view/login.html';
+        });
+
+        // Get the register button element
+        const registerButton = document.getElementById('registerButton');
+
+        // Add a click event listener to the register button
+        registerButton.addEventListener('click', function() {
+            // Redirect to the dashboard-postlogin page
+            window.location.href = '../view/dashboard-postlogin.html';
+        });
+    </script>
 </body>
 </html>
