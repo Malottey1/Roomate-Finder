@@ -36,32 +36,20 @@
                 <div class="forgot-password">
                     <a href="#">Forgot password?</a>
                 </div>
-                <center><button type="submit">Login</button><center>
+                <center><button id="loginSubmitButton" type="submit">Login</button><center>
             </form>
         </div>
     </div>
+
     <script>
-        // JavaScript code for linking the login page to other pages
-        
-        // Function to handle form submission
-        function handleLogin(event) {
-            event.preventDefault(); // Prevents the default form submission behavior
+        const loginSubmitButton = document.getElementById('loginSubmitButton');
+
+        loginSubmitButton.addEventListener('click', function(event) {
+    
+            event.preventDefault();
             
-            // Get the username and password from the form fields
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-            
-            // Perform validation (e.g., check if username and password are not empty)
-            if (!username.trim() || !password.trim()) {
-                alert('Please enter both username and password.');
-                return;
-            }
-            
-            window.location.href = 'dashboard.html';
-        }
-        
-        // Add event listener to the login form
-        document.getElementById('login-form').addEventListener('submit', handleLogin);
+            window.location.href = '../view/dashboard-postlogin.html';
+        });
     </script>
 </body>
 </html>
