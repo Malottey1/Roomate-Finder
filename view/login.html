@@ -20,7 +20,7 @@
         
         <div class="login-box">
             <h2>Login</h2>
-            <form>
+            <form id="loginForm">
                 <div class="input-group">
                     <label for="username">Username or Email:</label>
                     <input type="text" id="username" name="username">
@@ -36,10 +36,21 @@
                 <div class="forgot-password">
                     <a href="#">Forgot password?</a>
                 </div>
-                <center><button id="loginSubmitButton" type="submit">Login</button><center>
+
+                <center><button type="submit" id="loginButton">Login</button><center>
+
             </form>
         </div>
     </div>
+    <script>
+        const loginForm = document.getElementById('loginForm');
+
+        // Add a submit event listener to the login form
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            window.location.href = '../view/dashboard-postlogin.html';
+        });
+    </script>
 
     <script>
         const loginSubmitButton = document.getElementById('loginSubmitButton');
