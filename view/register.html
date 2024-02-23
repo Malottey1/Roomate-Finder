@@ -11,7 +11,7 @@
 <body>
     <header>
         <img src="../assets/images/5.png" alt="Logo" class="logo">
-        <button class="menu-button">Sign-In</button>
+        <button id="loginButton" class="menu-button">Sign-In</button>
     </header>
         <div class="container">
             <div class="box">
@@ -115,14 +115,11 @@
                 </div>
         </div>
 
-
         <script>
-            // Get the login button element
             const loginButton = document.getElementById('loginButton');
-    
-            // Add a click event listener to the login button
+
             loginButton.addEventListener('click', function() {
-                // Redirect to the login page
+                
                 window.location.href = 'login.html';
             });
         </script>
