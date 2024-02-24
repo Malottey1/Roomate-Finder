@@ -165,9 +165,9 @@
 /* Rectangle 4 */
 .rectangle-4 {
     position: absolute;
-    width: 637px;
+    width: 585px;
     height: 33px;
-    left: 375px;
+    left: 425px;
     top: 721px;
     background: #7ED957;
     border-radius: 5px;
@@ -434,10 +434,10 @@
 /* Line 1 */
 .line-1 {
     position: absolute;
-    width: 124.53px;
+    width: 90.53px;
     height: 0px;
-    left: 975.91px;
-    top: 451.32px;
+    left: 925.91px;
+    top: 428.32px;
     border: 4px solid rgba(126, 217, 87, 0.28);
     transform: rotate(-32.86deg);
 }
@@ -445,10 +445,10 @@
 /* Line 2 */
 .line-2 {
     position: absolute;
-    width: 149.2px;
+    width: 120.53px;
     height: 0px;
-    left: 946.91px;
-    top: 451.32px;
+    left: 905.91px;
+    top: 440.32px;
     border: 4px solid rgba(126, 217, 87, 0.28);
     transform: rotate(-32.94deg);
 }
