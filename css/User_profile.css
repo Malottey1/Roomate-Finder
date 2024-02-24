@@ -16,7 +16,7 @@
 /* Rectangle 1 */
 .rectangle-1 {
     position: absolute;
-    width: 615px;
+    width: 620px;
     height: 389px;
     left: 399px;
     top: 65px;
@@ -30,7 +30,7 @@
 /* Rectangle 3 */
 .rectangle-3 {
     position: absolute;
-    width: 615px;
+    width: 620px;
     height: 300px;
     left: 397px;
     top: 659px;
@@ -405,7 +405,7 @@
     position: absolute;
     width: 129px;
     height: 31px;
-    left: 1100px;
+    left: 1050px;
     top: 77px;
     font-family: 'Inter';
     font-style: normal;
@@ -506,42 +506,46 @@
 /* Rectangle 10 */
 .rectangle-10 {
     position: absolute;
-    width: 169px;
-    height: 30px;
-    left: 1137px;
+    width: auto;
+    height: auto;
+    left: 1050px;
     top: 127px;
     background: #E79292;
     border-radius: 10px;
+    white-space: nowrap;
 }
 
 /* Rectangle 13 */
 .rectangle-13 {
     position: absolute;
-    width: 169px;
-    height: 30px;
-    left: 1137px;
+    width: auto;
+    height: auto;
+    left: 1050px;
     top: 215px;
     background: #4EA4F3;
     border-radius: 10px;
+    white-space: nowrap;
 }
 
 /* Rectangle 12 */
 .rectangle-12 {
     position: absolute;
-    width: 169px;
-    height: 30px;
-    left: 1202px;
+    width: auto;
+    height: auto;
+    left: 1088px;
     top: 171px;
     background: #D3BF08;
     border-radius: 10px;
+    white-space: nowrap;
 }
 
 /* Rectangle 11 */
 .rectangle-11 {
+    white-space: nowrap;
     position: absolute;
-    width: 55px;
-    height: 30px;
-    left: 1137px;
+    width: auto;
+    height: auto;
+    left: 1050px;
     top: 171px;
     background: #73E92C;
     border-radius: 10px;
@@ -693,7 +697,7 @@
 /* Adjustments for Rectangle 2 */
 .rectangle-2 {
     position: absolute;
-    width: 615px;
+    width: 620px;
     height: 138px;
     left: 399px;
     top: 487px;
