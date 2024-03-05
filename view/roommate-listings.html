@@ -16,11 +16,11 @@
     <header>
         <img src="../assets/images/roommate_logo.png" alt="Logo" class="logo">
         <div class="user-info">
-          <div class="notification-bell">
+          <div class="notification-bell" id="notification-bell">
             <i class="fa fa-bell"></i> 
             <span class="notification-badge">3</span> 
           </div>
-          <img src="../assets/images/profile_ako.jpg" alt="Profile Photo" class="profile-photo">
+          <img src="../assets/images/profile_ako.jpg" alt="Profile Photo" class="profile-photo" id="profilePhoto">
         </div>
         
     </header>
@@ -159,7 +159,7 @@
                 <div class="lower">
                     <div><p class="name">Melanin Doe</p></div>
                     <div class="icons">
-                        <div style="margin-right: 10px;" class="material-symbols-outlined">send</div>
+                        <div style="margin-right: 10px;" class="material-symbols-outlined send-btn">send</div>
                         <div class="material-symbols-outlined">thumb_down</div>
                     </div>
                 </div>
@@ -170,7 +170,7 @@
                 <div class="lower">
                     <div><p class="name">Melanin Doe</p></div>
                     <div class="icons">
-                        <div style="margin-right: 10px;" class="material-symbols-outlined">send</div>
+                        <div style="margin-right: 10px;" class="material-symbols-outlined send-btn">send</div>
                         <div class="material-symbols-outlined">thumb_down</div>
                     </div>
                 </div>
@@ -181,7 +181,7 @@
                 <div class="lower">
                     <div><p class="name">Melanin Doe</p></div>
                     <div class="icons">
-                        <div style="margin-right: 10px;" class="material-symbols-outlined">send</div>
+                        <div style="margin-right: 10px;" class="material-symbols-outlined send-btn">send</div>
                         <div class="material-symbols-outlined">thumb_down</div>
                     </div>
                 </div>
@@ -192,7 +192,7 @@
                 <div class="lower">
                     <div><p class="name">Melanin Doe</p></div>
                     <div class="icons">
-                        <div style="margin-right: 10px;" class="material-symbols-outlined">send</div>
+                        <div style="margin-right: 10px;" class="material-symbols-outlined send-btn">send</div>
                         <div class="material-symbols-outlined">thumb_down</div>
                     </div>
                 </div>
@@ -203,7 +203,7 @@
                 <div class="lower">
                     <div><p class="name">Melanin Doe</p></div>
                     <div class="icons">
-                        <div style="margin-right: 10px;" class="material-symbols-outlined">send</div>
+                        <div style="margin-right: 10px;" class="material-symbols-outlined send-btn">send</div>
                         <div class="material-symbols-outlined">thumb_down</div>
                     </div>
                 </div>
@@ -214,7 +214,7 @@
                 <div class="lower">
                     <div><p class="name">Melanin Doe</p></div>
                     <div class="icons">
-                        <div style="margin-right: 10px;" class="material-symbols-outlined">send</div>
+                        <div style="margin-right: 10px;" class="material-symbols-outlined send-btn">send</div>
                         <div class="material-symbols-outlined">thumb_down</div>
                     </div>
                 </div>
@@ -225,7 +225,7 @@
                 <div class="lower">
                     <div><p class="name">Melanin Doe</p></div>
                     <div class="icons">
-                        <div style="margin-right: 10px;" class="material-symbols-outlined">send</div>
+                        <div style="margin-right: 10px;" class="material-symbols-outlined send-btn">send</div>
                         <div class="material-symbols-outlined">thumb_down</div>
                     </div>
                 </div>
@@ -262,6 +262,57 @@
           <a href="#">About Us</a>
         </div>
       </footer>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the notification bell element
+            const notificationBell = document.querySelector('.notification-bell');
+    
+            // Add a click event listener to the notification bell
+            notificationBell.addEventListener('click', function() {
+                // Redirect to the message.html page
+                window.location.href = '../view/pre-message.html';
+            });
+        });
+
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all elements with the class "send-btn"
+            const sendButtons = document.querySelectorAll('.send-btn');
+
+            // Add click event listener to each send button
+            sendButtons.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    // Redirect to messages.html when a send button is clicked
+                    window.location.href = '../view/message.html';
+                });
+            });
+        });
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the logo element
+            const logo = document.querySelector('.logo');
+
+            // Add a click event listener to the logo
+            logo.addEventListener('click', function() {
+                // Redirect to dashboard-postlogin.html when the logo is clicked
+                window.location.href = '../view/dashboard-postlogin.html';
+            });
+        });
+
+
+        const profilePhoto = document.getElementById('profilePhoto');
+
+        // Add a click event listener to the profile photo
+        profilePhoto.addEventListener('click', function() {
+            // Redirect to User_profile.html when the profile photo is clicked
+            window.location.href = '../view/User_profile.html';
+        });
+
+
+    </script>
     
 </body>
 </html>

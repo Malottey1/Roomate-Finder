@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../css/pre-message.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>Website Header</title>
+</head>
+<body>
+  <header class="top-bar">
+    <div class="white-bar">
+      <img src="../assets/images/roommate_logo.png" alt="Logo" class="logo">
+      <div class="icons">
+        <i class="fa fa-search"></i>
+        <img src="../assets/images/profile-photo.jpeg" alt="Profile Photo" class="profile-photo" id="profilePhoto">
+      </div>
+    </div>
+  </header>
+
+  <div class="message-container">
+    <div class="message">
+      <img src='../assets/images/Image 202.jpeg'>
+    </div>
+</div>
+
+  <div class="message-section">
+    <div class="message-contain">
+      <h2 class="message-title">Message</h2> 
+      <div class="message-row"></div>
+      <div class="message-list">
+        <!-- Message rows will be dynamically added here -->
+        <div class="message-row">
+          <div class="message-sender">Melanin Doe</div>
+          <div class="message-prompt">..... when can we meet up to actually get to know each other</div>
+          <button class="message-button">Message</button>
+        </div>
+        <div class="message-row">
+          <div class="message-sender">Melanin Doe</div>
+          <div class="message-prompt">..... when can we meet up to actually get to know each other</div>
+          <button class="message-button">Message</button>
+        </div>
+        <div class="message-row">
+          <div class="message-sender">Melanin Doe</div>
+          <div class="message-prompt">..... when can we meet up to actually get to know each other</div>
+          <button class="message-button">Message</button>
+        </div>
+        <div class="message-row">
+          <div class="message-sender">Melanin Doe</div>
+          <div class="message-prompt">..... when can we meet up to actually get to know each other</div>
+          <button class="message-button">Message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="search-button">Search Roommate</button>
+  
+  <footer class="bottom-bar">
+    <div>
+      <a href="#">Privacy</a>
+      <a href="#">Contact Us</a>
+      <a href="#">About Us</a>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get all message buttons
+        const messageButtons = document.querySelectorAll('.message-button');
+
+        // Add click event listeners to each message button
+        messageButtons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                // Redirect to message.html when a message button is clicked
+                window.location.href = 'message.html';
+            });
+        });
+    });
+
+    const profilePhoto = document.getElementById('profilePhoto');
+
+        // Add a click event listener to the profile photo
+        profilePhoto.addEventListener('click', function() {
+            // Redirect to User_profile.html when the profile photo is clicked
+            window.location.href = '../view/User_profile.html';
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the logo element
+            const logo = document.querySelector('.logo');
+
+            // Add a click event listener to the logo
+            logo.addEventListener('click', function() {
+                // Redirect to dashboard-postlogin.html when the logo is clicked
+                window.location.href = '../view/dashboard-postlogin.html';
+            });
+        });
+</script>
+</body>
+</html>

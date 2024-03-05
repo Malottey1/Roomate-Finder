@@ -1,0 +1,757 @@
+/* user-profile */
+
+.user-profile {
+    position: relative;
+    width: 1440px; /* Adjusted width */
+    height: 1024px; /* Adjusted height */
+    background: #FFFFFF; /* Background color for the entire template */
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.2); 
+
+    
+}
+
+/* Rectangle 1 */
+.rectangle-1 {
+    position: absolute;
+    width: 693px;
+    height: 389px;
+    left: 399px;
+    top: 65px;
+    background: #FFFFFF;
+    box-shadow: 3px 9px 15px 5px rgba(0, 0, 0, 0.06);
+    border-radius: 5px;
+}
+
+
+
+/* Rectangle 3 */
+.rectangle-3 {
+    position: absolute;
+    width: 693px;
+    height: 300px;
+    left: 397px;
+    top: 659px;
+    background: #FFFFFF;
+    box-shadow: 3px 9px 15px 5px rgba(0, 0, 0, 0.06);
+    border-radius: 5px;
+}
+
+/* Rectangle 8 */
+.rectangle-8 {
+    position: absolute;
+    width: 325px;
+    height: 515px;
+    left: 41px;
+    top: 65px;
+    background: linear-gradient(170.83deg, #7ED957 1.48%, rgba(214, 243, 202, 0) 70.41%);
+    border-radius: 5px;
+}
+
+/* Ellipse 1 */
+.ellipse-1 {
+        position: absolute;
+        width: 190px;
+        height: 190px;
+        top: 83px;
+        left: 99px;
+        background: url('../assets/images/profile.jpg') center/cover; /* Add background image */
+        /* Or background: #CCCCCC; */ /* Add background color */
+        overflow: hidden; /* Ensures the image stays within the ellipse */
+        border-radius: 50%; /* Creates an ellipse shape */
+    }
+    .profile-picture {
+   
+            width: 190px;
+            height: 190px;
+            top: 83px;
+            left: 99px;
+            border-radius: 50%;
+            background-size: cover;
+            background-position: center;
+            filter: grayscale(100%); /* Convert to grayscale */
+
+            
+        
+        
+    }
+    .profile{
+        position: absolute;
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+    background-size: cover;
+    filter: grayscale(100%); 
+    }
+
+
+/* Ellipse 2 */
+.ellipse-2 {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    left: 269px;
+    top: 237px;
+    background: #7ED957;
+    overflow: hidden;
+    
+}
+.ellipse-edit-pencil {
+    position: absolute;
+    width: 48px; /* Adjust as needed */
+    height: 48px; /* Adjust as needed */
+    top: 50%; /* Adjust to vertically center the icon */
+    right: 50%; /* Adjust to horizontally center the icon */
+    transform: translate(-50%, -50%); /* Center the icon properly */
+}
+
+/* Jane Doe */
+.jane-doe {
+    position: absolute;
+    width: 146px;
+    height: 39px;
+    left: 121px;
+    top: 291px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    color: rgba(53, 52, 52, 0.82);
+}
+
+/* Jane’s interests include... */
+.janes-interests {
+    position: absolute;
+    width: 415px;
+    height: 21px;
+    left: 425px;
+    top: 677px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #676363;
+}
+
+/* Jane has roomed with... */
+.janes-roommates {
+    width: 415px;
+    height: 21px;
+    margin: 0 left;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #676363;
+    top: 499px;
+    left: 426px
+    
+
+
+
+
+}
+.roomed-with-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+/* Rectangle 4 */
+.rectangle-4 {
+    position: absolute;
+    width: 637px;
+    height: 33px;
+    left: 425px;
+    top: 721px;
+    background: #7ED957;
+    border-radius: 5px;
+}
+
+/* Drawing and painting */
+.drawing-painting {
+    position: absolute;
+    width: 160px;
+    height: 21px;
+    left: 439px;
+    top: 730px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFFCFC;
+}
+
+/* Continue styling for other elements */
+
+
+/* Rectangle 5 */
+.rectangle-5 {
+    position: absolute;
+    width: 480px;
+    height: 33px;
+    left: 425px;
+    top: 765px;
+    background: #7ED957;
+    border-radius: 5px;
+}
+
+/* Watching sitcom series */
+.watching-sitcoms {
+    position: absolute;
+    width: 160px;
+    height: 21px;
+    left: 439px;
+    top: 774px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFFCFC;
+}
+.criteria {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 22px;
+    color: #0c0c0c; /* This controls the color of the text */
+}
+
+
+
+
+/* Rectangle 6 */
+.rectangle-6 {
+    position: absolute;
+    width: 394px;
+    height: 33px;
+    left: 425px;
+    top: 809px;
+    background: #7ED957;
+    border-radius: 5px;
+}
+
+/* Video Gaming */
+.video-gaming {
+    position: absolute;
+    width: 160px;
+    height: 21px;
+    left: 439px;
+    top: 818px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFFCFC;
+}
+
+/* Rectangle 7 */
+.rectangle-7 {
+    position: absolute;
+    width: 206px;
+    height: 33px;
+    left: 425px;
+    top: 853px;
+    background: #7ED957;
+    border-radius: 5px;
+}
+
+/* Coding late at night */
+.coding-late {
+    position: absolute;
+    width: 160px;
+    height: 21px;
+    left: 439px;
+    top: 862px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFFCFC;
+}
+
+/* Ellipse 3 */
+.ellipse-3 {
+    position: absolute;
+    width: 78px;
+    height: 78px;
+    left: 427px;
+    top: 528px;
+    /* Add background image or color */
+}
+
+/* Ellipse 4 */
+.ellipse-4 {
+    position: absolute;
+    width: 78px;
+    height: 78px;
+    left: 546px;
+    top: 528px;
+    /* Add background image or color */
+}
+
+/* Ellipse 5 */
+.ellipse-5 {
+    position: absolute;
+    width: 78px;
+    height: 78px;
+    left: 665px;
+    top: 528px;
+    /* Add background image or color */
+}
+
+/* Jane’s Bio */
+.janes-bio {
+    position: absolute;
+    width: 415px;
+    height: 21px;
+    left: 427px;
+    top: 85px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #676363;
+}
+
+/* Location */
+.location {
+    position: absolute;
+    width: 125px;
+    height: 21px;
+    left: 427px;
+    top: 316px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #676363;
+}
+
+/* Edit Profile */
+.edit-profile {
+    position: absolute;
+    width: 86px;
+    height: 21px;
+    left: 120px;
+    top: 495px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #676363;
+}
+
+/* View Profile */
+.view-profile {
+    position: absolute;
+    width: 86px;
+    height: 21px;
+    left: 118px;
+    top: 456px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #7ED957;
+}
+
+/* Delete Profile */
+.delete-profile {
+    position: absolute;
+    width: 110px;
+    height: 21px;
+    left: 118px;
+    top: 534px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #676363;
+}
+
+/* Rating */
+.rating {
+    position: absolute;
+    width: 110px;
+    height: 21px;
+    left: 121px;
+    top: 367px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #676363;
+}
+
+/* Jane’s Criteria */
+.janes-criteria {
+    position: absolute;
+    width: 129px;
+    height: 31px;
+    left: 1137px;
+    top: 77px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    color: black;
+}
+
+/* Location Details */
+.location-details {
+    position: absolute;
+    width: 231px;
+    height: 31px;
+    left: 425px;
+    top: 346px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 31px;
+    color: #363434;
+}
+
+/* Line 1 */
+.line-1 {
+    position: absolute;
+    width: 124.53px;
+    height: 0px;
+    left: 975.91px;
+    top: 451.32px;
+    border: 4px solid rgba(126, 217, 87, 0.28);
+    transform: rotate(-32.86deg);
+}
+
+/* Line 2 */
+.line-2 {
+    position: absolute;
+    width: 149.2px;
+    height: 0px;
+    left: 946.91px;
+    top: 451.32px;
+    border: 4px solid rgba(126, 217, 87, 0.28);
+    transform: rotate(-32.94deg);
+}
+
+/* Star 1 */
+.star-1 {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    left: 121px;
+    top: 389px;
+    background: #7ED957;
+}
+
+/* Star 2 */
+.star-2 {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    left: 146px;
+    top: 389px;
+    background: #7ED957;
+}
+
+/* Star 3 */
+.star-3 {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    left: 173px;
+    top: 389px;
+    background: #7ED957;
+}
+
+/* Star 4 */
+.star-4 {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    left: 198px;
+    top: 389px;
+    background: #7ED957;
+}
+
+/* Star 5 */
+.star-5 {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    left: 225px;
+    top: 389px;
+    background: #F3F0F0;
+}
+
+/* Rectangle 10 */
+.rectangle-10 {
+    position: absolute;
+    width: 169px;
+    height: 30px;
+    left: 1137px;
+    top: 127px;
+    background: #E79292;
+    border-radius: 10px;
+}
+
+/* Rectangle 13 */
+.rectangle-13 {
+    position: absolute;
+    width: 169px;
+    height: 30px;
+    left: 1137px;
+    top: 215px;
+    background: #4EA4F3;
+    border-radius: 10px;
+}
+
+/* Rectangle 12 */
+.rectangle-12 {
+    position: absolute;
+    width: 169px;
+    height: 30px;
+    left: 1202px;
+    top: 171px;
+    background: #D3BF08;
+    border-radius: 10px;
+}
+
+/* Rectangle 11 */
+.rectangle-11 {
+    position: absolute;
+    width: 55px;
+    height: 30px;
+    left: 1137px;
+    top: 171px;
+    background: #73E92C;
+    border-radius: 10px;
+}
+
+/* Criteria */
+.criteria {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 22px;
+    color: #141414;
+}
+
+/* Bio Content */
+.bio-content {
+    position: absolute;
+    width: 606px;
+    height: 163px;
+    left: 427px;
+    top: 125px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 185%;
+    color: #363434;
+}
+
+.edit-pencil-icon {
+    background-image: url('../assets\images/🦆 icon _edit pencil_.png'); /* Adjust the path to your edit pencil icon */
+    background-size: cover;
+    width: 14.88px;
+    height: 14.96px;
+    position: absolute;
+    
+    transform: rotate(0.51deg);
+    cursor: pointer;
+}
+
+/* Edit pencil icon within Rectangle 1 */
+.rectangle-1 .edit-pencil-icon {
+    width: 14.88px;
+    height: 14.96px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+    transform: rotate(0.51deg);
+    cursor: pointer;
+
+
+}
+
+/* Edit pencil icon within Rectangle 2 */
+.rectangle-2 .edit-pencil-icon {
+    width: 14.88px;
+    height: 14.96px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+    transform: rotate(0.51deg);
+    cursor: pointer;
+}
+
+/* Edit pencil icon within Rectangle 3 */
+.rectangle-3 .edit-pencil-icon {
+    width: 14.88px;
+    height: 14.96px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+    transform: rotate(0.51deg);
+    cursor: pointer;
+}
+
+/* Edit pencil icon within Rectangle 8 */
+.rectangle-8 .edit-pencil-icon {
+    width: 48px;
+    height: 26.5px;
+    position: absolute;
+    top: 252.11px;
+    left: 277px;
+    cursor: pointer;
+    width: 26.5px;
+    border: 2px solid rgba(255, 255, 255, 1);
+    transform:rotate(1.2deg);
+
+
+}
+
+/* Quiet */
+.rectangle-11.criteria {
+    position: absolute;
+    width: 36px;
+    height: 20px;
+    left: 1145px;
+    top: 176px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 22px; /* Adjusted line-height */
+    color: #070707;
+}
+
+
+
+/* Vector */
+.vector {
+    position: absolute;
+    left: 19.24%;
+    right: 78.92%;
+    top: 24.62%;
+    bottom: 72.79%;
+    border: 2px solid #FFFFFF;
+    /* Adjust other properties */
+}
+
+/* Additional Edit Pencil Icons and Vectors styling */
+
+/* lucide:log-out */
+.lucide-logout {
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    left: 1311px;
+    top: 913px;
+    /* Add background image or icon */
+}
+
+/* Additional CSS for Rectangle 1 */
+.rectangle1 {
+    position: relative;
+    width: 693px;
+    height: auto; /* Adjusted to fit content */
+    left: 399px;
+    top: 65px;
+    background: #FFFFFF;
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.1); /* Increased shadow */
+    border: 2px solid #000; /* Bold border */
+    border-radius: 5px;
+    padding: 20px; /* Added padding */
+}
+
+/* Adjustments for Rectangle 2 */
+.rectangle-2 {
+    position: absolute;
+    width: 693px;
+    height: 138px;
+    left: 399px;
+    top: 487px;
+    background: linear-gradient(273.61deg, #7ED957 -7.7%, rgba(126, 217, 87, 0) 51.29%);
+    box-shadow: 3px 9px 15px 5px rgba(0, 0, 0, 0.06);
+    border-radius: 5px;
+
+
+}
+
+.roomed-with-block {
+    width: 78px;
+    height: 78px;
+    background-color: gray; /* Placeholder color */
+    border-radius: 50%;
+    display: inline-block;
+    overflow: hidden;
+    position: relative; /* Ensure positioning context */
+}
+
+.roomed-with-block img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%); /* Convert to grayscale */
+}
+
+/* Additional CSS for the text "Jane has roomed with" */
+.janes-roommates {
+    margin-bottom: 10px; /* Added margin to separate from profile photos */
+    
+}
+
+/* Adjustments for lines in Rectangle 1 */
+.line1,
+.line2 {
+    position: absolute;
+    width: 60%;
+    height: 0;
+    border: 2px solid rgba(0, 0, 0, 0.1); /* Match the border color */
+}
+
+.line1 {
+    top: 50px; /* Adjusted position */
+}
+
+.line2 {
+    bottom: 50px; /* Adjusted position */
+}
+
+.profile-picture {
+    position: absolute;
+    width: 78px;
+    height: 78px;
+    background-image: url('profile-placeholder.jpg'); /* Add your image path */
+    background-size: cover;
+    border-radius: 50%;
+}
+
+
+
+

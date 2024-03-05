@@ -11,7 +11,7 @@
 <body>
     <header>
         <img src="../assets/images/5.png" alt="Logo" class="logo">
-        <button class="menu-button">Sign-In</button>
+        <button id="signInButton" class="menu-button">Sign-In</button>
     </header>
         <div class="container">
             <div class="box">
@@ -111,8 +111,50 @@
                     <label for="socialMedia">Social Media Links (optional):</label>
                     <input type="text" id="socialMedia" name="socialMedia">
                 </div>
-                    <button type="submit">Submit</button>
+                    <button id="registerButton" type="submit">Submit</button>
                 </div>
         </div>
+
+
+        <script>
+            // Function to validate the registration form
+            function validateRegistrationForm() {
+                // Get form input values
+                const firstName = document.getElementById('firstName').value.trim();
+                const lastName = document.getElementById('lastName').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const dateOfBirth = document.getElementById('dateOfBirth').value.trim();
+                const gender = document.getElementById('gender').value.trim();
+                const city = document.getElementById('city').value.trim();
+                const state = document.getElementById('state').value.trim();
+        
+                // Check if required fields are empty
+                if (firstName === '' || lastName === '' || email === '' || dateOfBirth === '' || gender === '' || city === '' || state === '') {
+                    alert('Please fill in all required fields.');
+                    return false; // Prevent form submission
+                }
+        
+        
+                return true; // Proceed with form submission
+            }
+        
+            // Add event listener to the register button
+            const registerButton = document.getElementById('registerButton');
+            registerButton.addEventListener('click', function(event) {
+                // Prevent default form submission
+                event.preventDefault();
+        
+                // Call the validateRegistrationForm function
+                if (validateRegistrationForm()) {
+                    // Proceed with form submission or redirection
+                    // For now, let's redirect to the dashboard-postlogin page
+                    window.location.href = '../view/dashboard-postlogin.html';
+                }
+            });
+        </script>
+        
+        
+
+
 </body>
 </html>
