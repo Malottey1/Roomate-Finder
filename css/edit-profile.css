@@ -1,0 +1,75 @@
+/* CSS for Edit Profile Page */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #4CAF50, #1E8449); /* Green gradient background */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: left;
+    color: #fff; /* White text color */
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 24px;
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 80vh; /* Limit the height of the form */
+}
+
+label {
+    font-weight: bold;
+}
+
+#back-button {
+    background-color: #f44336; /* Red color for back button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#back-button:hover {
+    background-color: #d32f2f; /* Darker red hover color */
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical; /* Allow vertical resizing of textarea */
+}
+
+input[type="submit"] {
+    background-color: #4CAF50; /* Green submit button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049; /* Darker green hover color */
+}
