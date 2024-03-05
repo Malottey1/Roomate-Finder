@@ -1,6 +1,6 @@
 
 function goToEditProfile() {
-    window.location.href = 'edit-profile.html';
+    window.location.href = '../view/edit-profile.html';
 }
 
 // Event listener for clicking on profile images
