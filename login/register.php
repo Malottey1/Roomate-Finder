@@ -27,19 +27,19 @@
                 <h2>Personal Information:</h2>
                 <div class="form-group">
                     <label for="firstName">First Name:</label>
-                    <input type="text" id="firstName" name="firstName">
+                    <input type="text" id="firstName" name="firstName" pattern="[A-Za-z]+" required>
                 </div>
                 <div class="form-group">
                     <label for="lastName">Last Name:</label>
-                    <input type="text" id="lastName" name="lastName">
+                    <input type="text" id="lastName" name="lastName" pattern="[A-Za-z]+" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email Address:</label>
-                    <input type="email" id="email" name="email">
+                    <input type="email" id="email" name="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone Number (optional):</label>
-                    <input type="tel" id="phone" name="phone">
+                    <input type="tel" id="phone" name="phone" pattern="^\+?(\d[\d-. ]+)?(\([\d-. ]+\))?[\d-. ]+\d$" required>
                 </div>
                 <h2>Demographics:</h2>
                 <div class="form-group">
@@ -50,14 +50,13 @@
                 <label for="gender">Gender:</label>
                 <select id="gender" name="gender">
                     <option value="">Select Gender</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
+                    <option value="0">Male</option>
+                    <option value="1">Female</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="ethnicity">Ethnicity (optional):</label>
-                <input type="text" id="ethnicity" name="ethnicity">
+                <input type="text" id="ethnicity" name="ethnicity" pattern="^[A-Za-z\s\-,']+$" required>
             </div>
             <div class="form-group">
                 <label for="profession">Profession or Student Status (optional):</label>
@@ -66,15 +65,15 @@
             <h2>Location:</h2>
             <div class="form-group">
                 <label for="city">City:</label>
-                <input type="text" id="city" name="city">
+                <input type="text" id="city" name="city" pattern="^[A-Za-z\s\-,']+$" required>
             </div>
             <div class="form-group">
                 <label for="state">State/Province:</label>
-                <input type="text" id="state" name="state">
+                <input type="text" id="state" name="state" pattern="^[A-Za-z\s\-,']+$" required>
             </div>
             <div class="form-group">
                 <label for="country">Country (optional):</label>
-                <input type="text" id="country" name="country">
+                <input type="text" id="country" name="country" pattern="^[A-Za-z\s\-,']+$" required>
             </div>
 
             <h2>Matching Preferences:</h2>
