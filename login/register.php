@@ -1,3 +1,8 @@
+<?php
+    //establish connection with database
+    include('../settings/connection.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
