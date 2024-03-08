@@ -27,11 +27,11 @@
                 <h2>Personal Information:</h2>
                 <div class="form-group">
                     <label for="firstName">First Name:</label>
-                    <input type="text" id="firstName" name="firstName" pattern="[A-Za-z]+" required>
+                    <input type="text" id="firstName" name="firstName" pattern="^[A-Za-z]+$" required>
                 </div>
                 <div class="form-group">
                     <label for="lastName">Last Name:</label>
-                    <input type="text" id="lastName" name="lastName" pattern="[A-Za-z]+" required>
+                    <input type="text" id="lastName" name="lastName" pattern="^[A-Za-z]+$" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email Address:</label>
@@ -133,28 +133,28 @@
                 const state = document.getElementById('state').value.trim();
         
                 // Check if required fields are empty
-                if (firstName === '' || lastName === '' || email === '' || dateOfBirth === '' || gender === '' || city === '' || state === '') {
-                    alert('Please fill in all required fields.');
-                    return false; // Prevent form submission
-                }
+                // if (firstName === '' || lastName === '' || email === '' || dateOfBirth === '' || gender === '' || city === '' || state === '') {
+                //     alert('Please fill in all required fields.');
+                //     return false; // Prevent form submission
+                // }
         
         
                 return true; // Proceed with form submission
             }
         
             // Add event listener to the register button
-            const registerButton = document.getElementById('registerButton');
-            registerButton.addEventListener('click', function(event) {
-                // Prevent default form submission
-                event.preventDefault();
+            // const registerButton = document.getElementById('registerButton');
+            // registerButton.addEventListener('click', function(event) {
+            //     // Prevent default form submission
+            //     // event.preventDefault();
         
-                // Call the validateRegistrationForm function
-                if (validateRegistrationForm()) {
-                    // Proceed with form submission or redirection
-                    // For now, let's redirect to the dashboard-postlogin page
-                    window.location.href = '../view/dashboard-postlogin.html';
-                }
-            });
+            //     // Call the validateRegistrationForm function
+            //     if (validateRegistrationForm()) {
+            //         // Proceed with form submission or redirection
+            //         // For now, let's redirect to the dashboard-postlogin page
+            //         window.location.href = '../view/dashboard-postlogin.html';
+            //     }
+            // });
         </script>
         
         
