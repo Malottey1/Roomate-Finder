@@ -131,30 +131,9 @@
                 const gender = document.getElementById('gender').value.trim();
                 const city = document.getElementById('city').value.trim();
                 const state = document.getElementById('state').value.trim();
-        
-                // Check if required fields are empty
-                // if (firstName === '' || lastName === '' || email === '' || dateOfBirth === '' || gender === '' || city === '' || state === '') {
-                //     alert('Please fill in all required fields.');
-                //     return false; // Prevent form submission
-                // }
-        
-        
-                return true; // Proceed with form submission
+
             }
         
-            // Add event listener to the register button
-            // const registerButton = document.getElementById('registerButton');
-            // registerButton.addEventListener('click', function(event) {
-            //     // Prevent default form submission
-            //     // event.preventDefault();
-        
-            //     // Call the validateRegistrationForm function
-            //     if (validateRegistrationForm()) {
-            //         // Proceed with form submission or redirection
-            //         // For now, let's redirect to the dashboard-postlogin page
-            //         window.location.href = '../view/dashboard-postlogin.html';
-            //     }
-            // });
         </script>
         
         
