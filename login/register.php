@@ -39,6 +39,10 @@
                         <input type="email" id="email" name="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
                     </div>
                     <div class="form-group">
+                        <label for="passwrd">Password:</label>
+                        <input type="password" id="passwrd" name="passwrd" minlength="8" required>
+                    </div>
+                    <div class="form-group">
                         <label for="phone">Phone Number (optional):</label>
                         <input type="tel" id="phone" name="phone" pattern="^\+?(\d[\d-. ]+)?(\([\d-. ]+\))?[\d-. ]+\d$" required>
                     </div>
