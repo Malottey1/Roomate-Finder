@@ -25,7 +25,7 @@
                 </div>
                 <h1>Let's start here!</h1>
                 <h2>Personal Information:</h2>
-                <form action="#" method="#">
+                <form action="../actions/register_user_action.php" method="post">
                     <div class="form-group">
                         <label for="firstName">First Name:</label>
                         <input type="text" id="firstName" name="firstName" pattern="^[A-Za-z]+$" required>
