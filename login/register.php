@@ -43,6 +43,10 @@
                         <input type="password" id="passwrd" name="passwrd" minlength="8" required>
                     </div>
                     <div class="form-group">
+                        <label for="confirm-passwrd">Confirm Password:</label>
+                        <input type="password" id="c-passwrd" name="confirm-passwrd" minlength="8" required>
+                    </div>
+                    <div class="form-group">
                         <label for="phone">Phone Number (optional):</label>
                         <input type="tel" id="phone" name="phone" pattern="^\+?(\d[\d-. ]+)?(\([\d-. ]+\))?[\d-. ]+\d$" required>
                     </div>
@@ -120,7 +124,7 @@
                             <label for="socialMedia">Social Media Links (optional):</label>
                             <input type="text" id="socialMedia" name="socialMedia">
                         </div>
-                            <button id="registerButton" type="submit">Submit</button>
+                            <button id="registerButton" name="submit-btn" type="submit">Submit</button>
                         </div>
                 </form>
         </div>
