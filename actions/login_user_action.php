@@ -1,6 +1,8 @@
 <?php
     include("../settings/connection.php");
 
+    session_start();
+
     if (isset($_POST['login-btn'])){
         
         $email = $_POST['username'];
@@ -22,7 +24,20 @@
         
         $row = mysqli_fetch_assoc($result);
 
+        if (password_verify($passwrd, $row['passwrd'])){
 
+            // store session and start session
+            $_SESSION['user-id'] = $row['user_id'];
+            $_SESSION['username'] = $row['email'];
+
+            // route user to postlogin dashboard
+            header("Location: ../view/dashboard-postlogin.php");
+            exit();
+        }
+        else {
+            echo "<script>alert('Wrong input.');</script>";
+            exit();
+        }
 
     }
 
