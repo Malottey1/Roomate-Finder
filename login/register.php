@@ -47,77 +47,77 @@
                         <label for="dateOfBirth">Date of Birth:</label>
                         <input type="date" id="dateOfBirth" name="dateOfBirth">
                     </div>
-                <div class="form-group">
-                    <label for="gender">Gender:</label>
-                    <select id="gender" name="gender">
-                        <option value="">Select Gender</option>
-                        <option value="0">Male</option>
-                        <option value="1">Female</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="ethnicity">Ethnicity (optional):</label>
-                    <input type="text" id="ethnicity" name="ethnicity" pattern="^[A-Za-z\s\-,']+$" required>
-                </div>
-                <div class="form-group">
-                    <label for="profession">Profession or Student Status (optional):</label>
-                    <input type="text" id="profession" name="profession">
-                </div>
-                <h2>Location:</h2>
-                <div class="form-group">
-                    <label for="city">City:</label>
-                    <input type="text" id="city" name="city" pattern="^[A-Za-z\s\-,']+$" required>
-                </div>
-                <div class="form-group">
-                    <label for="state">State/Province:</label>
-                    <input type="text" id="state" name="state" pattern="^[A-Za-z\s\-,']+$" required>
-                </div>
-                <div class="form-group">
-                    <label for="country">Country (optional):</label>
-                    <input type="text" id="country" name="country" pattern="^[A-Za-z\s\-,']+$" required>
-                </div>
-
-                <h2>Matching Preferences:</h2>
                     <div class="form-group">
-                        <label for="moveInDate">Desired Move-in Date:</label>
-                        <input type="date" id="moveInDate" name="moveInDate">
-                    </div>
-                    <div class="form-group">
-                        <label for="housingType">Type of Housing Sought:</label>
-                        <select id="housingType" name="housingType">
-                            <option value="">Select Housing Type</option>
-                            <option value="sharedApartment">Shared Apartment</option>
-                            <option value="singleRoom">Single Room</option>
+                        <label for="gender">Gender:</label>
+                        <select id="gender" name="gender">
+                            <option value="">Select Gender</option>
+                            <option value="0">Male</option>
+                            <option value="1">Female</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="amenities">Specific Amenities Desired:</label>
-                        <textarea id="amenities" name="amenities" rows="4"></textarea>
+                        <label for="ethnicity">Ethnicity (optional):</label>
+                        <input type="text" id="ethnicity" name="ethnicity" pattern="^[A-Za-z\s\-,']+$" required>
                     </div>
                     <div class="form-group">
-                        <label for="dealbreakers">Dealbreakers:</label>
-                        <textarea id="dealbreakers" name="dealbreakers" rows="4"></textarea>
+                        <label for="profession">Profession or Student Status (optional):</label>
+                        <input type="text" id="profession" name="profession">
+                    </div>
+                    <h2>Location:</h2>
+                    <div class="form-group">
+                        <label for="city">City:</label>
+                        <input type="text" id="city" name="city" pattern="^[A-Za-z\s\-,']+$" required>
                     </div>
                     <div class="form-group">
-                        <label for="compatibilityQuestions">Roommate Compatibility Questions:</label>
-                        <textarea id="compatibilityQuestions" name="compatibilityQuestions" rows="4"></textarea>
+                        <label for="state">State/Province:</label>
+                        <input type="text" id="state" name="state" pattern="^[A-Za-z\s\-,']+$" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country (optional):</label>
+                        <input type="text" id="country" name="country" pattern="^[A-Za-z\s\-,']+$" required>
                     </div>
 
-                    <h2>Additional Information:</h2>
-                    <div class="form-group">
-                        <label for="bio">Short Bio:</label>
-                        <textarea id="bio" name="bio" rows="4"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="references">References (optional):</label>
-                        <textarea id="references" name="references" rows="4"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="socialMedia">Social Media Links (optional):</label>
-                        <input type="text" id="socialMedia" name="socialMedia">
-                    </div>
-                        <button id="registerButton" type="submit">Submit</button>
-                    </div>
+                    <h2>Matching Preferences:</h2>
+                        <div class="form-group">
+                            <label for="moveInDate">Desired Move-in Date:</label>
+                            <input type="date" id="moveInDate" name="moveInDate">
+                        </div>
+                        <div class="form-group">
+                            <label for="housingType">Type of Housing Sought:</label>
+                            <select id="housingType" name="housingType">
+                                <option value="">Select Housing Type</option>
+                                <option value="sharedApartment">Shared Apartment</option>
+                                <option value="singleRoom">Single Room</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="amenities">Specific Amenities Desired:</label>
+                            <textarea id="amenities" name="amenities" rows="4"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="dealbreakers">Dealbreakers:</label>
+                            <textarea id="dealbreakers" name="dealbreakers" rows="4"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="compatibilityQuestions">Roommate Compatibility Questions:</label>
+                            <textarea id="compatibilityQuestions" name="compatibilityQuestions" rows="4"></textarea>
+                        </div>
+
+                        <h2>Additional Information:</h2>
+                        <div class="form-group">
+                            <label for="bio">Short Bio:</label>
+                            <textarea id="bio" name="bio" rows="4"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="references">References (optional):</label>
+                            <textarea id="references" name="references" rows="4"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="socialMedia">Social Media Links (optional):</label>
+                            <input type="text" id="socialMedia" name="socialMedia">
+                        </div>
+                            <button id="registerButton" type="submit">Submit</button>
+                        </div>
                 </form>
         </div>
 
