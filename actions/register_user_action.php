@@ -24,6 +24,17 @@
             exit();
         }
 
+        $sql = "INSERT INTO users (email, passwrd, first_name, last_name, gender, dob, ethnicity) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        $stmt = mysqli_prepare($conn, $sql);
+        mysqli_stmt_bind_param($stmt, "ssssiss", $email, $hashed_passwrd, $fname, $lname, $gender, $dob, $ethnicity);
+        $result = mysqli_stmt_execute($stmt);
 
+        if ($result){
+            header("Location: ../view/dashboard-postLogin.php");
+            exit();
+        }
+        else{
+            echo "<script>alert(Error: ".mysqli_error($conn).")</script>";
+        }
     }
 ?>
