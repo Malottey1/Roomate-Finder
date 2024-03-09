@@ -92,7 +92,7 @@
 
   loginButton.addEventListener('click', function() {
 
-    window.location.href = '../login/login.html';
+    window.location.href = '../login/login.php';
   });
 
   const findRoommateBtn = document.getElementById('findRoommateBtn');
