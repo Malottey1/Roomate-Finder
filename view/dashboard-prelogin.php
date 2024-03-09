@@ -84,7 +84,7 @@
 
   registerButton.addEventListener('click', function() {
 
-    window.location.href = '../view/register.html';
+    window.location.href = '../login/register.php';
   });
 
   const loginButton = document.getElementById('loginButton');
@@ -92,7 +92,7 @@
 
   loginButton.addEventListener('click', function() {
 
-    window.location.href = '../view/login.html';
+    window.location.href = '../login/login.html';
   });
 
   const findRoommateBtn = document.getElementById('findRoommateBtn');
