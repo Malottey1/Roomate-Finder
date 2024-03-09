@@ -18,7 +18,11 @@
   </div>
 </header>
 
-<img src="../assets/images/dashboard-image.png" alt="Centered Image" class="centered-image">
+<div class="main">
+  <div class="main-image"><img src="../assets/images/dashboard-image-1.png" alt="Centered Image" class="centered-image"></div>
+  <div class="btn-container"><button id="findRoommateBtn">Find a roommate</button></div>
+</div>
+
 
 <div class="horizontal-strip">
   <p>Finding a roommate should be stress-free</p>
@@ -54,16 +58,16 @@
 
 <div class="content-container">
   <div class="content-item" style="margin-top: 30px;">
-    <img src="../assets/images/img1.png" alt="Image 1">
-    <p style="color:#7ed956; margin-top: 30px; font-size: 20px; font-weight: bolder;">Matching Lifestyles</p>
+    <div><img src="../assets/images/img1.png" alt="Image 1"></div>
+    <div><p>Matching Lifestyles</p></div>
   </div>
   <div class="content-item">
-    <img src="../assets/images/img2.png" alt="Image 2">
-    <p style="color:#7ed956; font-size: 20px; font-weight: bolder;">Saves Time</p>
+    <div><img src="../assets/images/img2.png" alt="Image 2"></div>
+    <div><p>Saves Time</p></div>
   </div>
   <div class="content-item">
-    <img src="../assets/images/img3.png" alt="Image 3" style="width: 90px;";>
-    <p style="color:#7ed956; font-size: 20px; font-weight: bolder;" >New Friendships</p>
+    <div><img src="../assets/images/img3.png" alt="Image 3" style="width: 90px;";></div>
+    <div><p >New Friendships</p></div>
   </div>
 </div>
 
@@ -89,6 +93,12 @@
   loginButton.addEventListener('click', function() {
 
     window.location.href = '../view/login.html';
+  });
+
+  const findRoommateBtn = document.getElementById('findRoommateBtn');
+
+  findRoommateBtn.addEventListener('click', function() {
+      window.location.href = '../view/roommate-listings.html';
   });
 </script>
 
