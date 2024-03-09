@@ -49,7 +49,7 @@
 </div>
 
 
-<center><button class="get-started-button">Get Started</button></center>>
+<center><button class="get-started-button" id="getStartedButton">Get Started</button></center>>
 
 
 <div class="horizontal-strip">
@@ -81,26 +81,25 @@
 
 <script>
   const registerButton = document.getElementById('registerButton');
-
   registerButton.addEventListener('click', function() {
-
     window.location.href = '../login/register.php';
   });
 
   const loginButton = document.getElementById('loginButton');
-
-
   loginButton.addEventListener('click', function() {
-
     window.location.href = '../login/login.php';
   });
 
   const findRoommateBtn = document.getElementById('findRoommateBtn');
-
   findRoommateBtn.addEventListener('click', function() {
-      window.location.href = '../view/roommate-listings.html';
+      window.location.href = '../login/login.php';
+  });
+
+  document.getElementById("getStartedButton").addEventListener("click", function() {
+    window.location.href = "../login/login.php";
   });
 </script>
+
 
 </body>
 </html>
