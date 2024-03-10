@@ -1,3 +1,7 @@
+<?php
+    include("../actions/display_users_action.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -154,105 +158,10 @@
             </form>
         </div>
         <div class="grid-container">
-            <div class="card">
-                <div><img src="../assets/images/Rectangle 38.jpg" alt="card image"></div>
-                <div class="lower">
-                    <div><p class="name">Melanin Doe</p></div>
-                    <div class="icons">
-                        <div style="margin-right: 10px;" class="material-symbols-outlined send-btn">send</div>
-                        <div class="material-symbols-outlined">thumb_down</div>
-                    </div>
-                </div>
-                <div><p class="location">Dufiex Annex, GHS 7000</p></div>
-            </div>
-            <div class="card">
-                <div><img src="../assets/images/Rectangle 39.jpg" alt="card image"></div>
-                <div class="lower">
-                    <div><p class="name">Melanin Doe</p></div>
-                    <div class="icons">
-                        <div style="margin-right: 10px;" class="material-symbols-outlined send-btn">send</div>
-                        <div class="material-symbols-outlined">thumb_down</div>
-                    </div>
-                </div>
-                <div><p class="location">Dufiex Annex, GHS 7000</p></div>
-            </div>
-            <div class="card">
-                <div><img src="../assets/images/Rectangle 40.jpg" alt="card image"></div>
-                <div class="lower">
-                    <div><p class="name">Melanin Doe</p></div>
-                    <div class="icons">
-                        <div style="margin-right: 10px;" class="material-symbols-outlined send-btn">send</div>
-                        <div class="material-symbols-outlined">thumb_down</div>
-                    </div>
-                </div>
-                <div><p class="location">Dufiex Annex, GHS 7000</p></div>
-            </div>
-            <div class="card">
-                <div><img src="../assets/images/Rectangle 41.jpg" alt="card image"></div>
-                <div class="lower">
-                    <div><p class="name">Melanin Doe</p></div>
-                    <div class="icons">
-                        <div style="margin-right: 10px;" class="material-symbols-outlined send-btn">send</div>
-                        <div class="material-symbols-outlined">thumb_down</div>
-                    </div>
-                </div>
-                <div><p class="location">Dufiex Annex, GHS 7000</p></div>
-            </div>
-            <div class="card">
-                <div><img src="../assets/images/Rectangle 42.jpg" alt="card image"></div>
-                <div class="lower">
-                    <div><p class="name">Melanin Doe</p></div>
-                    <div class="icons">
-                        <div style="margin-right: 10px;" class="material-symbols-outlined send-btn">send</div>
-                        <div class="material-symbols-outlined">thumb_down</div>
-                    </div>
-                </div>
-                <div><p class="location">Dufiex Annex, GHS 7000</p></div>
-            </div>
-            <div class="card">
-                <div><img src="../assets/images/Rectangle 43.jpg" alt="card image"></div>
-                <div class="lower">
-                    <div><p class="name">Melanin Doe</p></div>
-                    <div class="icons">
-                        <div style="margin-right: 10px;" class="material-symbols-outlined send-btn">send</div>
-                        <div class="material-symbols-outlined">thumb_down</div>
-                    </div>
-                </div>
-                <div><p class="location">Dufiex Annex, GHS 7000</p></div>
-            </div>
-            <div class="card">
-                <div><img src="../assets/images/Rectangle 44.jpg" alt="card image"></div>
-                <div class="lower">
-                    <div><p class="name">Melanin Doe</p></div>
-                    <div class="icons">
-                        <div style="margin-right: 10px;" class="material-symbols-outlined send-btn">send</div>
-                        <div class="material-symbols-outlined">thumb_down</div>
-                    </div>
-                </div>
-                <div><p class="location">Dufiex Annex, GHS 7000</p></div>
-            </div>
-            <div class="card">
-                <div><img src="../assets/images/Rectangle 45.jpg" alt="card image"></div>
-                <div class="lower">
-                    <div><p class="name">Melanin Doe</p></div>
-                    <div class="icons">
-                        <div style="margin-right: 10px;" class="material-symbols-outlined">send</div>
-                        <div class="material-symbols-outlined">thumb_down</div>
-                    </div>
-                </div>
-                <div><p class="location">Dufiex Annex, GHS 7000</p></div>
-            </div>
-            <div class="card">
-                <div><img src="../assets/images/Rectangle 46.jpg" alt="card image"></div>
-                <div class="lower">
-                    <div><p class="name">Melanin Doe</p></div>
-                    <div class="icons">
-                        <div style="margin-right: 10px;" class="material-symbols-outlined">send</div>
-                        <div class="material-symbols-outlined">thumb_down</div>
-                    </div>
-                </div>
-                <div><p class="location">Dufiex Annex, GHS 7000</p></div>
-            </div>
+            <?php
+                $users = get_all_users();
+                display_each_user($users);
+            ?>
         </div>
     </div>
     <footer>

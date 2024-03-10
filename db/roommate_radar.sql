@@ -9,6 +9,13 @@ CREATE DATABASE roommate_radar;
 USE roommate_radar;
 
 -- Create the tables
+CREATE Table Room_Listings (
+    listing_id INT AUTO_INCREMENT PRIMARY KEY,
+    location VARCHAR(255),
+    hostel_name VARCHAR(255),
+    hostel_cost DECIMAL
+);
+
 CREATE Table Users (
     user_id INT AUTO_INCREMENT PRIMARY KEY,
     email VARCHAR(255),
@@ -18,6 +25,8 @@ CREATE Table Users (
     gender TINYINT(1) NOT NULL,
     dob DATE,
     ethnicity VARCHAR(255),
+    listing_id INT,
+    FOREIGN KEY (listing_id) REFERENCES Room_Listings(listing_id),
     CONSTRAINT check_field CHECK (gender IN (0, 1))
 );
 
@@ -33,15 +42,6 @@ CREATE Table Preferences (
     preference_id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
     comment VARCHAR(255),
-    FOREIGN KEY (user_id) REFERENCES Users(user_id)
-);
-
-CREATE Table Room_Listings (
-    listing_id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT NOT NULL,
-    location VARCHAR(255),
-    hostel_name VARCHAR(255),
-    hostel_cost DECIMAL,
     FOREIGN KEY (user_id) REFERENCES Users(user_id)
 );
 
@@ -63,4 +63,22 @@ CREATE Table Roommate_History (
     FOREIGN KEY (user_id) REFERENCES Users(user_id),
     FOREIGN KEY (roommate_id) REFERENCES Users(user_id)
 );
+
+CREATE Table Dislikes (
+    dislike_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    COMMENT VARCHAR(255),
+    FOREIGN KEY (user_id) REFERENCES Users(user_id)
+);
+
+INSERT INTO Room_Listings (location, hostel_name, hostel_cost) 
+VALUES 
+('Berekuso', 'Old Dufie', 6200),
+('Berekuso', 'Dufie Annex', 7000),
+('Berekuso', 'Hosanna', 4000), 
+('Berekuso', 'New Hosanna', 7200),
+('Berekuso', 'Masere', 5000),
+('Berekuso', 'New Masere', 5500),
+('None', 'None',0);
+
 

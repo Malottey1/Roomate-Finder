@@ -105,7 +105,7 @@
   // Add a click event listener to the Get Started button
   getStartedButton.addEventListener('click', function() {
       // Redirect to the roommate-listings.html page
-      window.location.href = '../view/roommate-listings.html';
+      window.location.href = '../view/roommate-listings.php';
     });
   
     const profilePhoto = document.getElementById('profilePhoto');
@@ -119,7 +119,7 @@
   const findRoommateBtn = document.getElementById('findRoommateBtn');
 
   findRoommateBtn.addEventListener('click', function() {
-      window.location.href = '../view/roommate-listings.html';
+      window.location.href = '../view/roommate-listings.php';
   });
 </script>
 

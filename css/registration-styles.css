@@ -17,14 +17,14 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 border-bottom: 2px solid #7ED957;
-padding: 10px 20px;
+padding: 5px 20px;
 margin-left: -10px;
 z-index: 1000; 
 
 }
 .logo {
-width: 300px; 
-height: auto; 
+/* width: 300px;  */
+/* height: auto;  */
 margin-top: 10px;
 margin-bottom: 10px;
 }
@@ -43,7 +43,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 height: 100vh;
-margin-top: 0px;
+margin-top: 10px;
 }
 
 
