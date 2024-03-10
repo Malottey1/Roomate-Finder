@@ -35,6 +35,4 @@
             echo '</div>';
         }
     }
-
-    $users = get_all_users();
 ?>

@@ -159,6 +159,7 @@
         </div>
         <div class="grid-container">
             <?php
+                $users = get_all_users();
                 display_each_user($users);
             ?>
         </div>
