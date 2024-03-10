@@ -1,6 +1,7 @@
 <?php
     //establish connection with database
     include('../actions/display_hostels_action.php');
+    include('../actions/display_ethnic_group.php');
 ?>
 
 <!DOCTYPE html>
@@ -64,8 +65,12 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="ethnicity">Ethnicity (optional):</label>
-                        <input type="text" id="ethnicity" name="ethnicity" pattern="^[A-Za-z\s\-,']+$" required>
+                        <label for="ethnicity">Ethnicity:</label>
+                        <select id="ethnicity" name=ethnicity required>
+                            <?php foreach ($eth_groups as $group): ?>
+                                <option value="<?php echo $group['eth_id']; ?>"><?php echo $group['eth_name']; ?></option>
+                            <?php endforeach; ?>
+                        </select>
                     </div>
 
                     <h2>Location:</h2>
