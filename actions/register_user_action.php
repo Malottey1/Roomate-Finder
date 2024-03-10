@@ -12,7 +12,7 @@
         $gender = $_POST['gender'];
         $ethnicity = $_POST['ethnicity'];
         $dob = $_POST['dateOfBirth'];
-
+        $hostel = $_POST['hostel'];
         // $bio = $_POST['bio'];
         // $fbook = $_POST['socialMedia'];
 
@@ -24,9 +24,9 @@
             exit();
         }
 
-        $sql = "INSERT INTO users (email, passwrd, first_name, last_name, gender, dob, ethnicity) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO users (email, passwrd, first_name, last_name, gender, dob, ethnicity, listing_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = mysqli_prepare($conn, $sql);
-        mysqli_stmt_bind_param($stmt, "ssssiss", $email, $hashed_passwrd, $fname, $lname, $gender, $dob, $ethnicity);
+        mysqli_stmt_bind_param($stmt, "ssssisss", $email, $hashed_passwrd, $fname, $lname, $gender, $dob, $ethnicity, $hostel);
         $result = mysqli_stmt_execute($stmt);
 
         if ($result){
