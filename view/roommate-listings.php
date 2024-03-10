@@ -53,11 +53,17 @@
                   
                 <div class="section">
                     <div><label for="budget"><p>Budget</p></label></div>
-                    <div><input type="range" name="budget" min="2000" max="10000"/></div>
+                    <div class="slider-container">
+                        <div><input type="range" id="budget" name="budget" min="2000" max="10000"/></div>
+                        <div class="max-label"><p id="budget-out">10000</p></div>
+                    </div>
                 </div>
                 <div class="section">
                     <div><label for="age"><p>Age</p></label></div>
-                    <div><input type="range" name="age" min="21" max="50"/></div>
+                    <div class="slider-container">
+                        <div><input type="range" id="age" name="age" min="21" max="50"/></div>
+                        <div class="max-label"><p id="age-out">50</p></div>
+                    </div>
                 </div>
                 <div class="section">
                     <div><label for="hostel-check"><p>Hostel Occupying</p></label></div>
@@ -147,6 +153,23 @@
             // Redirect to User_profile.html when the profile photo is clicked
             window.location.href = '../view/User_profile.html';
         });
+
+        // Update values displayed for budget and age
+        var budgetSlider = document.getElementById('budget');
+        var budgetOut = document.getElementById('budget-out');
+        var ageSlider = document.getElementById('age');
+        var ageOut = document.getElementById('age-out');
+
+        budgetOut.innerHTML = budgetSlider.value;
+        ageOut.innerHTML = ageSlider.value;
+
+        budgetSlider.oninput = function(){
+            budgetOut.innerHTML = this.value;
+        };
+
+        ageSlider.oninput = function(){
+            ageOut.innerHTML = this.value;
+        };
 
 
     </script>

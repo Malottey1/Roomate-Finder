@@ -218,6 +218,17 @@ footer a{
     background-color: white;
 }
 
+.slider-container {
+    position: relative;
+}
+
+.max-label {
+    position: absolute;
+    top: -7px;
+    right: 50px;
+    font-size: 11px;
+}
+
 .filter-container form{
     display: flex;
     flex-direction: column;
