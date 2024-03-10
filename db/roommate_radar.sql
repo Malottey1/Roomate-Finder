@@ -78,6 +78,7 @@ VALUES
 ('Berekuso', 'Hosanna', 4000), 
 ('Berekuso', 'New Hosanna', 7200),
 ('Berekuso', 'Masere', 5000),
-('Berekuso', 'New Masere', 5500);
+('Berekuso', 'New Masere', 5500),
+('None', 'None',0);
 
 

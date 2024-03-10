@@ -1,6 +1,6 @@
 <?php
     //establish connection with database
-    include('../settings/connection.php');
+    include('../actions/display_hostels_action.php');
 ?>
 
 <!DOCTYPE html>
@@ -72,18 +72,9 @@
                     <div class="form-group">
                         <label for="hostel">Hostel Name:</label>
                         <select id="hostel" name="hostel" required>
-                            <option value="" selected disabled>Select Hostel</option>
-                            <option value="">Columbiana</option>
-                            <option value="1">Old Dufie</option>
-                            <option value="2">Dufie Annex</option>
-                            <option value="3">Charlotte</option>
-                            <option value="4">Hosanna</option>
-                            <option value="5">New Hosanna</option>
-                            <option value="6">Masere</option>
-                            <option value="7">New Masere</option>
-                            <option value="8">Tanko</option>
-                            <option value="0">None</option>
-    
+                            <?php foreach ($hostels as $hostel): ?>
+                                <option value="<?php echo $hostel['listing_id']; ?>"><?php echo $hostel['hostel_name']; ?></option>
+                            <?php endforeach; ?>
                         </select>
                     </div>
                     
