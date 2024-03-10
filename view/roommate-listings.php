@@ -1,3 +1,7 @@
+<?php
+    include("../actions/display_users_action.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -153,6 +157,11 @@
 
             </form>
         </div>
+        <?php
+            foreach ($users as $user){
+                echo $user['first_name'];
+            }
+        ?>
         <div class="grid-container">
             <div class="card">
                 <div><img src="../assets/images/Rectangle 38.jpg" alt="card image"></div>
