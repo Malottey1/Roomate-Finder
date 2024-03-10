@@ -157,12 +157,10 @@
 
             </form>
         </div>
-        <?php
-            foreach ($users as $user){
-                echo $user['first_name'];
-            }
-        ?>
         <div class="grid-container">
+            <?php
+                display_each_user($users);
+            ?>
             <div class="card">
                 <div><img src="../assets/images/Rectangle 38.jpg" alt="card image"></div>
                 <div class="lower">
