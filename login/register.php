@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../css/registration-styles.css">
-    <title>Login Page</title>
+    <title>Register Page</title>
     
 </head>
 <body>
