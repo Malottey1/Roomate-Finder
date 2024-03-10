@@ -64,7 +64,7 @@
                     <div class="hostel-check">
                         <?php foreach ($hostels as $hostel): ?>
                             <div class="check-text">
-                                <div><input type="radio" name="move-in-date" value="<?php echo $hostel['listing_id']; ?>"/></div>
+                                <div><input type="radio" name="hostel" value="<?php echo $hostel['listing_id']; ?>"/></div>
                                 <div><p><?php echo $hostel['hostel_name'] ?></p></div>
                             </div>
                         <?php endforeach; ?>
@@ -75,7 +75,7 @@
                     <div class="ethnicity-check">
                         <?php foreach ($eth_groups as $group): ?>
                             <div class="check-text">
-                                <div><input type="radio" name="move-in-date" value="<?php echo $group['eth_id']; ?>"/></div>
+                                <div><input type="radio" name="ethnicity" value="<?php echo $group['eth_id']; ?>"/></div>
                                 <div><p><?php echo $group['eth_name'] ?></p></div>
                             </div>
                         <?php endforeach; ?>
