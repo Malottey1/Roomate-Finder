@@ -15,13 +15,13 @@
 </head>
 <body>
     <header>
-        <img src="../assets/images/5.png" alt="Logo" class="logo">
+        <img src="../assets/images/roommate_logo.png" alt="Logo" class="logo">
         <button id="signInButton" class="menu-button">Sign-In</button>
     </header>
         <div class="container">
             <div class="box">
                 <div class="centered-logo">
-                    <img src="../assets/images/3.png" alt="Logo" class="logo">
+                    <img src="../assets/images/binoculars.png" alt="Logo" class="logo">
                 </div>
                 <h1>Let's start here!</h1>
                 <h2>Personal Information:</h2>
@@ -47,7 +47,7 @@
                         <input type="password" id="c-passwrd" name="confirm-passwrd" minlength="8" required>
                     </div>
                     <div class="form-group">
-                        <label for="phone">Phone Number (optional):</label>
+                        <label for="phone">Phone Number:</label>
                         <input type="tel" id="phone" name="phone" pattern="^\+?(\d[\d-. ]+)?(\([\d-. ]+\))?[\d-. ]+\d$" required>
                     </div>
                     <h2>Demographics:</h2>
@@ -67,41 +67,70 @@
                         <label for="ethnicity">Ethnicity (optional):</label>
                         <input type="text" id="ethnicity" name="ethnicity" pattern="^[A-Za-z\s\-,']+$" required>
                     </div>
-                    <div class="form-group">
-                        <label for="profession">Profession or Student Status (optional):</label>
-                        <input type="text" id="profession" name="profession">
-                    </div>
+
                     <h2>Location:</h2>
                     <div class="form-group">
                         <label for="hostel">Hostel Name:</label>
-                        <input type="text" id="hostel" name="hostel" pattern="^[A-Za-z\s\-,']+$" required>
+                        <select id="hostel" name="hostel" required>
+                            <option value="" selected disabled>Select Hostel</option>
+                            <option value="">Columbiana</option>
+                            <option value="1">Old Dufie</option>
+                            <option value="2">Dufie Annex</option>
+                            <option value="3">Charlotte</option>
+                            <option value="4">Hosanna</option>
+                            <option value="5">New Hosanna</option>
+                            <option value="6">Masere</option>
+                            <option value="7">New Masere</option>
+                            <option value="8">Tanko</option>
+                            <option value="0">None</option>
+    
+                        </select>
                     </div>
+                    
 
                     <h2>Matching Preferences:</h2>
                         <div class="form-group">
-                            <label for="moveInDate">Desired Move-in Date:</label>
-                            <input type="date" id="moveInDate" name="moveInDate">
+                            <label for="criteria1">Criteria 1:</label>
+                            <textarea id="criteria1" name="criteria1" rows="4"></textarea>
                         </div>
+                        
                         <div class="form-group">
-                            <label for="housingType">Type of Housing Sought:</label>
-                            <select id="housingType" name="housingType">
-                                <option value="">Select Housing Type</option>
-                                <option value="sharedApartment">Shared Apartment</option>
-                                <option value="singleRoom">Single Room</option>
-                            </select>
+                            <label for="criteria2">Criteria 2:</label>
+                            <textarea id="criteria2" name="criteria2" rows="4"></textarea>
                         </div>
+                        
                         <div class="form-group">
-                            <label for="amenities">Specific Amenities Desired:</label>
-                            <textarea id="amenities" name="amenities" rows="4"></textarea>
+                            <label for="criteria3">Criteria 3:</label>
+                            <textarea id="criteria3" name="criteria3" rows="4"></textarea>
                         </div>
+                        
                         <div class="form-group">
-                            <label for="dealbreakers">Dealbreakers:</label>
-                            <textarea id="dealbreakers" name="dealbreakers" rows="4"></textarea>
+                            <label for="criteria4">Criteria 4:</label>
+                            <textarea id="criteria4" name="criteria4" rows="4"></textarea>
                         </div>
+
                         <div class="form-group">
-                            <label for="compatibilityQuestions">Roommate Compatibility Questions:</label>
-                            <textarea id="compatibilityQuestions" name="compatibilityQuestions" rows="4"></textarea>
+                            <label for="interests1">Interests 1:</label>
+                            <textarea id="interests1" name="interests1" rows="4"></textarea>
                         </div>
+                        
+                        <div class="form-group">
+                            <label for="interests2">Interests 2:</label>
+                            <textarea id="interests2" name="interests2" rows="4"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="interests3">Interests 3:</label>
+                            <textarea id="interests3" name="interests3" rows="4"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="interests4">Interests 4:</label>
+                            <textarea id="interests4" name="interests4" rows="4"></textarea>
+                        </div>
+                        
+                    
+
 
                         <h2>Additional Information:</h2>
                         <div class="form-group">
@@ -109,11 +138,7 @@
                             <textarea id="bio" name="bio" rows="4"></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="references">References (optional):</label>
-                            <textarea id="references" name="references" rows="4"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="socialMedia">Social Media Links (optional):</label>
+                            <label for="socialMedia">Facebook Profile Link:</label>
                             <input type="text" id="socialMedia" name="socialMedia">
                         </div>
                             <button id="registerButton" name="submit-btn" type="submit">Submit</button>

@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <img src="../assets/images/5.png" alt="Logo" class="logo">
+        <img src="../assets/images/roommate_logo.png" alt="Logo" class="logo">
         <button class="menu-button">Menu</button>
     </header>
     <div class="container">
