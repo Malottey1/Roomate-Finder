@@ -15,13 +15,13 @@
 </head>
 <body>
     <header>
-        <img src="../assets/images/5.png" alt="Logo" class="logo">
+        <img src="../assets/images/roommate_logo.png" alt="Logo" class="logo">
         <button id="signInButton" class="menu-button">Sign-In</button>
     </header>
         <div class="container">
             <div class="box">
                 <div class="centered-logo">
-                    <img src="../assets/images/3.png" alt="Logo" class="logo">
+                    <img src="../assets/images/binoculars.png" alt="Logo" class="logo">
                 </div>
                 <h1>Let's start here!</h1>
                 <h2>Personal Information:</h2>
@@ -67,7 +67,7 @@
                         <label for="ethnicity">Ethnicity (optional):</label>
                         <input type="text" id="ethnicity" name="ethnicity" pattern="^[A-Za-z\s\-,']+$" required>
                     </div>
-                    //Added names of hostels
+
                     <h2>Location:</h2>
                     <div class="form-group">
                         <label for="hostel">Hostel Name:</label>
@@ -88,7 +88,6 @@
                     </div>
                     
 
-                    //Changed Preferences to only criteria and interests
                     <h2>Matching Preferences:</h2>
                         <div class="form-group">
                             <label for="criteria1">Criteria 1:</label>
@@ -132,7 +131,6 @@
                         
                     
 
-                        //Added Facebook link input field, took of the reference field
 
                         <h2>Additional Information:</h2>
                         <div class="form-group">
