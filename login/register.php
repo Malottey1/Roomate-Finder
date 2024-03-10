@@ -73,16 +73,8 @@
                     </div>
                     <h2>Location:</h2>
                     <div class="form-group">
-                        <label for="city">City:</label>
-                        <input type="text" id="city" name="city" pattern="^[A-Za-z\s\-,']+$" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="state">State/Province:</label>
-                        <input type="text" id="state" name="state" pattern="^[A-Za-z\s\-,']+$" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="country">Country (optional):</label>
-                        <input type="text" id="country" name="country" pattern="^[A-Za-z\s\-,']+$" required>
+                        <label for="hostel">Hostel Name:</label>
+                        <input type="text" id="hostel" name="hostel" pattern="^[A-Za-z\s\-,']+$" required>
                     </div>
 
                     <h2>Matching Preferences:</h2>
@@ -139,8 +131,7 @@
                 const email = document.getElementById('email').value.trim();
                 const dateOfBirth = document.getElementById('dateOfBirth').value.trim();
                 const gender = document.getElementById('gender').value.trim();
-                const city = document.getElementById('city').value.trim();
-                const state = document.getElementById('state').value.trim();
+                const hostel = document.getElementById('hostel').value.trim();
 
             }
         
