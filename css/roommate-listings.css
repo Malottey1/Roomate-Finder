@@ -176,7 +176,7 @@ footer a{
     font-size: 11px;
 }
 
-.filter-container .lease-duration {
+.filter-container .ethnicity-check {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -269,6 +269,7 @@ footer a{
     border-radius: 5px;
     margin-left: 50px;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .submit-btn:hover {

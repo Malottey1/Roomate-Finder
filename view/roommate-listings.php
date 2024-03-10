@@ -1,6 +1,7 @@
 <?php
     include("../actions/display_users_action.php");
     include("../actions/display_hostels_action.php");
+    include("../actions/display_ethnic_group.php");
 ?>
 
 <!DOCTYPE html>
@@ -59,7 +60,7 @@
                     <div><input type="range" name="age" min="21" max="50"/></div>
                 </div>
                 <div class="section">
-                    <div><label for="move-in-date"><p>Hostel Occupying</p></label></div>
+                    <div><label for="hostel-check"><p>Hostel Occupying</p></label></div>
                     <div class="hostel-check">
                         <?php foreach ($hostels as $hostel): ?>
                             <div class="check-text">
@@ -70,50 +71,18 @@
                     </div>
                 </div>
                 <div class="section">
-                    <div><label for="lease-duration"><p>Lease Duration</p></label></div>
-                    <div class="lease-duration">
-                        <div class="check-text">
-                            <div><input type="radio" name="lease-duration" value="monthly"></div>
-                            <div><p>Month-to-month</p></div>
-                        </div>
-                        <div class="check-text">
-                            <div><input type="radio" name="lease-duration" value="4-months"></div>
-                            <div><p>4-months</p></div>
-                        </div>
-                        <div class="check-text">
-                            <div><input type="radio" name="lease-duration" value="6-months"></div>
-                            <div><p>6-months</p></div>
-                        </div>
-                        <div class="check-text">
-                            <div><input type="radio" name="lease-duration" value="12-months"></div>
-                            <div><p>1 Year</p></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="section">
-                    <div><label for="pets"><p>Pets</p></label></div>
-                    <div class="lease-duration">
-                        <div class="check-text">
-                            <div><input type="radio" name="pets" value="none"></div>
-                            <div><p>No pets</p></div>
-                        </div>
-                        <div class="check-text">
-                            <div><input type="radio" name="pets" value="dogs"></div>
-                            <div><p>Dogs</p></div>
-                        </div>
-                        <div class="check-text">
-                            <div><input type="radio" name="pets" value="cats"></div>
-                            <div><p>Cats</p></div>
-                        </div>
-                        <div class="check-text">
-                            <div><input type="radio" name="pets" value="12-months"></div>
-                            <div><p>Pet-friendly</p></div>
-                        </div>
+                    <div><label for="ethnicity-check"><p>Ethnicity</p></label></div>
+                    <div class="ethnicity-check">
+                        <?php foreach ($eth_groups as $group): ?>
+                            <div class="check-text">
+                                <div><input type="radio" name="move-in-date" value="<?php echo $group['eth_id']; ?>"/></div>
+                                <div><p><?php echo $group['eth_name'] ?></p></div>
+                            </div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
                 <div><button class="submit-btn" name="submit-btn" type="submit"><p>Apply Filter</p></button></div>
                 
-
             </form>
         </div>
         <div class="grid-container">
