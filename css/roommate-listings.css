@@ -164,9 +164,9 @@ footer a{
     padding: 20px 0px 0px 50px;
 }
 
-.filter-container .move-in-check {
+.filter-container .hostel-check {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr ;
 }
 
 .check-text {

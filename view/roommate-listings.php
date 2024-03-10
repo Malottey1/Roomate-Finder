@@ -1,5 +1,6 @@
 <?php
     include("../actions/display_users_action.php");
+    include("../actions/display_hostels_action.php");
 ?>
 
 <!DOCTYPE html>
@@ -58,56 +59,14 @@
                     <div><input type="range" name="age" min="21" max="50"/></div>
                 </div>
                 <div class="section">
-                    <div><label for="move-in-date"><p>Move in Date</p></label></div>
-                    <div class="move-in-check">
-                        <div class="check-text">
-                            <div><input type="radio" name="move-in-date" value="jan"></div>
-                            <div><p>Jan</p></div>
-                        </div>
-                        <div class="check-text">
-                            <div><input type="radio" name="move-in-date" value="feb"></div>
-                            <div><p>Feb</p></div>
-                        </div>
-                        <div class="check-text">
-                            <div><input type="radio" name="move-in-date" value="mar"></div>
-                            <div><p>Mar</p></div>
-                        </div>
-                        <div class="check-text">
-                            <div><input type="radio" name="move-in-date" value="apr"></div>
-                            <div><p>Apr</p></div>
-                        </div>
-                        <div class="check-text">
-                            <div><input type="radio" name="move-in-date" value="may"></div>
-                            <div><p>May</p></div>
-                        </div>
-                        <div class="check-text">
-                            <div><input type="radio" name="move-in-date" value="jun"></div>
-                            <div><p>Jun</p></div>
-                        </div>
-                        <div class="check-text">
-                            <div><input type="radio" name="move-in-date" value="jul"></div>
-                            <div><p>Jul</p></div>
-                        </div>
-                        <div class="check-text">
-                            <div><input type="radio" name="move-in-date" value="aug"></div>
-                            <div><p>Aug</p></div>
-                        </div>
-                        <div class="check-text">
-                            <div><input type="radio" name="move-in-date" value="sep"></div>
-                            <div><p>Sep</p></div>
-                        </div>
-                        <div class="check-text">
-                            <div><input type="radio" name="move-in-date" value="oct"></div>
-                            <div><p>Oct</p></div>
-                        </div>
-                        <div class="check-text">
-                            <div><input type="radio" name="move-in-date" value="nov"></div>
-                            <div><p>Nov</p></div>
-                        </div>
-                        <div class="check-text">
-                            <div><input type="radio" name="move-in-date" value="dec"></div>
-                            <div><p>Dec</p></div>
-                        </div>
+                    <div><label for="move-in-date"><p>Hostel Occupying</p></label></div>
+                    <div class="hostel-check">
+                        <?php foreach ($hostels as $hostel): ?>
+                            <div class="check-text">
+                                <div><input type="radio" name="move-in-date" value="<?php echo $hostel['listing_id']; ?>"/></div>
+                                <div><p><?php echo $hostel['hostel_name'] ?></p></div>
+                            </div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
                 <div class="section">
