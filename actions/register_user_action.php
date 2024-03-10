@@ -26,7 +26,7 @@
 
         $sql = "INSERT INTO users (email, passwrd, first_name, last_name, gender, dob, ethnicity, listing_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = mysqli_prepare($conn, $sql);
-        mysqli_stmt_bind_param($stmt, "ssssisss", $email, $hashed_passwrd, $fname, $lname, $gender, $dob, $ethnicity, $hostel);
+        mysqli_stmt_bind_param($stmt, "ssssisis", $email, $hashed_passwrd, $fname, $lname, $gender, $dob, $ethnicity, $hostel);
         $result = mysqli_stmt_execute($stmt);
 
         if ($result){
