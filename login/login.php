@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <img src="../assets/images/5.png" alt="Logo" class="logo">
+        <img src="../assets/images/roommate_logo.png" alt="Logo" class="logo">
         <button class="menu-button">Menu</button>
     </header>
     <div class="container">
@@ -20,14 +20,14 @@
         
         <div class="login-box">
             <h2>Login</h2>
-            <form>
+            <form id="loginForm" method="post" action="../actions/login_user_action.php">
                 <div class="input-group">
-                    <label for="username">Username or Email:</label>
-                    <input type="text" id="username" name="username">
+                    <label for="username">Email:</label>
+                    <input type="text" id="username" name="username" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
                 </div>
                 <div class="input-group">
                     <label for="password">Password:</label>
-                    <input type="password" id="password" name="password">
+                    <input type="password" id="password" name="password" minlength="8" required>
                 </div>
                 <div class="input-group checkbox-group">
                     <input type="checkbox" id="remember-me" name="remember-me">
@@ -36,10 +36,29 @@
                 <div class="forgot-password">
                     <a href="#">Forgot password?</a>
                 </div>
-                <center><button type="submit">Login</button><center>
+
+                <center><button name="login-btn" type="submit" id="loginButton">Login</button><center>
+
             </form>
         </div>
     </div>
+    <script>
+        // const loginForm = document.getElementById('loginForm');
 
+        // // Add a submit event listener to the login form
+        // loginForm.addEventListener('submit', function(event) {
+        //     event.preventDefault();
+        //     window.location.href = '../view/dashboard-postlogin.html';
+        // });
+    
+        // const loginSubmitButton = document.getElementById('loginSubmitButton');
+
+        // loginSubmitButton.addEventListener('click', function(event) {
+    
+        //     event.preventDefault();
+            
+        //     window.location.href = '../view/dashboard-postlogin.html';
+        // });
+    </script>
 </body>
 </html>

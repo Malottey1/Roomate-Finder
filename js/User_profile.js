@@ -1,7 +1,9 @@
 
+
 function goToEditProfile() {
     window.location.href = '../view/edit-profile.html';
 }
+
 
 // Event listener for clicking on profile images
 const profileImages = document.querySelectorAll('.roomed-with-block img');

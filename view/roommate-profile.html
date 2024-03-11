@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
     <link rel="stylesheet" href="../css/User_profile.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-
 </head>
 <body>
     <div class="user-profile">
@@ -49,14 +47,11 @@
             
         </div>
         <div class="rectangle-8" >
-            <div class="edit-pencil-icon"  onclick="editProfilePhoto()"></div>
         </div>
         <div class="ellipse-1"></div>
        
         
-
-        <div class="Name editable">Jane Doe</div>
-
+        <div class="jane-doe editable">Jane Doe</div>
 
         <div class="janes-interests">Jane’s interests include...</div>
         
@@ -79,18 +74,20 @@
         <div class="ellipse-5"></div>
         <div class="janes-bio">Jane’s Bio</div>
         <div class="location">Location</div>
-
-        <div class="edit-profile" onclick="goToEditProfile()">Edit Profile</div>
-
-        <div class="view-profile">View Profile</div>
-        <div class="delete-profile">Delete Profile</div>
+        <div class="facebook-link">
+            <a href="https://www.facebook.com/your-facebook-profile" target="_blank" rel="noopener noreferrer">
+            <span class="facebook-icon-text">
+                <i class="fa fa-facebook"></i><img src="../assets/images/facebook.jpeg" alt="Facebook icon" style="width:20px; margin-right: 10px;">   Facebook
+            </span>
+            </a>
+        </div>
+        <div class="contact-info-text">Contact Info</div>
         <div class="rating">Rating</div>
         <div class="janes-criteria">Jane’s Criteria</div>
         
         <div class="location-details editable">Eastern Region, Berekuso</div>
         <div class="line-1"></div>
         <div class="line-2"></div>
-
         <div class="star-1">
             <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10.5 0L12.8574 7.25532H20.4861L14.3143 11.7394L16.6717 18.9947L10.5 14.5106L4.32825 18.9947L6.68565 11.7394L0.513906 7.25532H8.1426L10.5 0Z" fill="#7ED957"/>
@@ -120,7 +117,7 @@
             </svg>
         </div>
         <div class="rectangle-10">
-
+           
             <p class="criteria editable">Respects my space</p>
         </div>
         <div class="rectangle-11">
@@ -142,8 +139,6 @@
         </div>
     </div>
 
-
-
     <footer>
         <div>
           <a href="#">Privacy</a>
@@ -152,7 +147,6 @@
         </div>
       </footer>
       
-
     <script src="../js/User_profile.js"></script>
 
     
