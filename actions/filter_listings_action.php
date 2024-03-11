@@ -21,7 +21,7 @@
     else {
         $result_set = mysqli_stmt_get_result($stmt);
 
-        if (mysqli_num_rows($result_set) > 0){
+        if (mysqli_num_rows($result_set) >= 0){
             $users = mysqli_fetch_all($result_set, MYSQLI_ASSOC);
         }
 
