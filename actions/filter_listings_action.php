@@ -13,7 +13,7 @@
 
     // check if gender was stated
     if($gender != null){
-        $sql .= "AND gender = $gender";
+        $sql .= " AND gender = $gender";
     }
 
     // Include multiple options for ethnicity in query
@@ -25,7 +25,7 @@
     // Include multiple options for hostel in query
     if ($hostel != null){
         $hostelString = implode(",", $hostel);
-        $sql .= "AND listing_id IN ($hostelString)";
+        $sql .= " AND listing_id IN ($hostelString)";
     }
 
     // Prepare and execute query
