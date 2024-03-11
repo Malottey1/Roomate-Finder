@@ -9,13 +9,21 @@
     $hostel = $_POST['hostel'];
     $ethnicity = $_POST['ethnicity'];
 
-    $sql = "SELECT * FROM users WHERE gender = $gender AND listing_id = $hostel AND Year(dob) = $age";
+    $sql = "SELECT * FROM users WHERE gender = $gender AND Year(dob) = $age";
 
+    // Include multiple options for ethnicity in query
     if ($ethnicity){
         $ethnicityString = implode(",", $ethnicity);
         $sql .= " AND ethnicity IN ($ethnicityString)";
     }
 
+    // Include multiple options for hostel in query
+    if ($hostel){
+        $hostelString = implode(",", $hostel);
+        $sql .= "AND listing_id IN ($hostelString)";
+    }
+
+    // Prepare and execute query
     $stmt = mysqli_prepare($conn, $sql);
 
     $result = mysqli_stmt_execute($stmt);

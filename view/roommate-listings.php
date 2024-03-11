@@ -70,7 +70,7 @@
                     <div class="hostel-check">
                         <?php foreach ($hostels as $hostel): ?>
                             <div class="check-text">
-                                <div><input type="radio" name="hostel" value="<?php echo $hostel['listing_id']; ?>"/></div>
+                                <div><input type="checkbox" name="hostel[]" value="<?php echo $hostel['listing_id']; ?>"/></div>
                                 <div><p><?php echo $hostel['hostel_name'] ?></p></div>
                             </div>
                         <?php endforeach; ?>
