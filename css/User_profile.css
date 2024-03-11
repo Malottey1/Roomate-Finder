@@ -1,27 +1,24 @@
 /* user-profile */
-body {
-    font-family: Inter, sans-serif;
-    margin: 0;
-    margin-top: 100px;
-    padding: 0;
-  }
+
 
 .user-profile {
     position: relative;
-    width: 1440px; 
-    height: 1024px; 
-    background: #FFFFFF;
-    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.2);
-    margin: 0 auto; 
-    margin-bottom: 100px;
-    border-radius: 10px;
-}
+    width: 1440px; /* Adjusted width */
+    height: 1024px; /* Adjusted height */
+    background: #FFFFFF; /* Background color for the entire template */
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.2); 
+    width:100%;
+    overflow-x: hidden; 
+    max-width: 1440px;
 
+    
+}
 
 /* Rectangle 1 */
 .rectangle-1 {
     position: absolute;
-    width: 693px;
+    width: 620px;
+
     height: 389px;
     left: 399px;
     top: 65px;
@@ -35,7 +32,9 @@ body {
 /* Rectangle 3 */
 .rectangle-3 {
     position: absolute;
-    width: 693px;
+
+    width: 620px;
+
     height: 300px;
     left: 397px;
     top: 659px;
@@ -113,7 +112,9 @@ body {
 }
 
 /* Jane Doe */
-.jane-doe {
+
+.Name {
+
     position: absolute;
     width: 146px;
     height: 39px;
@@ -170,7 +171,9 @@ body {
 /* Rectangle 4 */
 .rectangle-4 {
     position: absolute;
-    width: 637px;
+
+    width: 585px;
+
     height: 33px;
     left: 425px;
     top: 721px;
@@ -227,11 +230,11 @@ body {
     font-weight: 700;
     font-size: 12px;
     line-height: 22px;
-    color: #ffff;
-    margin: auto;
-    margin-top: 4px;
-    margin-left: 10px;
+
+    color: white; /* This controls the color of the text */
 }
+
+
 
 
 
@@ -348,6 +351,8 @@ body {
 }
 
 /* Edit Profile */
+
+
 .facebook-link {
     position: absolute;
     width: 86px;
@@ -382,6 +387,7 @@ a {
 }
 
 /* Edit Profile */
+
 .edit-profile {
     position: absolute;
     width: 86px;
@@ -446,7 +452,9 @@ a {
     position: absolute;
     width: 129px;
     height: 31px;
-    left: 1137px;
+
+    left: 1040px;
+
     top: 77px;
     font-family: 'Inter';
     font-style: normal;
@@ -454,6 +462,9 @@ a {
     font-size: 14px;
     line-height: 26px;
     color: black;
+
+    width: calc(100% - 50px);
+
 }
 
 /* Location Details */
@@ -471,27 +482,34 @@ a {
     color: #363434;
 }
 
-/* Line 1 */
 .line-1 {
     position: absolute;
-    width: 124.53px;
-    height: 0px;
-    left: 975.91px;
-    top: 451.32px;
-    border: 4px solid rgba(126, 217, 87, 0.28);
+    width: 125px; /* Adjusted width */
+    height: 0;
+    right: -105px; /* Adjusted position relative to rectangle-1 */
+    border-bottom: 4px solid rgba(126, 217, 87, 0.28);
+    border-left: 4px solid rgba(126, 217, 87, 0.28);
     transform: rotate(-32.86deg);
+    top: 410.32px; /* Adjusted top position to position it below line-2 */
+    left: 900.91px; 
 }
 
-/* Line 2 */
 .line-2 {
     position: absolute;
-    width: 149.2px;
-    height: 0px;
-    left: 946.91px;
-    top: 451.32px;
-    border: 4px solid rgba(126, 217, 87, 0.28);
-    transform: rotate(-32.94deg);
+    width: 232.2px;
+    height: 0;
+    right: -135px; /* Adjusted position relative to rectangle-1 */
+    border-bottom: 4px solid rgba(126, 217, 87, 0.28);
+    border-left: 4px solid rgba(126, 217, 87, 0.28);
+    transform: rotate(-32.94deg);    
+    top: 390.32px;
+    left: 800.91px;
+
+
 }
+
+
+
 
 /* Star 1 */
 .star-1 {
@@ -500,7 +518,11 @@ a {
     height: 21px;
     left: 121px;
     top: 389px;
+
+    background: #7ED957;
+
     background: transparent;
+
 }
 
 /* Star 2 */
@@ -510,7 +532,11 @@ a {
     height: 21px;
     left: 146px;
     top: 389px;
+
+    background: #7ED957;
+
     background: transparent;
+
 }
 
 /* Star 3 */
@@ -520,7 +546,11 @@ a {
     height: 21px;
     left: 173px;
     top: 389px;
+
+    background: #7ED957;
+
     background:  transparent;
+
 }
 
 /* Star 4 */
@@ -530,7 +560,11 @@ a {
     height: 21px;
     left: 198px;
     top: 389px;
+
+    background: #7ED957;
+
     background:  transparent;
+
 }
 
 /* Star 5 */
@@ -540,7 +574,11 @@ a {
     height: 21px;
     left: 225px;
     top: 389px;
+
+    background: #F3F0F0;
+
     background: transparent;
+
 }
 
 /* Rectangle 10 */
@@ -548,10 +586,13 @@ a {
     position: absolute;
     width: 169px;
     height: 30px;
-    left: 1137px;
+
+    left: 1040px;
     top: 127px;
     background: #E79292;
     border-radius: 10px;
+    white-space: nowrap;
+
 }
 
 /* Rectangle 13 */
@@ -559,29 +600,38 @@ a {
     position: absolute;
     width: 169px;
     height: 30px;
-    left: 1137px;
+
+    left: 1040px;
     top: 215px;
     background: #4EA4F3;
     border-radius: 10px;
+    white-space: nowrap;
+
 }
 
 /* Rectangle 12 */
 .rectangle-12 {
     position: absolute;
-    width: 169px;
+
+    width: auto;
     height: 30px;
-    left: 1202px;
+    left: 1090px;
     top: 171px;
     background: #D3BF08;
     border-radius: 10px;
+    white-space: nowrap;
+
 }
 
 /* Rectangle 11 */
 .rectangle-11 {
+
+    white-space: nowrap;
     position: absolute;
-    width: 55px;
+    width:40px;
     height: 30px;
-    left: 1137px;
+    left: 1040px;
+
     top: 171px;
     background: #73E92C;
     border-radius: 10px;
@@ -594,7 +644,12 @@ a {
     font-weight: 700;
     font-size: 12px;
     line-height: 22px;
-    color: #141414;
+
+    color: white;
+    letter-spacing: 0em;
+    text-align: left;
+
+
 }
 
 /* Bio Content */
@@ -677,7 +732,9 @@ a {
 }
 
 /* Quiet */
-.rectangle-11 .criteria-editable {
+
+.rectangle-11.criteria {
+
     position: absolute;
     width: 36px;
     height: 20px;
@@ -688,7 +745,9 @@ a {
     font-weight: 700;
     font-size: 12px;
     line-height: 22px; /* Adjusted line-height */
-    color: #070707;
+
+    color: white;
+
 }
 
 
@@ -733,7 +792,9 @@ a {
 /* Adjustments for Rectangle 2 */
 .rectangle-2 {
     position: absolute;
-    width: 693px;
+
+    width: 620px;
+
     height: 138px;
     left: 399px;
     top: 487px;
@@ -796,6 +857,7 @@ a {
     border-radius: 50%;
 }
 
+
 .facebook-icon-text {
     display: flex;  /* Arrange icon and text horizontally */
     align-items: center;  /* Align icon and text vertically */
@@ -824,5 +886,6 @@ a {
   }
 
   
+
 
 

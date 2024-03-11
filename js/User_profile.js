@@ -1,14 +1,9 @@
-// Add event listeners to all elements with the class "edit-profile"
-const editProfileButtons = document.querySelectorAll('.edit-profile');
-        editProfileButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const profileName = prompt("roommateradder says:Enter your new name:");
-                if (profileName !== null) {
-                    document.querySelector('.jane-doe').textContent = profileName;
-                    console.log('Profile name updated:', profileName);
-                }
-            });
-        });
+
+
+function goToEditProfile() {
+    window.location.href = '../view/edit-profile.html';
+}
+
 
 // Event listener for clicking on profile images
 const profileImages = document.querySelectorAll('.roomed-with-block img');
