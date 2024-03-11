@@ -9,9 +9,14 @@
     $hostel = $_POST['hostel'];
     $ethnicity = $_POST['ethnicity'];
 
-    $sql = "SELECT * FROM users WHERE gender = ? AND ethnicity = ? AND listing_id = ? AND Year(dob) = ?";
+    $sql = "SELECT * FROM users WHERE gender = $gender AND listing_id = $hostel AND Year(dob) = $age";
+
+    if ($ethnicity){
+        $ethnicityString = implode(",", $ethnicity);
+        $sql .= " AND ethnicity IN ($ethnicityString)";
+    }
+
     $stmt = mysqli_prepare($conn, $sql);
-    mysqli_stmt_bind_param($stmt, "iiii", $gender, $ethnicity, $hostel, $age);
 
     $result = mysqli_stmt_execute($stmt);
 

@@ -81,7 +81,7 @@
                     <div class="ethnicity-check">
                         <?php foreach ($eth_groups as $group): ?>
                             <div class="check-text">
-                                <div><input type="radio" name="ethnicity" value="<?php echo $group['eth_id']; ?>"/></div>
+                                <div><input type="checkbox" name="ethnicity[]" value="<?php echo $group['eth_id']; ?>"/></div>
                                 <div><p><?php echo $group['eth_name'] ?></p></div>
                             </div>
                         <?php endforeach; ?>
