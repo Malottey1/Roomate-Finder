@@ -39,14 +39,14 @@
     </div>
     <div class="main">
         <div class="filter-container">
-            <form action="#" method="#">
+            <form id="filter-form">
                 <div class="section">
                     <div><label><p>Gender</p></label></div>
                     <div class="gender-radio">
-                        <input type="radio" id="male" name="gender" value="male">
+                        <input type="radio" id="male" name="gender" value="0">
                         <label for="male" style="font-weight: 300;">Male</label>
                         
-                        <input type="radio" id="female" name="gender" value="female">
+                        <input type="radio" id="female" name="gender" value="1">
                         <label for="female" style="font-weight: 300;">Female</label>
                     </div>
                 </div>
@@ -61,7 +61,7 @@
                 <div class="section">
                     <div><label for="age"><p>Age</p></label></div>
                     <div class="slider-container">
-                        <div><input type="range" id="age" name="age" min="21" max="50"/></div>
+                        <div><input type="range" id="age" name="age" min="21" max="60"/></div>
                         <div class="max-label"><p id="age-out">50</p></div>
                     </div>
                 </div>
@@ -91,7 +91,7 @@
                 
             </form>
         </div>
-        <div class="grid-container">
+        <div class="grid-container" id="grid-container">
             <?php
                 $users = get_all_users();
                 display_each_user($users);
@@ -170,6 +170,24 @@
         ageSlider.oninput = function(){
             ageOut.innerHTML = this.value;
         };
+
+        const filterForm = document.getElementById('filter-form');
+
+        filterForm.addEventListener('submit', function(event){
+            event.preventDefault();
+
+            var formData = new FormData(this);
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '../actions/filter_listings_action.php', true);
+            xhr.setRequestHeader('Requested-With', 'XMLHttpRequest');
+            xhr.onload = function(){
+                if (xhr.status >= 200 && xhr.status < 400){
+                    document.getElementById("grid-container").innerHTML = xhr.responseText;
+                }
+            };
+            xhr.send(formData);
+        })
 
 
     </script>
