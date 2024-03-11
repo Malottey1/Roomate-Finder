@@ -4,21 +4,26 @@
     include("../actions/display_users_action.php");
 
 
-    $gender = $_POST['gender'];
+    $gender = isset($_POST['gender']) ? $_POST['gender'] : null;
     $age = date("Y") - $_POST['age'];
-    $hostel = $_POST['hostel'];
-    $ethnicity = $_POST['ethnicity'];
+    $hostel = isset($_POST['hostel']) ? $_POST['hostel'] : null;
+    $ethnicity = isset($_POST['ethnicity']) ? $_POST['ethnicity'] : null;
 
-    $sql = "SELECT * FROM users WHERE gender = $gender AND Year(dob) = $age";
+    $sql = "SELECT * FROM users WHERE Year(dob) = $age";
+
+    // check if gender was stated
+    if($gender != null){
+        $sql .= "AND gender = $gender";
+    }
 
     // Include multiple options for ethnicity in query
-    if ($ethnicity){
+    if ($ethnicity != null){
         $ethnicityString = implode(",", $ethnicity);
         $sql .= " AND ethnicity IN ($ethnicityString)";
     }
 
     // Include multiple options for hostel in query
-    if ($hostel){
+    if ($hostel != null){
         $hostelString = implode(",", $hostel);
         $sql .= "AND listing_id IN ($hostelString)";
     }
