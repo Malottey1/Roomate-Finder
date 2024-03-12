@@ -1,7 +1,4 @@
 <?php
-// Start the session
-session_start();
-
 if (isset($_SESSION['user_id'])) {
     // Get the current user ID from the session
     $currentUserId = $_SESSION['user_id'];
@@ -11,10 +8,7 @@ if (isset($_SESSION['user_id'])) {
 
     // Get suggested roommates for the current user
     $suggestedRoommates = getSuggestedRoommates($conn, $currentUserId);
-} else {
-    header("Location: login.php");
-    exit(); 
-}
+} 
 ?>
 
 <!DOCTYPE html>
