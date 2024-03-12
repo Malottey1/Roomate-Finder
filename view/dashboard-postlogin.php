@@ -1,3 +1,22 @@
+<?php
+// Start the session
+session_start();
+
+if (isset($_SESSION['user_id'])) {
+    // Get the current user ID from the session
+    $currentUserId = $_SESSION['user_id'];
+
+    // Include the file to retrieve suggested roommates
+    include '../actions/display_suggested_roommates_action.php';
+
+    // Get suggested roommates for the current user
+    $suggestedRoommates = getSuggestedRoommates($conn, $currentUserId);
+} else {
+    header("Location: login.php");
+    exit(); 
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,26 +54,23 @@
   <p>Finding a roommate should be stress-free</p>
 </div>
 
+
 <h2 class="heading">SUGGESTED ROOMMATES</h2>
 
 <div class="image-container">
-  <div class="image-details">
-    <img src="../assets/images/portrait1.jpg" alt="Portrait 1">
-    <p style="margin-left: 41px; font-weight: bolder;">Jane Doe</p>
-    <p style="margin-left: 41px; margin-top: -20px;">Hosanna</p>
-  </div>
-  <div class="image-details">
-    <img src="../assets/images/portrait2.jpg" alt="Portrait 2">
-    <p style="margin-left: 41px; font-weight: bolder;">Samantha Payton</p>
-    <p style="margin-left: 41px; margin-top: -20px;">Charlotte</p>
-  </div>
-  <div class="image-details">
-    <img src="../assets/images/portrait3.jpg" alt="Portrait 3">
-    <p style="margin-left: 41px; font-weight: bolder;">Mychaela Johnson</p>
-    <p style="margin-left: 41px; margin-top: -20px;" >Dufie Annex</p>
-  </div>
+<?php
+// Display suggested roommates
+foreach ($suggestedRoommates as $roommate) {
+?>
+    <div class="image-details">
+        <img src="../assets/images/<?php echo $roommate['image']; ?>" alt="<?php echo $roommate['name']; ?>">
+        <p style="margin-left: 41px; font-weight: bolder;"><?php echo $roommate['name']; ?></p>
+        <p style="margin-left: 41px; margin-top: -20px;"><?php echo $roommate['hostel']; ?></p>
+    </div>
+<?php
+}
+?>
 </div>
-
 
 
 <center><button class="get-started-button" id="getStartedButton">Get Started</button></center>

@@ -71,6 +71,16 @@ CREATE Table Dislikes (
     FOREIGN KEY (user_id) REFERENCES Users(user_id)
 );
 
+CREATE TABLE SuggestedRoommates (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    hostel VARCHAR(255) NOT NULL,
+    score INT NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES Users(user_id)
+);
+
+
 INSERT INTO Room_Listings (location, hostel_name, hostel_cost) 
 VALUES 
 ('Berekuso', 'Old Dufie', 6200),
