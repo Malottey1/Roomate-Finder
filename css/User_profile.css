@@ -725,7 +725,7 @@ a {
     left: 277px;
     cursor: pointer;
     width: 26.5px;
-    border: 2px solid rgba(255, 255, 255, 1);
+    border: 2px solid rgb(255, 255, 255);
     transform:rotate(1.2deg);
 
 
