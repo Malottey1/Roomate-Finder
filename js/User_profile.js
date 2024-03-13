@@ -1,67 +1,30 @@
+// Get the modal
+var modal = document.getElementById("edit-profile-modal");
 
+// Get the button that opens the modal
+var editProfileButton = document.querySelector(".edit-profile");
 
-function goToEditProfile() {
-    window.location.href = '../view/edit-profile.html';
-}
+// Get the <span> element that closes the modal
+var closeBtn = document.querySelector(".close");
 
-
-// Event listener for clicking on profile images
-const profileImages = document.querySelectorAll('.roomed-with-block img');
-profileImages.forEach(image => {
-    image.addEventListener('click', () => {
-        const profileName = prompt("Enter profile name:");
-        if (profileName !== null) {
-            console.log('Viewing profile:', profileName);
-        }
-    });
+// When the user clicks the button, open the modal 
+editProfileButton.addEventListener('click', function() {
+  modal.style.display = "block";
 });
 
-// Event listener for clicking on stars
-const stars = document.querySelectorAll('.star');
-stars.forEach((star, index) => {
-    star.addEventListener('click', () => {
-        const rating = index + 1;
-        console.log('Rating:', rating);
-    });
+// When the user clicks on <span> (x), close the modal
+closeBtn.addEventListener('click', function() {
+  modal.style.display = "none";
 });
 
-// Event listener for clicking on the "Delete Profile" button
-const deleteProfileButton = document.querySelector('.delete-profile');
-deleteProfileButton.addEventListener('click', () => {
-    const confirmation = confirm("Are you sure you want to delete your profile?");
-    if (confirmation) {
-        console.log('Profile deleted.');
-    }
+// When the user clicks anywhere outside of the modal, close it
+window.addEventListener('click', function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 });
-
-// Event listener for clicking on the "View Profile" button
-const viewProfileButton = document.querySelector('.view-profile');
-viewProfileButton.addEventListener('click', () => {
-    console.log('Viewing profile...');
-    // Add logic to navigate to the view profile page or show profile details
-});
-
-
-
-function toggleEdit(elementIds) {
-    elementIds.forEach(elementId => {
-        var element = document.getElementById(elementId);
-        if (element) {
-            element.contentEditable = element.contentEditable === 'true' ? 'false' : 'true';
-        }
-    });
-}
-
-// Update the event listeners for edit pencils
-var editPencilIcons = document.querySelectorAll('.edit-pencil-icon');
-editPencilIcons.forEach(icon => {
-    icon.addEventListener('click', function(event) {
-        var parentElementId = event.target.parentElement.id;
-        toggleEdit([parentElementId]);
-    });
-});
-
-// Update the editProfilePhoto function to target the correct element
+j
+// Function to handle uploading profile photo
 function editProfilePhoto() {
     // Open a file dialog to let the user select a new photo
     var input = document.createElement('input');
@@ -77,9 +40,9 @@ function editProfilePhoto() {
         reader.onload = function() {
             var imageDataUrl = reader.result;
 
-            // Update the profile photo with the new image
-            var profilePicture = document.querySelector('.profile-picture');
-            profilePicture.style.backgroundImage = 'url(' + imageDataUrl + ')';
+            // Update the profile picture in ellipse 1 with the new image
+            var ellipse1ProfilePicture = document.querySelector('.ellipse-1');
+            ellipse1ProfilePicture.style.backgroundImage = 'url(' + imageDataUrl + ')';
         };
 
         // Read the selected file
@@ -95,18 +58,31 @@ var editProfilePhotoIcon = document.querySelector('.rectangle-8 .edit-pencil-ico
 editProfilePhotoIcon.addEventListener('click', function() {
     editProfilePhoto();
 });
+// Get all star elements
+var stars = document.querySelectorAll('.star-1, .star-2, .star-3, .star-4, .star-5');
 
-// Add event listeners to rectangles 1, 2, and 3
-var rectangle1 = document.getElementById('rectangle-1');
-var rectangle2 = document.getElementById('rectangle-2');
-var rectangle3 = document.getElementById('rectangle-3');
+// Function to handle star click event
+function handleStarClick(event) {
+    var star = event.currentTarget;
+    var starIndex = Array.from(stars).indexOf(star) + 1; // Get the index of the clicked star
+    var fillColor = "#FFFFFF"; // Default fill color is white
 
-rectangle1.addEventListener('click', function() {
-    toggleEdit(['rectangle-1']);
+    // Check if the star is currently filled
+    var isFilled = star.querySelector("path").getAttribute("fill") === "#7ED957";
+
+    // Toggle fill color based on current state
+    if (isFilled) {
+        fillColor = "#FFFFFF"; // Change to white if currently filled
+    } else {
+        fillColor = "#7ED957"; // Change to green if currently not filled
+    }
+
+    // Update fill color of the star
+    star.querySelector("path").setAttribute("fill", fillColor);
+}
+
+// Add click event listener to each star
+stars.forEach(function(star) {
+    star.addEventListener('click', handleStarClick);
 });
-rectangle2.addEventListener('click', function() {
-    toggleEdit(['rectangle-2']);
-});
-rectangle3.addEventListener('click', function() {
-    toggleEdit(['rectangle-3']);
-});
+
