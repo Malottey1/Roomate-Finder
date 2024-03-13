@@ -80,7 +80,59 @@
         <div class="janes-bio">Jane’s Bio</div>
         <div class="location">Location</div>
 
-        <div class="edit-profile" onclick="goToEditProfile()">Edit Profile</div>
+          <!-- Add a modal for the edit profile form -->
+          <div id="edit-profile-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Edit Profile</h2>
+                <form id="edit-profile-form">
+                    <!-- Input field for bio -->
+                    <label for="bio">Bio:</label><br>
+                    <textarea id="bio" name="bio" rows="4" cols="50"></textarea><br>
+
+                    <!-- Input fields for rectangle contents -->
+                    <label for="rectangle-3-content">Interests:</label><br>
+
+
+                    <!-- Input fields for other editable content -->
+                    <label for="rectangle-4-content">Interest 1:</label><br>
+                    <input type="text" id="rectangle-4-content" name="rectangle-4-content"><br>
+
+                    <label for="rectangle-5-content">Interest 2:</label><br>
+                    <input type="text" id="rectangle-5-content" name="rectangle-5-content"><br>
+
+                    <label for="rectangle-6-content">Interest 3:</label><br>
+                    <input type="text" id="rectangle-6-content" name="rectangle-6-content"><br>
+
+                    <label for="rectangle-7-content">Interest 4:</label><br>
+                    <input type="text" id="rectangle-7-content" name="rectangle-7-content"><br>
+
+                    <label for="rectangle-3-content">Criteria:</label><br>
+
+                    <label for="rectangle-10-content">Option 1:</label><br>
+                    <input type="text" id="rectangle-10-content" name="rectangle-10-content"><br>
+
+                    <label for="rectangle-11-content">Option 2:</label><br>
+                    <input type="text" id="rectangle-11-content" name="rectangle-11-content"><br>
+
+                    <label for="rectangle-12-content">Option 3:</label><br>
+                    <input type="text" id="rectangle-12-content" name="rectangle-12-content"><br>
+
+                    <label for="rectangle-13-content">Option 4:</label><br>
+                    <input type="text" id="rectangle-13-content" name="rectangle-13-content"><br>
+
+                    <!-- Input field for location details -->
+                    <label for="location-details-content">Location Details:</label><br>
+                    <input type="text" id="location-details-content" name="location-details-content"><br>
+
+                    
+
+
+                    <input type="submit" value="Save Changes">
+                </form>
+            </div>
+        </div>
+        <div class="edit-profile">Edit Profile</div>
 
         <div class="view-profile">View Profile</div>
         <div class="delete-profile">Delete Profile</div>
