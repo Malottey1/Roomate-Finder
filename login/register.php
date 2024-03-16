@@ -1,6 +1,7 @@
 <?php
     //establish connection with database
     include('../actions/display_hostels_action.php');
+    include('../actions/display_ethnic_group.php');
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../css/registration-styles.css">
-    <title>Login Page</title>
+    <title>Register Page</title>
     
 </head>
 <body>
@@ -64,8 +65,12 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="ethnicity">Ethnicity (optional):</label>
-                        <input type="text" id="ethnicity" name="ethnicity" pattern="^[A-Za-z\s\-,']+$" required>
+                        <label for="ethnicity">Ethnicity:</label>
+                        <select id="ethnicity" name=ethnicity required>
+                            <?php foreach ($eth_groups as $group): ?>
+                                <option value="<?php echo $group['eth_id']; ?>"><?php echo $group['eth_name']; ?></option>
+                            <?php endforeach; ?>
+                        </select>
                     </div>
 
                     <h2>Location:</h2>

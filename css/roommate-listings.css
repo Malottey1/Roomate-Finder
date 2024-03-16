@@ -164,9 +164,9 @@ footer a{
     padding: 20px 0px 0px 50px;
 }
 
-.filter-container .move-in-check {
+.filter-container .hostel-check {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr ;
 }
 
 .check-text {
@@ -176,7 +176,7 @@ footer a{
     font-size: 11px;
 }
 
-.filter-container .lease-duration {
+.filter-container .ethnicity-check {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -216,6 +216,17 @@ footer a{
 
 .filter-container {
     background-color: white;
+}
+
+.slider-container {
+    position: relative;
+}
+
+.max-label {
+    position: absolute;
+    top: -7px;
+    right: 50px;
+    font-size: 11px;
 }
 
 .filter-container form{
@@ -269,6 +280,7 @@ footer a{
     border-radius: 5px;
     margin-left: 50px;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .submit-btn:hover {

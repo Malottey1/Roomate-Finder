@@ -9,6 +9,12 @@ CREATE DATABASE roommate_radar;
 USE roommate_radar;
 
 -- Create the tables
+CREATE Table Ethnicity(
+    eth_id INT AUTO_INCREMENT PRIMARY KEY,
+    eth_name VARCHAR(255),
+    eth_desc VARCHAR(255)
+);
+
 CREATE Table Room_Listings (
     listing_id INT AUTO_INCREMENT PRIMARY KEY,
     location VARCHAR(255),
@@ -24,9 +30,10 @@ CREATE Table Users (
     last_name VARCHAR(255),
     gender TINYINT(1) NOT NULL,
     dob DATE,
-    ethnicity VARCHAR(255),
+    ethnicity INT,
     listing_id INT,
     FOREIGN KEY (listing_id) REFERENCES Room_Listings(listing_id),
+    FOREIGN KEY (ethnicity) REFERENCES Ethnicity(eth_id),
     CONSTRAINT check_field CHECK (gender IN (0, 1))
 );
 
@@ -70,6 +77,19 @@ CREATE Table Dislikes (
     COMMENT VARCHAR(255),
     FOREIGN KEY (user_id) REFERENCES Users(user_id)
 );
+
+INSERT INTO Ethnicity (eth_name, eth_desc)
+VALUES
+('African', 'Ethnic groups indigenous to Africa'),
+('Asian', 'Ethnic groups indigenous to Asia'),
+('European', 'Ethnic groups indigenous to Europe'),
+('Native American', 'Indigenous peoples of the Americas'),
+('Hispanic/Latino', 'Ethnic groups with origins in Latin America or Spain'),
+('Middle Eastern', 'Ethnic groups from the Middle East region'),
+('Indigenous Peoples', 'Various indigenous ethnic groups from around the world'),
+('Pacific Islander', 'Ethnic groups indigenous to the Pacific Islands'),
+('Jewish', 'Ethnic group associated with Judaism'),
+('Romani', 'Ethnic group with roots in South Asia, traditionally nomadic');
 
 INSERT INTO Room_Listings (location, hostel_name, hostel_cost) 
 VALUES 

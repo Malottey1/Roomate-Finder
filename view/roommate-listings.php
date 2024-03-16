@@ -1,5 +1,7 @@
 <?php
     include("../actions/display_users_action.php");
+    include("../actions/display_hostels_action.php");
+    include("../actions/display_ethnic_group.php");
 ?>
 
 <!DOCTYPE html>
@@ -37,127 +39,59 @@
     </div>
     <div class="main">
         <div class="filter-container">
-            <form action="#" method="#">
+            <form id="filter-form">
                 <div class="section">
                     <div><label><p>Gender</p></label></div>
                     <div class="gender-radio">
-                        <input type="radio" id="male" name="gender" value="male">
+                        <input type="radio" id="male" name="gender" value="0">
                         <label for="male" style="font-weight: 300;">Male</label>
                         
-                        <input type="radio" id="female" name="gender" value="female">
+                        <input type="radio" id="female" name="gender" value="1">
                         <label for="female" style="font-weight: 300;">Female</label>
                     </div>
                 </div>
                   
                 <div class="section">
                     <div><label for="budget"><p>Budget</p></label></div>
-                    <div><input type="range" name="budget" min="2000" max="10000"/></div>
+                    <div class="slider-container">
+                        <div><input type="range" id="budget" name="budget" min="2000" max="10000"/></div>
+                        <div class="max-label"><p id="budget-out">10000</p></div>
+                    </div>
                 </div>
                 <div class="section">
                     <div><label for="age"><p>Age</p></label></div>
-                    <div><input type="range" name="age" min="21" max="50"/></div>
-                </div>
-                <div class="section">
-                    <div><label for="move-in-date"><p>Move in Date</p></label></div>
-                    <div class="move-in-check">
-                        <div class="check-text">
-                            <div><input type="radio" name="move-in-date" value="jan"></div>
-                            <div><p>Jan</p></div>
-                        </div>
-                        <div class="check-text">
-                            <div><input type="radio" name="move-in-date" value="feb"></div>
-                            <div><p>Feb</p></div>
-                        </div>
-                        <div class="check-text">
-                            <div><input type="radio" name="move-in-date" value="mar"></div>
-                            <div><p>Mar</p></div>
-                        </div>
-                        <div class="check-text">
-                            <div><input type="radio" name="move-in-date" value="apr"></div>
-                            <div><p>Apr</p></div>
-                        </div>
-                        <div class="check-text">
-                            <div><input type="radio" name="move-in-date" value="may"></div>
-                            <div><p>May</p></div>
-                        </div>
-                        <div class="check-text">
-                            <div><input type="radio" name="move-in-date" value="jun"></div>
-                            <div><p>Jun</p></div>
-                        </div>
-                        <div class="check-text">
-                            <div><input type="radio" name="move-in-date" value="jul"></div>
-                            <div><p>Jul</p></div>
-                        </div>
-                        <div class="check-text">
-                            <div><input type="radio" name="move-in-date" value="aug"></div>
-                            <div><p>Aug</p></div>
-                        </div>
-                        <div class="check-text">
-                            <div><input type="radio" name="move-in-date" value="sep"></div>
-                            <div><p>Sep</p></div>
-                        </div>
-                        <div class="check-text">
-                            <div><input type="radio" name="move-in-date" value="oct"></div>
-                            <div><p>Oct</p></div>
-                        </div>
-                        <div class="check-text">
-                            <div><input type="radio" name="move-in-date" value="nov"></div>
-                            <div><p>Nov</p></div>
-                        </div>
-                        <div class="check-text">
-                            <div><input type="radio" name="move-in-date" value="dec"></div>
-                            <div><p>Dec</p></div>
-                        </div>
+                    <div class="slider-container">
+                        <div><input type="range" id="age" name="age" min="21" max="60"/></div>
+                        <div class="max-label"><p id="age-out">50</p></div>
                     </div>
                 </div>
                 <div class="section">
-                    <div><label for="lease-duration"><p>Lease Duration</p></label></div>
-                    <div class="lease-duration">
-                        <div class="check-text">
-                            <div><input type="radio" name="lease-duration" value="monthly"></div>
-                            <div><p>Month-to-month</p></div>
-                        </div>
-                        <div class="check-text">
-                            <div><input type="radio" name="lease-duration" value="4-months"></div>
-                            <div><p>4-months</p></div>
-                        </div>
-                        <div class="check-text">
-                            <div><input type="radio" name="lease-duration" value="6-months"></div>
-                            <div><p>6-months</p></div>
-                        </div>
-                        <div class="check-text">
-                            <div><input type="radio" name="lease-duration" value="12-months"></div>
-                            <div><p>1 Year</p></div>
-                        </div>
+                    <div><label for="hostel-check"><p>Hostel Occupying</p></label></div>
+                    <div class="hostel-check">
+                        <?php foreach ($hostels as $hostel): ?>
+                            <div class="check-text">
+                                <div><input type="checkbox" name="hostel[]" value="<?php echo $hostel['listing_id']; ?>"/></div>
+                                <div><p><?php echo $hostel['hostel_name'] ?></p></div>
+                            </div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
                 <div class="section">
-                    <div><label for="pets"><p>Pets</p></label></div>
-                    <div class="lease-duration">
-                        <div class="check-text">
-                            <div><input type="radio" name="pets" value="none"></div>
-                            <div><p>No pets</p></div>
-                        </div>
-                        <div class="check-text">
-                            <div><input type="radio" name="pets" value="dogs"></div>
-                            <div><p>Dogs</p></div>
-                        </div>
-                        <div class="check-text">
-                            <div><input type="radio" name="pets" value="cats"></div>
-                            <div><p>Cats</p></div>
-                        </div>
-                        <div class="check-text">
-                            <div><input type="radio" name="pets" value="12-months"></div>
-                            <div><p>Pet-friendly</p></div>
-                        </div>
+                    <div><label for="ethnicity-check"><p>Ethnicity</p></label></div>
+                    <div class="ethnicity-check">
+                        <?php foreach ($eth_groups as $group): ?>
+                            <div class="check-text">
+                                <div><input type="checkbox" name="ethnicity[]" value="<?php echo $group['eth_id']; ?>"/></div>
+                                <div><p><?php echo $group['eth_name'] ?></p></div>
+                            </div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
                 <div><button class="submit-btn" name="submit-btn" type="submit"><p>Apply Filter</p></button></div>
                 
-
             </form>
         </div>
-        <div class="grid-container">
+        <div class="grid-container" id="grid-container">
             <?php
                 $users = get_all_users();
                 display_each_user($users);
@@ -219,6 +153,41 @@
             // Redirect to User_profile.html when the profile photo is clicked
             window.location.href = '../view/User_profile.html';
         });
+
+        // Update values displayed for budget and age
+        var budgetSlider = document.getElementById('budget');
+        var budgetOut = document.getElementById('budget-out');
+        var ageSlider = document.getElementById('age');
+        var ageOut = document.getElementById('age-out');
+
+        budgetOut.innerHTML = budgetSlider.value;
+        ageOut.innerHTML = ageSlider.value;
+
+        budgetSlider.oninput = function(){
+            budgetOut.innerHTML = this.value;
+        };
+
+        ageSlider.oninput = function(){
+            ageOut.innerHTML = this.value;
+        };
+
+        const filterForm = document.getElementById('filter-form');
+
+        filterForm.addEventListener('submit', function(event){
+            event.preventDefault();
+
+            var formData = new FormData(this);
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '../actions/filter_listings_action.php', true);
+            xhr.setRequestHeader('Requested-With', 'XMLHttpRequest');
+            xhr.onload = function(){
+                if (xhr.status >= 200 && xhr.status < 400){
+                    document.getElementById("grid-container").innerHTML = xhr.responseText;
+                }
+            };
+            xhr.send(formData);
+        })
 
 
     </script>
