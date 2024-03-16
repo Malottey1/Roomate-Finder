@@ -120,18 +120,18 @@
 
 
 
-        document.addEventListener('DOMContentLoaded', function() {
-            // Get all elements with the class "send-btn"
-            const sendButtons = document.querySelectorAll('.send-btn');
+        // document.addEventListener('DOMContentLoaded', function() {
+        //     // Get all elements with the class "send-btn"
+        //     const sendButtons = document.querySelectorAll('.send-btn');
 
-            // Add click event listener to each send button
-            sendButtons.forEach(function(button) {
-                button.addEventListener('click', function() {
-                    // Redirect to messages.html when a send button is clicked
-                    window.location.href = '../view/message.html';
-                });
-            });
-        });
+        //     // Add click event listener to each send button
+        //     sendButtons.forEach(function(button) {
+        //         button.addEventListener('click', function() {
+        //             // Redirect to messages.html when a send button is clicked
+        //             window.location.href = '../view/message.html';
+        //         });
+        //     });
+        // });
 
 
         document.addEventListener('DOMContentLoaded', function() {
