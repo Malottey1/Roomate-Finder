@@ -56,7 +56,9 @@
             echo '<div class="lower">';
             echo '<div><p class="name">'.$user["first_name"].' '.$user["last_name"].'</p></div>';
             echo '<div class="icons">';
+            echo '<a href="../actions/send_email_action.php?uid='.$user['user_id'].'" >';
             echo '<div style="margin-right: 10px;" class="material-symbols-outlined send-btn">send</div>';
+            echo '</a>';
             echo '<div class="material-symbols-outlined">thumb_down</div>';
             echo '</div></div>';
             

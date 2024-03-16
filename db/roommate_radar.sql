@@ -54,7 +54,7 @@ CREATE Table Preferences (
 
 CREATE Table Profile (
     profile_id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT NOT NULL,
+    user_id INT,
     photo_name VARCHAR(255),
     bio VARCHAR(255),
     facebook VARCHAR(255),
