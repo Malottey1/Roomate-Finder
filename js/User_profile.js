@@ -23,7 +23,7 @@ window.addEventListener('click', function(event) {
     modal.style.display = "none";
   }
 });
-j
+
 // Function to handle uploading profile photo
 function editProfilePhoto() {
     // Open a file dialog to let the user select a new photo
@@ -33,25 +33,73 @@ function editProfilePhoto() {
 
     // Handle file selection
     input.onchange = function(event) {
-        var file = event.target.files[0];
-        var reader = new FileReader();
+      alert("working.");
 
-        // Read the selected file as a data URL
-        reader.onload = function() {
-            var imageDataUrl = reader.result;
+      var file = event.target.files[0];
+      var reader = new FileReader();
 
-            // Update the profile picture in ellipse 1 with the new image
-            var ellipse1ProfilePicture = document.querySelector('.ellipse-1');
-            ellipse1ProfilePicture.style.backgroundImage = 'url(' + imageDataUrl + ')';
-        };
+      var formData = new FormData();
 
-        // Read the selected file
-        reader.readAsDataURL(file);
+      // Read the selected file as a data URL
+      reader.onload = function() {
+          var imageDataUrl = reader.result;
+
+          // Update the profile picture in ellipse 1 with the new image
+          var ellipse1ProfilePicture = document.querySelector('.ellipse-1');
+          ellipse1ProfilePicture.style.backgroundImage = 'url(' + imageDataUrl + ')';
+      };
+
+      // Read the selected file
+      reader.readAsDataURL(file);
+
+      formData.append('file', file);
+
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', '../actions/upload_photo_action.php');
+      xhr.onload = function(){
+        if (xhr.status === 200){
+          console.log("Successful upload");
+        }
+        else{
+          console.error("Unsuccessful upload");
+        }
+      }
+      xhr.send(formData);
     };
 
     // Trigger the file dialog
     input.click();
 }
+
+// function editProfilePhoto() {
+//   // Open a file dialog to let the user select a new photo
+//   var input = document.createElement('input');
+//   input.type = 'file';
+//   input.accept = 'image/*';
+
+//   alert("working")
+
+//   // Handle file selection
+//   input.onchange = function(event) {
+
+//       var file = event.target.files[0];
+//       var formData = new FormData();
+
+//       formData.append('file', file);
+
+//       var xhr = new XMLHttpRequest();
+//       xhr.open('POST', '../actions/upload_photo_action.php');
+//       xhr.onload = function(){
+//         if (xhr.status === 200){
+//           console.log("Successful upload");
+//         }
+//         else{
+//           console.error("Unsuccessful upload");
+//         }
+//       }
+//       xhr.send(formData);
+//   }
+// }
 
 // Add event listener to the edit profile photo icon
 var editProfilePhotoIcon = document.querySelector('.rectangle-8 .edit-pencil-icon');
