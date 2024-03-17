@@ -1,5 +1,6 @@
 <?php
     include("../settings/connection.php"); // connect to database
+    include("../functions/insert_preferences_fxn.php"); 
 
     if (isset($_POST['submit-btn'])){
         
@@ -16,6 +17,12 @@
         
         $bio = $_POST['bio'];
         $fbook = $_POST['socialMedia'];
+
+        // Preferences
+        $first_preference = $_POST['criteria1'];
+        $second_preference = $_POST['criteria2'];
+        $third_preference = $_POST['criteria3'];
+        $four_preference = $_POST['criteria4'];
 
         if ($passwrd == $c_psswrd){
             $hashed_passwrd = password_hash($passwrd, PASSWORD_DEFAULT);
@@ -39,9 +46,11 @@
         $stmt2 = mysqli_prepare($conn, $sql2);
         mysqli_stmt_bind_param($stmt2, "iss", $uid, $bio, $fbook);
         $result2 = mysqli_stmt_execute($stmt2);
-        
+
+        $result3 = insert_preferences($first_preference, $second_preference, $third_preference, $four_preference, $uid);
+   
         // If all querries worked
-        if ($result && $result2){
+        if ($result && $result2 && $result3){
             header("Location: ../view/dashboard-postLogin.php");
             exit();
         }
