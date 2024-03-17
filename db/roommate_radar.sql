@@ -32,8 +32,8 @@ CREATE Table Users (
     dob DATE,
     ethnicity INT,
     listing_id INT,
-    FOREIGN KEY (listing_id) REFERENCES Room_Listings(listing_id),
-    FOREIGN KEY (ethnicity) REFERENCES Ethnicity(eth_id),
+    FOREIGN KEY (listing_id) REFERENCES Room_Listings(listing_id) ON DELETE CASCADE,
+    FOREIGN KEY (ethnicity) REFERENCES Ethnicity(eth_id) ON DELETE CASCADE,
     CONSTRAINT check_field CHECK (gender IN (0, 1))
 );
 
@@ -42,14 +42,14 @@ CREATE Table Reviews (
     user_id INT NOT NULL,
     rating INT,
     review_date DATE,
-    FOREIGN KEY (user_id) REFERENCES Users(user_id)
+    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE
 );
 
 CREATE Table Preferences (
     preference_id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
     comment VARCHAR(255),
-    FOREIGN KEY (user_id) REFERENCES Users(user_id)
+    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE
 );
 
 CREATE Table Profile (
@@ -58,7 +58,7 @@ CREATE Table Profile (
     photo_name VARCHAR(255),
     bio VARCHAR(255),
     facebook VARCHAR(255),
-    FOREIGN KEY (user_id) REFERENCES Users(user_id)
+    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE
 );
 
 CREATE Table Roommate_History (
@@ -67,15 +67,15 @@ CREATE Table Roommate_History (
     roommate_id INT NOT NULL,
     start_date DATE,
     end_date DATE,
-    FOREIGN KEY (user_id) REFERENCES Users(user_id),
-    FOREIGN KEY (roommate_id) REFERENCES Users(user_id)
+    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE,
+    FOREIGN KEY (roommate_id) REFERENCES Users(user_id) ON DELETE CASCADE
 );
 
 CREATE Table Dislikes (
     dislike_id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
     COMMENT VARCHAR(255),
-    FOREIGN KEY (user_id) REFERENCES Users(user_id)
+    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE
 );
 
 INSERT INTO Ethnicity (eth_name, eth_desc)

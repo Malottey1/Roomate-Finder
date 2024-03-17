@@ -1,5 +1,7 @@
 <?php
     include("../settings/connection.php"); // connect to database
+    include("../functions/insert_preferences_fxn.php");
+    include("../functions/insert_dislikes_fxn.php"); 
 
     if (isset($_POST['submit-btn'])){
         
@@ -17,6 +19,24 @@
         $bio = $_POST['bio'];
         $fbook = $_POST['socialMedia'];
 
+        // preferences
+        $preferences = array(
+            $_POST['interests1'],
+            $_POST['interests2'],
+            $_POST['interests3'],
+            $_POST['interests4']
+        );
+
+        // dislikes
+        $dislikes = array(
+            $_POST['criteria1'],
+            $_POST['criteria2'],
+            $_POST['criteria3'],
+            $_POST['criteria4']
+        );
+
+        // check password
+
         if ($passwrd == $c_psswrd){
             $hashed_passwrd = password_hash($passwrd, PASSWORD_DEFAULT);
         }
@@ -25,35 +45,28 @@
             exit();
         }
 
+        // insert into users table
         $sql = "INSERT INTO users (email, passwrd, first_name, last_name, gender, dob, ethnicity, listing_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = mysqli_prepare($conn, $sql);
         mysqli_stmt_bind_param($stmt, "ssssisis", $email, $hashed_passwrd, $fname, $lname, $gender, $dob, $ethnicity, $hostel);
         $result = mysqli_stmt_execute($stmt);
 
-        // Get the user id of the user
-        $sql2 = "SELECT * FROM users WHERE email = ?";
-        $stmt3 = mysqli_prepare($conn, $sql2);
-        mysqli_stmt_bind_param($stmt3, "s", $email);
-        mysqli_stmt_execute($stmt3);
-        $res = mysqli_stmt_get_result($stmt3);
+        // find the id of the just inserted row
+        $uid = mysqli_insert_id($conn);
+        $photo = "no_image.jpg";
 
-        if($res){
-            if(mysqli_num_rows($res) > 0){
-                $user = mysqli_fetch_all($res, MYSQLI_ASSOC);
-            }
-        }
+        // insert details into profile table
+        $sql2 = "INSERT INTO profile (user_id, photo_name, bio, facebook) VALUES (?, ?, ?, ?)";
+        $stmt2 = mysqli_prepare($conn, $sql2);
+        mysqli_stmt_bind_param($stmt2, "isss", $uid, $photo, $bio, $fbook);
+        $result2 = mysqli_stmt_execute($stmt2);
 
-        // gets the id of a single user
-        foreach($user as $u){
-            $sql3 = "INSERT INTO profile (user_id, bio, facebook) VALUES (?, ?, ?)";
-            $stmt2 = mysqli_prepare($conn, $sql3);
-            mysqli_stmt_bind_param($stmt2, "iss", $u['user_id'], $bio, $fbook);
-            $result2 = mysqli_stmt_execute($stmt2);
-        }
-        
+        $result3 = insert_preferences($preferences, $uid);
+        $result4 = insert_dislikes($dislikes, $uid);
+   
         // If all querries worked
-        if ($result && $result2){
-            header("Location: ../view/dashboard-postLogin.php");
+        if ($result && $result2 && $result3){
+            header("Location: ../login/login.php");
             exit();
         }
         else{

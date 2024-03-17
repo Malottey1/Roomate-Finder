@@ -135,7 +135,7 @@
                         </div>
                         <div class="form-group">
                             <label for="socialMedia">Facebook Profile Link:</label>
-                            <input type="text" id="socialMedia" name="socialMedia">
+                            <input type="text" id="socialMedia" name="socialMedia" required>
                         </div>
                             <button id="registerButton" name="submit-btn" type="submit">Submit</button>
                         </div>

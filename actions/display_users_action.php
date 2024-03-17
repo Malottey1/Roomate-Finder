@@ -45,14 +45,43 @@
         }
     }
 
+    // Get profile details of a particular user
+    function get_user_profile($id){
+        global $conn;
+
+        $sql = "SELECT * FROM profile WHERE user_id = ?";
+
+        $stmt = mysqli_prepare($conn, $sql);
+        mysqli_stmt_bind_param($stmt, "i", $id);
+
+        $result = mysqli_stmt_execute($stmt);
+
+        if (!$result){
+            die("Unsuccessful query: ".mysqli_error($conn));
+        }
+        else {
+            $result_set = mysqli_stmt_get_result($stmt);
+
+            if (mysqli_num_rows($result_set) > 0){
+                $profile = mysqli_fetch_all($result_set, MYSQLI_ASSOC);
+                return $profile;
+            }
+        }
+        
+    }
+
     function display_each_user($users){
+
+        if ($users == null){return;}
 
         foreach ($users as $user){
 
             $hostel = get_user_hostel($user['listing_id']);
+            $profile = get_user_profile($user['user_id']);
+            $photo = $profile[0]['photo_name'];
 
             echo "<div class='card'>";
-            echo "<div><img src='../assets/images/Rectangle 38.jpg' alt='card image'></div>";
+            echo "<div><img src='../images/".$photo."' alt='card image'></div>";
             echo '<div class="lower">';
             echo '<div><p class="name">'.$user["first_name"].' '.$user["last_name"].'</p></div>';
             echo '<div class="icons">';
