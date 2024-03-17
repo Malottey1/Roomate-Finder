@@ -7,7 +7,6 @@
     session_start();
 
     $uid =  $_SESSION['user-id'];
-    $profile = null;
 
     $profile = get_profile_info($uid);
 

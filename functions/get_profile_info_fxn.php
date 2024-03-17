@@ -5,7 +5,7 @@
     function get_profile_info($uid){
         global $conn;
 
-        $sql = "SELECT  users.user_id, first_name, last_name, bio, preferences.comment, dislikes.COMMENT
+        $sql = "SELECT  users.user_id, first_name, last_name, bio, facebook, preferences.comment, dislikes.COMMENT
         FROM users
         JOIN profile ON users.user_id = profile.user_id 
         JOIN dislikes ON users.user_id = dislikes.user_id 

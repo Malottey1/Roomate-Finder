@@ -1,3 +1,22 @@
+<?php
+        include("../functions/show_profile_fxn.php");
+        include("../functions/get_profile_info_fxn.php");
+
+        if($_GET['uid']){
+            $uid = $_GET['uid'];
+
+            if($uid == null){echo "empty";}
+
+            $profile = get_profile_info($uid);
+
+            $dislike_comments = json_decode($profile[0]['COMMENT']);
+            $preference_comments = json_decode($profile[0]['comment']);
+        
+            $picture = get_profile_photo($uid);
+        }
+        
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,34 +67,34 @@
         </div>
         <div class="rectangle-8" >
         </div>
-        <div class="ellipse-1"></div>
+        <div class="ellipse-1" style="background: url('../images/<?php echo $picture ?>') center/cover;"></div>
        
         
-        <div class="Name editable">Jane Doe</div>
+        <div class="Name editable"><?php echo $profile[0]['first_name'];  ?></div>
 
-        <div class="janes-interests">Jane’s interests include...</div>
+        <div class="janes-interests"><?php echo $profile[0]['first_name'] ?>’s interests include...</div>
         
         <div class="rectangle-4 " id="rectangle-4">
             
         </div>
         
-        <div class="drawing-painting editable">Drawing and painting</div>
+        <div class="drawing-painting editable"><?php echo $preference_comments[0]?></div>
         <div class="rectangle-5" id="rectangle-5"></div>
         
-        <div class="watching-sitcoms editable">Watching sitcom series</div>
+        <div class="watching-sitcoms editable"><?php echo $preference_comments[1]?></div>
         <div class="rectangle-6" id="rectangle-6"></div>
         
-        <div class="video-gaming editable">Video Gaming</div>
+        <div class="video-gaming editable"><?php echo $preference_comments[2]?></div>
         <div class="rectangle-7" id="rectangle-7"></div>
         
-        <div class="coding-late editable">Coding late at night</div>
+        <div class="coding-late editable"><?php echo $preference_comments[3]?></div>
         <div class="ellipse-3"></div>
         <div class="ellipse-4"></div>
         <div class="ellipse-5"></div>
-        <div class="janes-bio">Jane’s Bio</div>
+        <div class="janes-bio"><?php echo $profile[0]['first_name'] ?>’s Bio</div>
         <div class="location">Location</div>
         <div class="facebook-link">
-            <a href="https://www.facebook.com/your-facebook-profile" target="_blank" rel="noopener noreferrer">
+            <a href="<?php $profile[0]['facebook']; ?>" target="_blank" rel="noopener noreferrer">
             <span class="facebook-icon-text">
                 <i class="fa fa-facebook"></i><img src="../assets/images/facebook.jpeg" alt="Facebook icon" style="width:20px; margin-right: 10px;">   Facebook
             </span>
@@ -83,7 +102,7 @@
         </div>
         <div class="contact-info-text">Contact Info</div>
         <div class="rating">Rating</div>
-        <div class="janes-criteria">Jane’s Criteria</div>
+        <div class="janes-criteria"><?php echo $profile[0]['first_name'] ?>’s Criteria</div>
         
         <div class="location-details editable">Eastern Region, Berekuso</div>
         <div class="line-1"></div>
@@ -118,25 +137,21 @@
         </div>
         <div class="rectangle-10">
            
-            <p class="criteria editable">Respects my space</p>
+            <p class="criteria editable"><?php echo $dislike_comments[0]?></p>
         </div>
         <div class="rectangle-11">
-            <p class = "criteria editable">Quiet</p>
+            <p class = "criteria editable"><?php echo $dislike_comments[1]?></p>
 
         </div>
         <div class="rectangle-13">
             
-            <p class="criteria editable">Clean and tidy</p>
+            <p class="criteria editable"><?php echo $dislike_comments[2]?></p>
         </div>
         <div class="rectangle-12">
             
-            <p class="criteria editable">Doesn’t mind loud music</p>
+            <p class="criteria editable"><?php echo $dislike_comments[3]?></p>
         </div>
-        <div class="bio-content eidtable">
-            
-            Adventure seeker, coffee enthusiast, and eternal optimist. Lover of good books, great conversations, and spontaneous road trips. On a perpetual quest to explore new places, meet interesting people, and make memories worth sharing. Firm believer in kindness, curiosity, and the power of laughter. Let's embark on this journey together!
-            
-        </div>
+        <div class="bio-content eidtable"><?php echo $profile[0]['bio']; ?></div>
     </div>
 
     <footer>

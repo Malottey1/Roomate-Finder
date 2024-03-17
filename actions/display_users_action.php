@@ -84,7 +84,7 @@
             echo "<div><img src='../images/".$photo."' alt='card image'></div>";
             echo '<div class="lower">';
             echo '<div>';
-            echo '<a style="text-decoration: none; color: inherit;" href="../actions/display_roommate_action.php?uid='.$user['user_id'].'" >';
+            echo '<a style="text-decoration: none; color: inherit;" href="../view/roommate-profile.php?uid='.$user["user_id"].'" >';
             echo '<p class="name">'.$user["first_name"].' '.$user["last_name"].'</p>';
             echo '</a>';
             echo '</div>';
