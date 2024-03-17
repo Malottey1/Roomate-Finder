@@ -5,7 +5,7 @@
     function get_all_hostels(){
         global $conn;
 
-        $sql = "SELECT * FROM room_listings";
+        $sql = "SELECT * FROM Room_Listings";
         $result = mysqli_query($conn, $sql);
 
         if (!$result){
