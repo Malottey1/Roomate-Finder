@@ -49,7 +49,7 @@ CREATE Table preferences (
     preference_id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
     comment VARCHAR(255),
-    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
 );
 
 CREATE Table profile (
