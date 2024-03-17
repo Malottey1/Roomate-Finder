@@ -1,6 +1,7 @@
 <?php
     include("../settings/connection.php"); // connect to database
-    include("../functions/insert_preferences_fxn.php"); 
+    include("../functions/insert_preferences_fxn.php");
+    include("../functions/insert_dislikes_fxn.php"); 
 
     if (isset($_POST['submit-btn'])){
         
@@ -18,11 +19,23 @@
         $bio = $_POST['bio'];
         $fbook = $_POST['socialMedia'];
 
-        // Preferences
-        $first_preference = $_POST['criteria1'];
-        $second_preference = $_POST['criteria2'];
-        $third_preference = $_POST['criteria3'];
-        $four_preference = $_POST['criteria4'];
+        // preferences
+        $preferences = array(
+            $_POST['interests1'],
+            $_POST['interests2'],
+            $_POST['interests3'],
+            $_POST['interests4']
+        );
+
+        // dislikes
+        $dislikes = array(
+            $_POST['criteria1'],
+            $_POST['criteria2'],
+            $_POST['criteria3'],
+            $_POST['criteria4']
+        );
+
+        // check password
 
         if ($passwrd == $c_psswrd){
             $hashed_passwrd = password_hash($passwrd, PASSWORD_DEFAULT);
@@ -47,7 +60,8 @@
         mysqli_stmt_bind_param($stmt2, "iss", $uid, $bio, $fbook);
         $result2 = mysqli_stmt_execute($stmt2);
 
-        $result3 = insert_preferences($first_preference, $second_preference, $third_preference, $four_preference, $uid);
+        $result3 = insert_preferences($preferences, $uid);
+        $result4 = insert_dislikes($dislikes, $uid);
    
         // If all querries worked
         if ($result && $result2 && $result3){

@@ -2,14 +2,14 @@
 
     include("../settings/connection.php");
 
-    function insert_preferences($preferences, $uid){
+    function insert_dislikes($dislikes, $uid){
         global $conn;
 
-        foreach ($preferences as $preference){
+        foreach ($dislikes as $dislike){
 
-            $sql = "INSERT INTO preferences (user_id, comment) VALUES (?, ?)";
+            $sql = "INSERT INTO dislikes (user_id, COMMENT) VALUES (?, ?)";
             $stmt = mysqli_prepare($conn, $sql);
-            mysqli_stmt_bind_param($stmt, "is", $uid, $preference);
+            mysqli_stmt_bind_param($stmt, "is", $uid, $dislike);
             $result = mysqli_stmt_execute($stmt);
 
             if(!$result){
