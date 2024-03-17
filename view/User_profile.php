@@ -61,7 +61,7 @@
         <div class="Name editable"><?php echo $profile[0]['first_name']." ".$profile[0]['last_name']; ?></div>
 
 
-        <div class="janes-interests">Jane’s interests include...</div>
+        <div class="janes-interests"><?php echo $profile[0]['first_name']."'s" ?> interests include...</div>
         
         <div class="rectangle-4 " id="rectangle-4">
             
@@ -80,7 +80,7 @@
         <div class="ellipse-3"></div>
         <div class="ellipse-4"></div>
         <div class="ellipse-5"></div>
-        <div class="janes-bio">Jane’s Bio</div>
+        <div class="janes-bio"><?php echo $profile[0]['first_name']."'s" ?> Bio</div>
         <div class="location">Location</div>
 
           <!-- Add a modal for the edit profile form -->
@@ -140,7 +140,7 @@
         <div class="view-profile">View Profile</div>
         <div class="delete-profile">Delete Profile</div>
         <div class="rating">Rating</div>
-        <div class="janes-criteria">Jane’s Criteria</div>
+        <div class="janes-criteria"><?php echo $profile[0]['first_name']."'s" ?> Criteria</div>
         
         <div class="location-details editable">Eastern Region, Berekuso</div>
         <div class="line-1"></div>
