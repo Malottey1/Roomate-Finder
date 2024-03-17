@@ -2,6 +2,7 @@
     include("../actions/display_users_action.php");
     include("../actions/display_hostels_action.php");
     include("../actions/display_ethnic_group.php");
+    include("../actions/display_profile_action.php");
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +27,7 @@
             <i class="fa fa-bell"></i> 
             <span class="notification-badge">3</span> 
           </div>
-          <img src="../assets/images/profile_ako.jpg" alt="Profile Photo" class="profile-photo" id="profilePhoto">
+          <img src="../images/<?php echo $profile; ?>" alt="Profile Photo" class="profile-photo" id="profilePhoto">
         </div>
         
     </header>
