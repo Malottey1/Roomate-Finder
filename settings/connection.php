@@ -2,7 +2,7 @@
 
     // Connect application with database
 
-    $SERVERNAME = '18.133.105.236';
+    $SERVERNAME = 'localhost';
     $USERNAME = 'root';
     $PASSWORD = 'cs341webtech';
     $DB_NAME = 'roommate_radar';
