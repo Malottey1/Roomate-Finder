@@ -33,7 +33,6 @@ function editProfilePhoto() {
 
     // Handle file selection
     input.onchange = function(event) {
-      alert("working.");
 
       var file = event.target.files[0];
       var reader = new FileReader();
