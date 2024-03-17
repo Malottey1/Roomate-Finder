@@ -27,7 +27,7 @@
             <i class="fa fa-bell"></i> 
             <span class="notification-badge">3</span> 
           </div>
-          <img src="../images/<?php echo $profile; ?>" alt="Profile Photo" class="profile-photo" id="profilePhoto">
+          <img src="../images/<?php echo $picture; ?>" alt="Profile Photo" class="profile-photo" id="profilePhoto">
         </div>
         
     </header>
