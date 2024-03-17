@@ -7,11 +7,12 @@
     // $uid =  $_SESSION['user-id'];
     $uid = 28;
 
-    $sql = "SELECT * 
-    FROM profile 
-    JOIN dislikes ON profile.user_id = dislikes.user_id 
-    JOIN preferences ON profile.user_id = preferences.user_id 
-    WHERE profile.user_id = $uid";
+    $sql = "SELECT  users.user_id, first_name, last_name, photo_name, bio, preferences.comment, dislikes.COMMENT
+    FROM users
+    JOIN profile ON users.user_id = profile.user_id 
+    JOIN dislikes ON users.user_id = dislikes.user_id 
+    JOIN preferences ON users.user_id = preferences.user_id 
+    WHERE users.user_id = $uid";
 
     $result = mysqli_query($conn, $sql);
 
