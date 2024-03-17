@@ -76,7 +76,7 @@
 
             $hostel = get_user_hostel($user['listing_id']);
             $profile = get_user_profile($user['user_id']);
-            $photo = $profile['photo_name'] != null ? $profile['photo_name'] : 'no_image.jpg';
+            $photo = $profile[0]['photo_name'];
 
             echo "<div class='card'>";
             echo "<div><img src='../images/".$photo."' alt='card image'></div>";
