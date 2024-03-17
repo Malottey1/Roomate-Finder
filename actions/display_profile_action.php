@@ -5,7 +5,7 @@
     // session_start();
 
     // $uid =  $_SESSION['user-id'];
-    $uid = 28;
+    $uid = 29;
 
     $sql = "SELECT  users.user_id, first_name, last_name, photo_name, bio, preferences.comment, dislikes.COMMENT
     FROM users
@@ -22,10 +22,11 @@
     else{
         if(mysqli_num_rows($result) > 0){
             $profile = mysqli_fetch_all($result, MYSQLI_ASSOC);
-            print_r($profile); 
         }
     }
 
+    $dislike_comments = json_decode($profile[0]['COMMENT']);
+    $preference_comments = json_decode($profile[0]['comment']);
     
 
 
