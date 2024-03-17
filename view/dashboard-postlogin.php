@@ -98,14 +98,6 @@
 
 
 <script>
-  // Get the notification bell element
-  const notificationBell = document.getElementById('notificationBell');
-
-  // Add a click event listener to the notification bell
-  notificationBell.addEventListener('click', function() {
-      // Redirect to the message.html page
-      window.location.href = '../view/message.html';
-  });
 
   // Get the Get Started button element
   const getStartedButton = document.getElementById('getStartedButton');
