@@ -1,8 +1,11 @@
 <?php
+    include("../settings/core.php");
     include("../actions/display_users_action.php");
     include("../actions/display_hostels_action.php");
     include("../actions/display_ethnic_group.php");
     include("../actions/display_profile_action.php");
+
+    check_login();
 ?>
 
 <!DOCTYPE html>

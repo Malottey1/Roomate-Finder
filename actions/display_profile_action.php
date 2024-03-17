@@ -4,7 +4,7 @@
     include("../functions/show_profile_fxn.php");
     include("../functions/get_profile_info_fxn.php");
 
-    session_start();
+    // session_start();
 
     $uid =  $_SESSION['user-id'];
 
