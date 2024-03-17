@@ -53,13 +53,6 @@
                 </div>
                   
                 <div class="section">
-                    <div><label for="budget"><p>Budget</p></label></div>
-                    <div class="slider-container">
-                        <div><input type="range" id="budget" name="budget" min="2000" max="10000"/></div>
-                        <div class="max-label"><p id="budget-out">10000</p></div>
-                    </div>
-                </div>
-                <div class="section">
                     <div><label for="age"><p>Age</p></label></div>
                     <div class="slider-container">
                         <div><input type="range" id="age" name="age" min="21" max="60"/></div>
@@ -145,12 +138,7 @@
         var ageSlider = document.getElementById('age');
         var ageOut = document.getElementById('age-out');
 
-        budgetOut.innerHTML = budgetSlider.value;
         ageOut.innerHTML = ageSlider.value;
-
-        budgetSlider.oninput = function(){
-            budgetOut.innerHTML = this.value;
-        };
 
         ageSlider.oninput = function(){
             ageOut.innerHTML = this.value;
