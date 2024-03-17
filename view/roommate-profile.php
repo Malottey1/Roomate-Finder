@@ -1,9 +1,11 @@
 <?php
         include("../settings/core.php");
+        check_login();
+
         include("../functions/show_profile_fxn.php");
         include("../functions/get_profile_info_fxn.php");
 
-        check_login();
+
 
         if($_GET['uid']){
             $uid = $_GET['uid'];
