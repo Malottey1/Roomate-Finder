@@ -2,12 +2,9 @@
 
     include("../settings/connection.php");
 
-    session_start();
-    
-    function get_profile_photo(){
+    // get name of profile photo form database
+    function get_profile_photo($uid){
         global $conn;
-
-        $uid = $_SESSION['user-id'];
 
         $sql = "SELECT * profile WHERE user_id = $uid";
         $result = mysqli_query($conn, $sql);
