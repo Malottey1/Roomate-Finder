@@ -48,6 +48,10 @@ header {
     margin-right: 10px;
 }
 
+.profile-photo:hover{
+    cursor: pointer;
+}
+
 .user-info {
     display: flex;
     align-items: center;
@@ -103,6 +107,11 @@ footer a{
     display: grid;
     grid-template-columns: 1.2fr 3fr;
     padding: 0px 20px;
+}
+
+
+.logo:hover{
+    cursor: pointer;
 }
 
 .grid-container {
