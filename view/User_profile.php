@@ -196,7 +196,7 @@
         <div class="bio-content eidtable"><?php echo $profile[0]['bio']; ?></div>
     </div>
 
-
+    <a href="../actions/logout.php" class="logout-button">Logout</a>
 
     <footer>
         <div>

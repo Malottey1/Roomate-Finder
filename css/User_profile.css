@@ -690,6 +690,20 @@ a {
 
 }
 
+.logout-button {
+    position: absolute;
+    width: 110px;
+    height: 21px;
+    left: 118px;
+    top: 665px; /* Adjusted top position */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #676363;
+}
+
 /* Edit pencil icon within Rectangle 2 */
 .rectangle-2 .edit-pencil-icon {
     width: 14.88px;
