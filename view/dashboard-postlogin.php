@@ -1,16 +1,6 @@
 <?php
-if (isset($_SESSION['user_id'])) {
-    // Get the current user ID from the session
-    $currentUserId = $_SESSION['user_id'];
-
-    // Include the file to retrieve suggested roommates
-    include '../actions/display_suggested_roommates_action.php';
-
-    // Get suggested roommates for the current user
-    $suggestedRoommates = getSuggestedRoommates($conn, $currentUserId);
-} 
+include '../actions/display_suggested_roommates_action.php'
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,27 +42,16 @@ if (isset($_SESSION['user_id'])) {
 <h2 class="heading">SUGGESTED ROOMMATES</h2>
 
 <div class="image-container">
-<?php
-// Display suggested roommates
-foreach ($suggestedRoommates as $roommate) {
-?>
-    <div class="image-details">
-        <img src="../assets/images/<?php echo $roommate['image']; ?>" alt="<?php echo $roommate['name']; ?>">
-        <p style="margin-left: 41px; font-weight: bolder;"><?php echo $roommate['name']; ?></p>
-        <p style="margin-left: 41px; margin-top: -20px;"><?php echo $roommate['hostel']; ?></p>
-    </div>
-<?php
-}
-?>
+    <?php displayEachRoommate($suggestedRoommates); ?>
+</div>
 </div>
 
 
 <center><button class="get-started-button" id="getStartedButton">Get Started</button></center>
 
 
-
 <div class="horizontal-strip">
-  <p>Roommate search simplied</p>
+  <p>Roommate search simplified</p>
 </div>
 
 <div class="content-container">
@@ -85,8 +64,8 @@ foreach ($suggestedRoommates as $roommate) {
     <div><p>Saves Time</p></div>
   </div>
   <div class="content-item">
-    <div><img src="../assets/images/img3.png" alt="Image 3" style="width: 90px;";></div>
-    <div><p >New Friendships</p></div>
+    <div><img src="../assets/images/img3.png" alt="Image 3" style="width: 90px;"></div>
+    <div><p>New Friendships</p></div>
   </div>
 </div>
 

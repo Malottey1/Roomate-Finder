@@ -1,16 +1,14 @@
 <?php
+define("DBHOST", "localhost");
+define("DBNAME", "roommate_radar");
+define("DBUSER", "root");
+define("DBPASS", "Naakey057@");
 
-    // Connect application with database
+// Create connection
+$conn = new mysqli(DBHOST, DBUSER, DBPASS, DBNAME);
 
-    $SERVERNAME = 'localhost';
-    $USERNAME = 'root';
-    $PASSWORD = '';
-    $DB_NAME = 'roommate_radar';
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
 
-    $conn = new mysqli($SERVERNAME, $USERNAME, $PASSWORD, $DB_NAME);
-
-    if($conn->connect_error){
-        die("Connection failed".$conn->connect_error);
-    }
-
-?>

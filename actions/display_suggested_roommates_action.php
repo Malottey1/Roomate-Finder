@@ -1,19 +1,34 @@
 <?php
-// Establish connection with database
-include('../settings/connection.php');
+ include '../settings/connection.php';
 
-// Function to retrieve suggested roommates for a user from the database
-function getSuggestedRoommates($conn, $userId) {
-    $sql = "SELECT name, hostel, score 
-            FROM SuggestedRoommates 
-            WHERE user_id = ? 
-            ORDER BY score DESC 
-            LIMIT 3";
-    $stmt = mysqli_prepare($conn, $sql);
-    mysqli_stmt_bind_param($stmt, "i", $userId);
-    mysqli_stmt_execute($stmt);
-    $result = mysqli_stmt_get_result($stmt);
-    return mysqli_fetch_all($result, MYSQLI_ASSOC);
+// Fetch suggested roommates based on the current user's hostel
+function getSuggestedRoommates($currentUserId) {
+    global $conn;
+    $query = "SELECT hostel_name FROM Room_Listings WHERE listing_id = (SELECT listing_id FROM Users WHERE user_id = $currentUserId)";
+    $result = mysqli_query($conn, $query);
+    $row = mysqli_fetch_assoc($result);
+    $currentHostel = $row['hostel_name'];
+
+    // Fetch other users in the same hostel
+    $query = "SELECT * FROM Users WHERE listing_id IN (SELECT listing_id FROM Room_Listings WHERE hostel_name = '$currentHostel') AND user_id != $currentUserId LIMIT 3";
+    $result = mysqli_query($conn, $query);
+    $suggestedRoommates = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+    return $suggestedRoommates;
 }
 
+// Display each suggested roommate
+function displayEachRoommate($suggestedRoommates) {
+    foreach ($suggestedRoommates as $roommate) {
+        echo '<div class="image-details">';
+        echo '<img src="../assets/images/' . $roommate['photo_name'] . '" alt="' . $roommate['name'] . '">';
+        echo '<p style="margin-left: 41px; font-weight: bolder;">' . $roommate['name'] . '</p>';
+        echo '<p style="margin-left: 41px; margin-top: -20px;">' . $roommate['hostel'] . '</p>';
+        echo '</div>';
+    }
+}
+
+$currentUserId = 1; // You need to replace this with the actual current user's ID
+
+$suggestedRoommates = getSuggestedRoommates($currentUserId);
 ?>

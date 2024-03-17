@@ -1,5 +1,5 @@
 <?php
-include("../settings/connection.php"); // connect to database
+include '../settings/connection.php'; // connect to database
 
 if (isset($_POST['submit-btn'])) {
     // Store data for user relation
@@ -47,7 +47,7 @@ if (isset($_POST['submit-btn'])) {
         mysqli_stmt_bind_param($stmt, "is", $user_id, $comment);
         mysqli_stmt_execute($stmt);
 
-        header("Location: ../view/dashboard-postLogin.php");
+        header("Location: ../view/dashboard-postlogin.php");
         exit();
     } else {
         echo "<script>alert(Error: " . mysqli_error($conn) . ")</script>";
