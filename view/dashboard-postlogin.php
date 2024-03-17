@@ -1,8 +1,8 @@
 <?php
   include("../settings/core.php");
-  include("../actions/display_profile_action.php");
-
   check_login();
+  
+  include("../actions/display_profile_action.php");
 
 ?>
 
