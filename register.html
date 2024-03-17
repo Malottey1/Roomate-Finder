@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roommate Finder App - Register</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Register</h2>
+        <form id="registerForm">
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Create a username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Create a password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+            </div>
+            <div class="form-group">
+                <label for="university">University Affiliation:</label>
+                <input type="text" id="university" name="university" placeholder="Enter your university" required>
+            </div>
+            <div class="form-group">
+                <label for="roomPreference">Room Preference:</label>
+                <select id="roomPreference" name="roomPreference">
+                    <option value="single">Single</option>
+                    <option value="shared">Shared</option>
+                    <option value="apartment">Apartment</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="graduationYear">Graduation Year:</label>
+                <input type="number" id="graduationYear" name="graduationYear" placeholder="Enter your expected graduation year">
+            </div>
+            <div class="form-group">
+                <label for="interests">Interests or Preferences:</label>
+                <textarea id="interests" name="interests" placeholder="Enter your interests or preferences"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Register</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+
+</html>
