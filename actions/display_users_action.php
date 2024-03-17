@@ -72,6 +72,8 @@
 
     function display_each_user($users){
 
+        if ($users == null){return;}
+
         foreach ($users as $user){
 
             $hostel = get_user_hostel($user['listing_id']);
