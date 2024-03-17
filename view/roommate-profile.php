@@ -92,7 +92,7 @@
         <div class="janes-bio"><?php echo $profile[0]['first_name'] ?>’s Bio</div>
         <div class="location">Location</div>
         <div class="facebook-link">
-            <a href="<?php $profile[0]['facebook']; ?>" target="_blank" rel="noopener noreferrer">
+            <a href=<?php $profile[0]['facebook']; ?>>
             <span class="facebook-icon-text">
                 <i class="fa fa-facebook"></i><img src="../assets/images/facebook.jpeg" alt="Facebook icon" style="width:20px; margin-right: 10px;">   Facebook
             </span>
