@@ -65,7 +65,7 @@
    
         // If all querries worked
         if ($result && $result2 && $result3){
-            header("Location: ../view/dashboard-postLogin.php");
+            header("Location: ../login/login.php");
             exit();
         }
         else{
