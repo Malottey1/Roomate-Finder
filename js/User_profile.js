@@ -71,36 +71,6 @@ function editProfilePhoto() {
     input.click();
 }
 
-// function editProfilePhoto() {
-//   // Open a file dialog to let the user select a new photo
-//   var input = document.createElement('input');
-//   input.type = 'file';
-//   input.accept = 'image/*';
-
-//   alert("working")
-
-//   // Handle file selection
-//   input.onchange = function(event) {
-
-//       var file = event.target.files[0];
-//       var formData = new FormData();
-
-//       formData.append('file', file);
-
-//       var xhr = new XMLHttpRequest();
-//       xhr.open('POST', '../actions/upload_photo_action.php');
-//       xhr.onload = function(){
-//         if (xhr.status === 200){
-//           console.log("Successful upload");
-//         }
-//         else{
-//           console.error("Unsuccessful upload");
-//         }
-//       }
-//       xhr.send(formData);
-//   }
-// }
-
 // Add event listener to the edit profile photo icon
 var editProfilePhotoIcon = document.querySelector('.rectangle-8 .edit-pencil-icon');
 editProfilePhotoIcon.addEventListener('click', function() {
