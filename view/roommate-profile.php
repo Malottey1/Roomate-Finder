@@ -5,8 +5,6 @@
         if($_GET['uid']){
             $uid = $_GET['uid'];
 
-            if($uid == null){echo "empty";}
-
             $profile = get_profile_info($uid);
 
             $dislike_comments = json_decode($profile[0]['COMMENT']);
