@@ -50,13 +50,21 @@
     foreach ($users as $user){
 
         $hostel = get_user_hostel($user['listing_id']);
+        $profile = get_user_profile($user['user_id']);
+        $photo = $profile[0]['photo_name'];
 
         $html .= "<div class='card'>";
-        $html .= "<div><img src='../assets/images/Rectangle 38.jpg' alt='card image'></div>";
+        $html .= "<div><img src='../images/".$photo."' alt='card image'></div>";
         $html .= '<div class="lower">';
-        $html .= '<div><p class="name">'.$user["first_name"].' '.$user["last_name"].'</p></div>';
+        $html .= '<div>';
+        $html .= '<a style="text-decoration: none; color: inherit;" href="../view/roommate-profile.php?uid='.$user["user_id"].'" >';
+        $html .= '<p class="name">'.$user["first_name"].' '.$user["last_name"].'</p>';
+        $html .= '</a>';
+        $html .= '</div>';
         $html .= '<div class="icons">';
+        $html .= '<a href="../actions/send_email_action.php?uid='.$user['user_id'].'" >';
         $html .= '<div style="margin-right: 10px;" class="material-symbols-outlined send-btn">send</div>';
+        $html .= '</a>';
         $html .= '<div class="material-symbols-outlined">thumb_down</div>';
         $html .= '</div></div>';
         

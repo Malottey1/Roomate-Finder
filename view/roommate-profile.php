@@ -68,7 +68,7 @@
         <div class="ellipse-1" style="background: url('../images/<?php echo $picture ?>') center/cover;"></div>
        
         
-        <div class="Name editable"><?php echo $profile[0]['first_name'];  ?></div>
+        <div class="Name editable"><?php echo $profile[0]['first_name']." ".$profile[0]['last_name'];  ?></div>
 
         <div class="janes-interests"><?php echo $profile[0]['first_name'] ?>’s interests include...</div>
         
