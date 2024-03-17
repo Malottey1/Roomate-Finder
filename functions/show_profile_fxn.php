@@ -6,7 +6,7 @@
     function get_profile_photo($uid){
         global $conn;
 
-        $sql = "SELECT * profile WHERE user_id = $uid";
+        $sql = "SELECT * FROM profile WHERE user_id = $uid";
         $result = mysqli_query($conn, $sql);
 
         if(!$result){

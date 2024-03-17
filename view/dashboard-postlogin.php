@@ -1,3 +1,9 @@
+<?php
+
+  include("../actions/display_profile_action.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +26,7 @@
       <i class="fa fa-bell"></i> 
       <span class="notification-badge">3</span> 
     </div>
-    <img src="../assets/images/profile-photo.jpeg" alt="Profile Photo" class="profile-photo" id="profilePhoto">
+    <img src="../images/<?php echo $picture?>" alt="Profile Photo" class="profile-photo" id="profilePhoto">
 
   </div>
   
