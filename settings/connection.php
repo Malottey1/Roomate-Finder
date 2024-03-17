@@ -2,9 +2,9 @@
 
     // Connect application with database
 
-    $SERVERNAME = 'localhost';
+    $SERVERNAME = '18.133.105.236';
     $USERNAME = 'root';
-    $PASSWORD = '';
+    $PASSWORD = 'cs341webtech';
     $DB_NAME = 'roommate_radar';
 
     $conn = new mysqli($SERVERNAME, $USERNAME, $PASSWORD, $DB_NAME);
