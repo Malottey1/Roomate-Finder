@@ -113,7 +113,7 @@
   // Add a click event listener to the profile photo
   profilePhoto.addEventListener('click', function() {
       // Redirect to User_profile.html when the profile photo is clicked
-      window.location.href = '../view/User_profile.html';
+      window.location.href = '../view/User_profile.php';
   });
 
   const findRoommateBtn = document.getElementById('findRoommateBtn');

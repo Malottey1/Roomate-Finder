@@ -5,6 +5,7 @@
     session_start();
 
     $uid =  $_SESSION['user-id'];
+    $profile = null;
 
     $sql = "SELECT  users.user_id, first_name, last_name, photo_name, bio, preferences.comment, dislikes.COMMENT
     FROM users
@@ -24,10 +25,12 @@
         }
     }
 
-    $dislike_comments = json_decode($profile[0]['COMMENT']);
-    $preference_comments = json_decode($profile[0]['comment']);
-
-    $picture = $profile[0]['photo_name'] == null ? 'no_image.jpg' : $profile[0]['photo_name'];
+    if($profile != null){
+        $dislike_comments = json_decode($profile[0]['COMMENT']);
+        $preference_comments = json_decode($profile[0]['comment']);
+    
+        $picture = $profile[0]['photo_name'] == null ? 'no_image.jpg' : $profile[0]['photo_name'];
+    }
     
 
 
