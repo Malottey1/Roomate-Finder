@@ -25,31 +25,20 @@
             exit();
         }
 
+        // insert into users table
         $sql = "INSERT INTO users (email, passwrd, first_name, last_name, gender, dob, ethnicity, listing_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = mysqli_prepare($conn, $sql);
         mysqli_stmt_bind_param($stmt, "ssssisis", $email, $hashed_passwrd, $fname, $lname, $gender, $dob, $ethnicity, $hostel);
         $result = mysqli_stmt_execute($stmt);
 
-        // Get the user id of the user
-        $sql2 = "SELECT * FROM users WHERE email = ?";
-        $stmt3 = mysqli_prepare($conn, $sql2);
-        mysqli_stmt_bind_param($stmt3, "s", $email);
-        mysqli_stmt_execute($stmt3);
-        $res = mysqli_stmt_get_result($stmt3);
+        // find the id of the just inserted row
+        $uid = mysqli_insert_id($conn);
 
-        if($res){
-            if(mysqli_num_rows($res) > 0){
-                $user = mysqli_fetch_all($res, MYSQLI_ASSOC);
-            }
-        }
-
-        // gets the id of a single user
-        foreach($user as $u){
-            $sql3 = "INSERT INTO profile (user_id, bio, facebook) VALUES (?, ?, ?)";
-            $stmt2 = mysqli_prepare($conn, $sql3);
-            mysqli_stmt_bind_param($stmt2, "iss", $u['user_id'], $bio, $fbook);
-            $result2 = mysqli_stmt_execute($stmt2);
-        }
+        // insert details into profile table
+        $sql2 = "INSERT INTO profile (user_id, bio, facebook) VALUES (?, ?, ?)";
+        $stmt2 = mysqli_prepare($conn, $sql2);
+        mysqli_stmt_bind_param($stmt2, "iss", $uid, $bio, $fbook);
+        $result2 = mysqli_stmt_execute($stmt2);
         
         // If all querries worked
         if ($result && $result2){
