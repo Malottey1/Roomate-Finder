@@ -83,7 +83,11 @@
             echo "<div class='card'>";
             echo "<div><img src='../images/".$photo."' alt='card image'></div>";
             echo '<div class="lower">';
-            echo '<div><p class="name">'.$user["first_name"].' '.$user["last_name"].'</p></div>';
+            echo '<div>';
+            echo '<a style="text-decoration: none; color: inherit;" href="../actions/display_roommate_action.php?uid='.$user['user_id'].'" >';
+            echo '<p class="name">'.$user["first_name"].' '.$user["last_name"].'</p>';
+            echo '</a>';
+            echo '</div>';
             echo '<div class="icons">';
             echo '<a href="../actions/send_email_action.php?uid='.$user['user_id'].'" >';
             echo '<div style="margin-right: 10px;" class="material-symbols-outlined send-btn">send</div>';
