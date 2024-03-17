@@ -104,16 +104,6 @@
       </footer>
 
       <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Get the notification bell element
-            const notificationBell = document.querySelector('.notification-bell');
-    
-            // Add a click event listener to the notification bell
-            notificationBell.addEventListener('click', function() {
-                // Redirect to the message.html page
-                window.location.href = '../view/pre-message.html';
-            });
-        });
 
         document.addEventListener('DOMContentLoaded', function() {
             // Get the logo element
@@ -122,7 +112,7 @@
             // Add a click event listener to the logo
             logo.addEventListener('click', function() {
                 // Redirect to dashboard-postlogin.html when the logo is clicked
-                window.location.href = '../view/dashboard-postlogin.html';
+                window.location.href = '../view/dashboard-postlogin.php';
             });
         });
 
@@ -132,7 +122,7 @@
         // Add a click event listener to the profile photo
         profilePhoto.addEventListener('click', function() {
             // Redirect to User_profile.html when the profile photo is clicked
-            window.location.href = '../view/User_profile.html';
+            window.location.href = '../view/User_profile.php';
         });
 
         // Update values displayed for budget and age
