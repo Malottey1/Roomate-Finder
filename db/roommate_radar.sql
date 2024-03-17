@@ -1,12 +1,12 @@
 -- Active: 1709766400996@@127.0.0.1@3308
 
 -- Drop the database if it already exists
-DROP DATABASE IF EXISTS roomate_radar;
+DROP DATABASE IF EXISTS AGJMP2025;
 
 -- create the database
-CREATE DATABASE roommate_radar;
+CREATE DATABASE AGJMP2025;
 
-USE roommate_radar;
+USE AGJMP2025;
 
 -- Create the tables
 CREATE Table ethnicity(
