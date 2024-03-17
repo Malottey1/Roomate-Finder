@@ -5,7 +5,7 @@
     $SERVERNAME = 'localhost';
     $USERNAME = 'root';
     $PASSWORD = 'cs341webtech';
-    $DB_NAME = 'roommate_radar';
+    $DB_NAME = 'AGJMP2025';
 
     $conn = new mysqli($SERVERNAME, $USERNAME, $PASSWORD, $DB_NAME);
 
