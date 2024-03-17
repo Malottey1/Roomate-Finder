@@ -2,10 +2,9 @@
 
     include("../settings/connection.php");
 
-    // session_start();
+    session_start();
 
-    // $uid =  $_SESSION['user-id'];
-    $uid = 29;
+    $uid =  $_SESSION['user-id'];
 
     $sql = "SELECT  users.user_id, first_name, last_name, photo_name, bio, preferences.comment, dislikes.COMMENT
     FROM users
@@ -27,6 +26,8 @@
 
     $dislike_comments = json_decode($profile[0]['COMMENT']);
     $preference_comments = json_decode($profile[0]['comment']);
+
+    $picture = $profile[0]['photo_name'] == null ? 'no_image.jpg' : $profile[0]['photo_name'];
     
 
 

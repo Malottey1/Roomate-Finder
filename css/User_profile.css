@@ -60,7 +60,6 @@
         height: 190px;
         top: 83px;
         left: 99px;
-        background: url('../assets/images/profile.jpg') center/cover; /* Add background image */
         /* Or background: #CCCCCC; */ /* Add background color */
         overflow: hidden; /* Ensures the image stays within the ellipse */
         border-radius: 50%; /* Creates an ellipse shape */
