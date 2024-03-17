@@ -1,3 +1,6 @@
+<?php
+    include("../actions/display_profile_action.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,7 +45,7 @@
                 </div>
                 
             </div>
-            </div>
+        </div>
             
         <div class="rectangle-3" id="rectangle-3" onclick="toggleEdit(['rectangle-3', 'rectangle-4', 'rectangle-5', 'rectangle-6', 'rectangle-7'])">
             <div class="edit-pencil-icon" ></div>
