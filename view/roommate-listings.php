@@ -2,6 +2,7 @@
     include("../actions/display_users_action.php");
     include("../actions/display_hostels_action.php");
     include("../actions/display_ethnic_group.php");
+    include("../actions/display_profile_action.php");
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +27,7 @@
             <i class="fa fa-bell"></i> 
             <span class="notification-badge">3</span> 
           </div>
-          <img src="../assets/images/profile_ako.jpg" alt="Profile Photo" class="profile-photo" id="profilePhoto">
+          <img src="../images/<?php echo $picture; ?>" alt="Profile Photo" class="profile-photo" id="profilePhoto">
         </div>
         
     </header>
@@ -51,13 +52,6 @@
                     </div>
                 </div>
                   
-                <div class="section">
-                    <div><label for="budget"><p>Budget</p></label></div>
-                    <div class="slider-container">
-                        <div><input type="range" id="budget" name="budget" min="2000" max="10000"/></div>
-                        <div class="max-label"><p id="budget-out">10000</p></div>
-                    </div>
-                </div>
                 <div class="section">
                     <div><label for="age"><p>Age</p></label></div>
                     <div class="slider-container">
@@ -144,12 +138,7 @@
         var ageSlider = document.getElementById('age');
         var ageOut = document.getElementById('age-out');
 
-        budgetOut.innerHTML = budgetSlider.value;
         ageOut.innerHTML = ageSlider.value;
-
-        budgetSlider.oninput = function(){
-            budgetOut.innerHTML = this.value;
-        };
 
         ageSlider.oninput = function(){
             ageOut.innerHTML = this.value;
