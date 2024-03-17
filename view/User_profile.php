@@ -26,7 +26,29 @@
             <div class="edit-pencil-icon" ></div>
         </div>
 
-        
+        <div class = "rectangle-2" id="rectangle-2" onclick="toggleEdit(['rectangle-2'])">
+            <div class="edit-pencil-icon" ></div>
+            <div class="janes-roommates">Jane has roomed with...<span class="edit-pencil-icon"></span></div>
+            
+            <div class="roomed-with-container">
+                <div class="roomed-with-block" style="left: 0px; top: 0px;">
+                    <img class="profile-picture" src="../assets\images/profile1.jpg" >
+                </div>
+                <div class="roomed-with-block" style="left: 0px; top: 0px;">
+                    <img class="profile-picture" src="../assets\images/profile2.jpg" >
+                </div>
+                <div class="roomed-with-block" style="left: 0px; top: 0px;">
+                    <img class="profile-picture" src="../assets\images/profile3.jpg" >
+                </div>
+                <div class="roomed-with-block" style="left: 0px; top: 0px;">
+                    <img class="profile-picture" src="../assets\images/profile4.jpg" >
+                </div>
+                <div class="roomed-with-block" style="left: 0px; top: 0px;">
+                    <img class="profile-picture" src="../assets\images/profile5.jpg" >
+                </div>
+                
+            </div>
+        </div>
             
         <div class="rectangle-3" id="rectangle-3" onclick="toggleEdit(['rectangle-3', 'rectangle-4', 'rectangle-5', 'rectangle-6', 'rectangle-7'])">
             <div class="edit-pencil-icon" ></div>

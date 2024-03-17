@@ -31,10 +31,12 @@
 /* Rectangle 3 */
 .rectangle-3 {
     position: absolute;
+
     width: 620px;
+
     height: 300px;
     left: 397px;
-    top: 100px;  /* Adjusted top position */
+    top: 659px;
     background: #FFFFFF;
     box-shadow: 3px 9px 15px 5px rgba(0, 0, 0, 0.06);
     border-radius: 5px;
@@ -701,7 +703,17 @@ a {
 
 }
 
-
+/* Edit pencil icon within Rectangle 2 */
+.rectangle-2 .edit-pencil-icon {
+    width: 14.88px;
+    height: 14.96px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+    transform: rotate(0.51deg);
+    cursor: pointer;
+}
 
 /* Edit pencil icon within Rectangle 3 */
 .rectangle-3 .edit-pencil-icon {
@@ -788,6 +800,41 @@ a {
     padding: 20px; /* Added padding */
 }
 
+/* Adjustments for Rectangle 2 */
+.rectangle-2 {
+    position: absolute;
+
+    width: 620px;
+
+    height: 138px;
+    left: 399px;
+    top: 487px;
+    background: linear-gradient(273.61deg, #7ED957 -7.7%, rgba(126, 217, 87, 0) 51.29%);
+    box-shadow: 3px 9px 15px 5px rgba(0, 0, 0, 0.06);
+    border-radius: 5px;
+
+
+}
+
+.roomed-with-block {
+    width: 78px;
+    height: 78px;
+    background-color: gray; /* Placeholder color */
+    border-radius: 50%;
+    display: inline-block;
+    overflow: hidden;
+    position: relative; /* Ensure positioning context */
+}
+
+.roomed-with-block img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%); /* Convert to grayscale */
+}
 
 /* Additional CSS for the text "Jane has roomed with" */
 .janes-roommates {
@@ -944,7 +991,6 @@ input[type="submit"]:hover {
   'GRAD' 0,
   'opsz' 24
 }
-
 
 
 
