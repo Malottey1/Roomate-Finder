@@ -53,11 +53,12 @@
 
         // find the id of the just inserted row
         $uid = mysqli_insert_id($conn);
+        $photo = "no_image.jpg";
 
         // insert details into profile table
-        $sql2 = "INSERT INTO profile (user_id, bio, facebook) VALUES (?, ?, ?)";
+        $sql2 = "INSERT INTO profile (user_id, photo_name, bio, facebook) VALUES (?, ?, ?, ?)";
         $stmt2 = mysqli_prepare($conn, $sql2);
-        mysqli_stmt_bind_param($stmt2, "iss", $uid, $bio, $fbook);
+        mysqli_stmt_bind_param($stmt2, "isss", $uid, $photo, $bio, $fbook);
         $result2 = mysqli_stmt_execute($stmt2);
 
         $result3 = insert_preferences($preferences, $uid);
