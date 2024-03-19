@@ -141,7 +141,7 @@
         <div class="edit-profile">Edit Profile</div>
 
         <div class="view-profile">View Profile</div>
-        <div class="delete-profile">Delete Profile</div>
+        <div class="delete-profile" onclick="deleteProfile()">Delete Profile</div>
         <div class="rating">Rating</div>
         <div class="janes-criteria"><?php echo $profile[0]['first_name']."'s" ?> Criteria</div>
         
@@ -208,6 +208,25 @@
       
 
     <script src="../js/User_profile.js"></script>
+
+    <script>
+    function deleteProfile() {
+        if (confirm("Are you sure you want to delete your profile?")) {
+            // Send AJAX request to delete_profile.php or any other endpoint
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "../actions/delete_profile.php", true);
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    alert(xhr.responseText); 
+                    window.location.href = "../view/dashboard-prelogin.php";
+                }
+            };
+            xhr.send(); 
+        }
+    }
+</script>
+
 
     
 

@@ -75,7 +75,7 @@
   <div>
     <a href="#">Privacy</a>
     <a href="#">Contact Us</a>
-    <a href="#">About Us</a>
+    <a href="https://clatteymolcolm4.wixsite.com/roommatefinder">About Us</a>
   </div>
 </footer>
 
