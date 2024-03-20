@@ -1,8 +1,10 @@
 <?php
     include("../settings/core.php");
+    check_login();
+    
     include("../actions/display_profile_action.php");
 
-    check_login();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -196,6 +198,8 @@
         <div class="bio-content eidtable"><?php echo $profile[0]['bio']; ?></div>
     </div>
 
+    <!-- Logout Button -->
+<a href="../actions/logout.php" class="logout-button">Logout</a>
 
 
     <footer>

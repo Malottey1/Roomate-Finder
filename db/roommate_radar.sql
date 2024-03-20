@@ -1,28 +1,28 @@
 -- Active: 1709766400996@@127.0.0.1@3308
 
 -- Drop the database if it already exists
-DROP DATABASE IF EXISTS roomate_radar;
+DROP DATABASE IF EXISTS AGJMP2025;
 
 -- create the database
-CREATE DATABASE roommate_radar;
+CREATE DATABASE AGJMP2025;
 
-USE roommate_radar;
+USE AGJMP2025;
 
 -- Create the tables
-CREATE Table Ethnicity(
+CREATE Table ethnicity(
     eth_id INT AUTO_INCREMENT PRIMARY KEY,
     eth_name VARCHAR(255),
     eth_desc VARCHAR(255)
 );
 
-CREATE Table Room_Listings (
+CREATE Table room_listings (
     listing_id INT AUTO_INCREMENT PRIMARY KEY,
     location VARCHAR(255),
     hostel_name VARCHAR(255),
     hostel_cost DECIMAL
 );
 
-CREATE Table Users (
+CREATE Table users (
     user_id INT AUTO_INCREMENT PRIMARY KEY,
     email VARCHAR(255),
     passwrd VARCHAR(255),
@@ -32,53 +32,53 @@ CREATE Table Users (
     dob DATE,
     ethnicity INT,
     listing_id INT,
-    FOREIGN KEY (listing_id) REFERENCES Room_Listings(listing_id) ON DELETE CASCADE,
-    FOREIGN KEY (ethnicity) REFERENCES Ethnicity(eth_id) ON DELETE CASCADE,
+    FOREIGN KEY (listing_id) REFERENCES room_listings(listing_id) ON DELETE CASCADE,
+    FOREIGN KEY (ethnicity) REFERENCES ethnicity(eth_id) ON DELETE CASCADE,
     CONSTRAINT check_field CHECK (gender IN (0, 1))
 );
 
-CREATE Table Reviews (
+CREATE Table reviews (
     review_id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
     rating INT,
     review_date DATE,
-    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
 );
 
-CREATE Table Preferences (
+CREATE Table preferences (
     preference_id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
     comment VARCHAR(255),
-    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
 );
 
-CREATE Table Profile (
+CREATE Table profile (
     profile_id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT,
     photo_name VARCHAR(255),
     bio VARCHAR(255),
     facebook VARCHAR(255),
-    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
 );
 
-CREATE Table Roommate_History (
+CREATE Table roommate_history (
     history_id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
     roommate_id INT NOT NULL,
     start_date DATE,
     end_date DATE,
-    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE,
-    FOREIGN KEY (roommate_id) REFERENCES Users(user_id) ON DELETE CASCADE
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE,
+    FOREIGN KEY (roommate_id) REFERENCES users(user_id) ON DELETE CASCADE
 );
 
-CREATE Table Dislikes (
+CREATE Table dislikes (
     dislike_id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
     COMMENT VARCHAR(255),
-    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
 );
 
-INSERT INTO Ethnicity (eth_name, eth_desc)
+INSERT INTO ethnicity (eth_name, eth_desc)
 VALUES
 ('African', 'Ethnic groups indigenous to Africa'),
 ('Asian', 'Ethnic groups indigenous to Asia'),
@@ -91,7 +91,7 @@ VALUES
 ('Jewish', 'Ethnic group associated with Judaism'),
 ('Romani', 'Ethnic group with roots in South Asia, traditionally nomadic');
 
-INSERT INTO Room_Listings (location, hostel_name, hostel_cost) 
+INSERT INTO room_listings (location, hostel_name, hostel_cost) 
 VALUES 
 ('Berekuso', 'Old Dufie', 6200),
 ('Berekuso', 'Dufie Annex', 7000),
