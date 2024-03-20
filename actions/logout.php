@@ -1,16 +1,4 @@
 <?php
-<<<<<<< HEAD
-
-    session_start();
-
-    $_SESSION = array();
-
-    session_destroy();
-
-    header("Location: ../login/login.php");
-    exit;
-?>
-=======
 // Start session
 session_start();
 
@@ -24,4 +12,3 @@ session_destroy();
 header("Location: ../login/login.php");
 exit;
 ?>
->>>>>>> ded29b8f2712665a30aacee27958a97d58c495f4

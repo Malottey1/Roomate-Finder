@@ -429,6 +429,22 @@ a {
     line-height: 17px;
     color: #676363;
 }
+
+.logout-profile {
+    position: absolute;
+    width: 110px;
+    height: 21px;
+    left: 118px;
+    top: 534px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #676363;
+}
+
+
 .logout-button {
     position: absolute;
     width: 110px;
