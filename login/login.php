@@ -11,7 +11,7 @@
 <body>
     <header>
         <img src="../assets/images/roommate_logo.png" alt="Logo" class="logo">
-        <button class="menu-button">Menu</button>
+        <button class="menu-button" onclick="redirectToRegister()">Register</button>
     </header>
     <div class="container">
         <div class="centered-logo">
@@ -59,6 +59,9 @@
             
         //     window.location.href = '../view/dashboard-postlogin.html';
         // });
+        function redirectToRegister() {
+        window.location.href = "../login/register.php"; 
+        }
     </script>
 </body>
 </html>

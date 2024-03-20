@@ -1,6 +1,5 @@
 <?php
     include("../settings/connection.php");
-
     session_start();
 
     if (isset($_POST['login-btn'])){
@@ -18,7 +17,7 @@
         $result = mysqli_stmt_get_result($stmt);
 
         if(mysqli_num_rows($result) == 0){
-            echo "<script>alert('Unsuccessful query.');</script>";
+            echo "<script>alert('Email not found.');</script>";
             exit();
         }
         
@@ -35,10 +34,9 @@
             exit();
         }
         else {
-            echo "<script>alert('Wrong input.');</script>";
+            echo "<script>alert('Incorrect password.');</script>";
             exit();
         }
 
     }
-
 ?>

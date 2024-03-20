@@ -1,8 +1,9 @@
 <?php
     //establish connection with database
-    include('../actions/display_hostels_action.php');
-    include('../actions/display_ethnic_group.php');
+    include '../actions/display_hostels_action.php';
+    include '../actions/display_ethnic_group.php' ;
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../css/registration-styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Register Page</title>
     
 </head>
@@ -54,8 +56,9 @@
                     <h2>Demographics:</h2>
                     <div class="form-group">
                         <label for="dateOfBirth">Date of Birth:</label>
-                        <input type="date" id="dateOfBirth" name="dateOfBirth">
+                        <input type="date" id="dateOfBirth" name="dateOfBirth" min="2004-01-01" pattern="\d{4}-\d{2}-\d{2}">
                     </div>
+                    
                     <div class="form-group">
                         <label for="gender">Gender:</label>
                         <select id="gender" name="gender">
@@ -85,48 +88,56 @@
                     
 
                     <h2>Matching Preferences:</h2>
+                        <div>
+                            <p>Set short standards or requirements a user sets to find compatible roommates and a suitable living situation. Eg: Respects my space</p>
+                        </div>
+
                         <div class="form-group">
                             <label for="criteria1">Criteria 1:</label>
-                            <textarea id="criteria1" name="criteria1" rows="4"></textarea>
+                            <textarea id="criteria1" name="criteria1" rows="4" maxlength="40" oninput="validateText(this)"></textarea>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="criteria2">Criteria 2:</label>
-                            <textarea id="criteria2" name="criteria2" rows="4"></textarea>
+                            <textarea id="criteria2" name="criteria2" rows="4" maxlength="40" oninput="validateText(this)"></textarea>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="criteria3">Criteria 3:</label>
-                            <textarea id="criteria3" name="criteria3" rows="4"></textarea>
+                            <textarea id="criteria3" name="criteria3" rows="4" maxlength="40" oninput="validateText(this)"></textarea>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="criteria4">Criteria 4:</label>
-                            <textarea id="criteria4" name="criteria4" rows="4"></textarea>
+                            <textarea id="criteria4" name="criteria4" rows="4" maxlength="40" oninput="validateText(this)"></textarea>
+                        </div>
+
+                        <div>
+                            <p>List things or activities that captivate your interest, bring you joy, or spark your curiosity. Eg: Listening to music</p>
                         </div>
 
                         <div class="form-group">
                             <label for="interests1">Interests 1:</label>
-                            <textarea id="interests1" name="interests1" rows="4"></textarea>
+                            <textarea id="interests1" name="interests1" rows="4" maxlength="40" oninput="validateText(this)"></textarea>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="interests2">Interests 2:</label>
-                            <textarea id="interests2" name="interests2" rows="4"></textarea>
+                            <textarea id="interests2" name="interests2" rows="4" maxlength="40" oninput="validateText(this)"></textarea>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="interests3">Interests 3:</label>
-                            <textarea id="interests3" name="interests3" rows="4"></textarea>
+                            <textarea id="interests3" name="interests3" rows="4" maxlength="40" oninput="validateText(this)"></textarea>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="interests4">Interests 4:</label>
-                            <textarea id="interests4" name="interests4" rows="4"></textarea>
+                            <textarea id="interests4" name="interests4" rows="4" maxlength="40" oninput="validateText(this)"></textarea>
                         </div>
+
                         
                     
-
 
                         <h2>Additional Information:</h2>
                         <div class="form-group">
@@ -137,7 +148,7 @@
                             <label for="socialMedia">Facebook Profile Link:</label>
                             <input type="text" id="socialMedia" name="socialMedia" required>
                         </div>
-                            <button id="registerButton" name="submit-btn" type="submit">Submit</button>
+                            <button id="sweetalert" name="submit-btn" type="submit">Submit</button>
                         </div>
                 </form>
         </div>
@@ -155,6 +166,17 @@
                 const hostel = document.getElementById('hostel').value.trim();
 
             }
+
+            document.getElementById('sweetalert').addEventListener('click', function(){
+                Swal.fire("Registration Successful");
+
+            })
+
+          
+            function validateText(input) {
+                input.value = input.value.replace(/[0-9]/g, '');
+            }
+
         
         </script>
         
@@ -163,3 +185,4 @@
 
 </body>
 </html>
+
