@@ -24,10 +24,15 @@
             $_POST['criteria4'],
         );
 
+        $sql = "UPDATE profile SET bio = ? WHERE user_id = ?";
+        $stmt = mysqli_prepare($conn, $sql);
+        mysqli_stmt_bind_param($stmt, "si", $bio, $uid);
+        $result = mysqli_stmt_execute($stmt);
+
         $result1 = update_preferences($preferences, $uid);
         $result2 = update_dislikes($dislikes, $uid);
 
-        if ($result1 && $result2){
+        if ($result && $result1 && $result2){
             header("Location: ../view/User_profile.php?update=success");
             exit();
         }
