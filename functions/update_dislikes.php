@@ -2,7 +2,7 @@
 
     include("../settings/connection.php");
 
-    function update_preferences($dislikes, $uid){
+    function update_dislikes($dislikes, $uid){
         global $conn;
 
         $json = json_encode($dislikes);
