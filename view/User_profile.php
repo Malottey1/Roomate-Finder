@@ -93,7 +93,7 @@
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <h2>Edit Profile</h2>
-                <form id="edit-profile-form">
+                <form id="edit-profile-form" action="../actions/edit_profile.php" method="post">
                     <!-- Input field for bio -->
                     <label for="bio">Bio:</label><br>
                     <textarea id="bio" name="bio" rows="4" cols="50"></textarea><br>
