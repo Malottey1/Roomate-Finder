@@ -3,6 +3,7 @@
   check_login();
   
   include("../actions/display_profile_action.php");
+  include("../actions/display_suggested_roommates.php");
 
 ?>
 
@@ -45,24 +46,7 @@
 
 <h2 class="heading">SUGGESTED ROOMMATES</h2>
 
-<div class="image-container">
-  <div class="image-details">
-    <img src="../assets/images/portrait1.jpg" alt="Portrait 1">
-    <p style="margin-left: 41px; font-weight: bolder;">Jane Doe</p>
-    <p style="margin-left: 41px; margin-top: -20px;">Hosanna</p>
-  </div>
-  <div class="image-details">
-    <img src="../assets/images/portrait2.jpg" alt="Portrait 2">
-    <p style="margin-left: 41px; font-weight: bolder;">Samantha Payton</p>
-    <p style="margin-left: 41px; margin-top: -20px;">Charlotte</p>
-  </div>
-  <div class="image-details">
-    <img src="../assets/images/portrait3.jpg" alt="Portrait 3">
-    <p style="margin-left: 41px; font-weight: bolder;">Mychaela Johnson</p>
-    <p style="margin-left: 41px; margin-top: -20px;" >Dufie Annex</p>
-  </div>
-</div>
-
+<?php displaySimilarRoommates($currentUserId, $conn); ?>
 
 
 <center><button class="get-started-button" id="getStartedButton">Get Started</button></center>

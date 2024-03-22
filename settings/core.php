@@ -11,4 +11,7 @@
         }
     }
 
+    //Store the current user id in this session
+    $_SESSION['user-id'] = $user_id;
+
 ?>
