@@ -93,7 +93,7 @@
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <h2>Edit Profile</h2>
-                <form id="edit-profile-form">
+                <form id="edit-profile-form" action="../actions/edit_profile.php" method="post">
                     <!-- Input field for bio -->
                     <label for="bio">Bio:</label><br>
                     <textarea id="bio" name="bio" rows="4" cols="50"></textarea><br>
@@ -104,46 +104,40 @@
 
                     <!-- Input fields for other editable content -->
                     <label for="rectangle-4-content">Interest 1:</label><br>
-                    <input type="text" id="rectangle-4-content" name="rectangle-4-content"><br>
+                    <input type="text" id="rectangle-4-content" name="interest1"><br>
 
                     <label for="rectangle-5-content">Interest 2:</label><br>
-                    <input type="text" id="rectangle-5-content" name="rectangle-5-content"><br>
+                    <input type="text" id="rectangle-5-content" name="interest2"><br>
 
                     <label for="rectangle-6-content">Interest 3:</label><br>
-                    <input type="text" id="rectangle-6-content" name="rectangle-6-content"><br>
+                    <input type="text" id="rectangle-6-content" name="interest3"><br>
 
                     <label for="rectangle-7-content">Interest 4:</label><br>
-                    <input type="text" id="rectangle-7-content" name="rectangle-7-content"><br>
+                    <input type="text" id="rectangle-7-content" name="interest4"><br>
 
                     <label for="rectangle-3-content">Criteria:</label><br>
 
                     <label for="rectangle-10-content">Option 1:</label><br>
-                    <input type="text" id="rectangle-10-content" name="rectangle-10-content"><br>
+                    <input type="text" id="rectangle-10-content" name="criteria1"><br>
 
                     <label for="rectangle-11-content">Option 2:</label><br>
-                    <input type="text" id="rectangle-11-content" name="rectangle-11-content"><br>
+                    <input type="text" id="rectangle-11-content" name="criteria2"><br>
 
                     <label for="rectangle-12-content">Option 3:</label><br>
-                    <input type="text" id="rectangle-12-content" name="rectangle-12-content"><br>
+                    <input type="text" id="rectangle-12-content" name="criteria3"><br>
 
                     <label for="rectangle-13-content">Option 4:</label><br>
-                    <input type="text" id="rectangle-13-content" name="rectangle-13-content"><br>
-
-                    <!-- Input field for location details -->
-                    <label for="location-details-content">Location Details:</label><br>
-                    <input type="text" id="location-details-content" name="location-details-content"><br>
-
-                    
+                    <input type="text" id="rectangle-13-content" name="criteria4"><br>
 
 
-                    <input type="submit" value="Save Changes">
+                    <input type="submit" name="submit-btn" value="Save Changes">
                 </form>
             </div>
         </div>
         <div class="edit-profile">Edit Profile</div>
 
         <div class="view-profile">View Profile</div>
-        <div class="delete-profile">Delete Profile</div>
+        <div class="delete-profile" onclick="deleteProfile()">Delete Profile</div>
         <div class="rating">Rating</div>
         <div class="janes-criteria"><?php echo $profile[0]['first_name']."'s" ?> Criteria</div>
         
@@ -210,6 +204,24 @@
       
 
     <script src="../js/User_profile.js"></script>
+
+    <script>
+    function deleteProfile() {
+        if (confirm("Are you sure you want to delete your profile?")) {
+            // Send AJAX request to delete_profile.php or any other endpoint
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "../actions/delete_profile.php", true);
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    window.location.href = "../view/dashboard-prelogin.php?profile=deleted";
+                }
+            };
+            xhr.send(); 
+        }
+    }
+</script>
+
 
     
 
