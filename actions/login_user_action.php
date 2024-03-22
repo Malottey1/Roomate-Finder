@@ -17,7 +17,7 @@
         $result = mysqli_stmt_get_result($stmt);
 
         if(mysqli_num_rows($result) == 0){
-            echo "<script>alert('Email not found.');</script>";
+            header("Location: ../login/login.php?msg=failed");
             exit();
         }
         
@@ -34,7 +34,7 @@
             exit();
         }
         else {
-            echo "<script>alert('Incorrect password.');</script>";
+            header("Location: ../login/login.php?msg=failed");
             exit();
         }
 

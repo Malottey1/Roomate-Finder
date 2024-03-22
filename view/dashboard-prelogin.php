@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="../css/dashboard.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap">
+<script src = "https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     
 <title>Dashboard</title>
 
@@ -80,6 +81,12 @@
 </footer>
 
 <script>
+  document.addEventListener("DOMContentLoaded", function (){
+    <?php if (isset($_GET['profile']) && $_GET['profile'] == 'deleted'): ?>
+        swal('Success','Your profile has been deleted', 'success');
+    <?php endif; ?>
+  })
+
   const registerButton = document.getElementById('registerButton');
   registerButton.addEventListener('click', function() {
     window.location.href = '../login/register.php';

@@ -12,7 +12,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../css/registration-styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
+    <script src = "https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Register Page</title>
     
 </head>
@@ -167,11 +168,14 @@
 
             }
 
-            document.getElementById('sweetalert').addEventListener('click', function(){
-                Swal.fire("Registration Successful");
-
+            document.addEventListener("DOMContentLoaded", function (){
+                <?php if (isset($_GET['email']) && $_GET['email'] == 'failed'): ?>
+                    swal('Error','Your email is already registered', 'error');
+                <?php endif; ?>
+                <?php if (isset($_GET['psswrd']) && $_GET['psswrd'] == 'failed'): ?>
+                    swal('Error','Your passwords do not match', 'error');
+                <?php endif; ?>
             })
-
           
             function validateText(input) {
                 input.value = input.value.replace(/[0-9]/g, '');

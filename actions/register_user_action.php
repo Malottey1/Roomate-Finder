@@ -43,7 +43,7 @@ if (isset($_POST['submit-btn'])){
     mysqli_stmt_store_result($check_stmt);
 
     if(mysqli_stmt_num_rows($check_stmt) > 0) {
-        echo "<script>alert('This email is already registered. Please choose a different one.');</script>";
+        header("Location: ../login/register.php?email=failed");
         exit();
     }
 
@@ -52,7 +52,7 @@ if (isset($_POST['submit-btn'])){
         $hashed_passwrd = password_hash($passwrd, PASSWORD_DEFAULT);
     }
     else{
-        echo "<script>alert('Your passwords are different');</script>";
+        header("Location: ../login/register.php?psswrd=failed");
         exit();
     }
 

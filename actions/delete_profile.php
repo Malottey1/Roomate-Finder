@@ -15,7 +15,7 @@
     if(mysqli_stmt_affected_rows($stmt) > 0) {
         // Deletion successful, provide feedback to the user
         echo "<script>alert('Profile deleted successfully.');</script>";
-        header("Location: ../view/dashboard-prelogin.php");
+        header("Location: ../view/dashboard-prelogin.php?profile=deleted");
         exit();
     } else {
         // Deletion failed, provide feedback to the user
