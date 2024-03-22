@@ -34,7 +34,7 @@
             exit();
         }
         else {
-            echo "<script>alert('Incorrect password.');</script>";
+            header("Location: ../login/login.php?msg=failed");
             exit();
         }
 
