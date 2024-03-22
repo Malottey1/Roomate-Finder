@@ -222,7 +222,7 @@
             xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xhr.onreadystatechange = function () {
                 if (xhr.readyState == 4 && xhr.status == 200) {
-                    window.location.href = "../view/dashboard-prelogin.php";
+                    window.location.href = "../view/dashboard-prelogin.php?profile=deleted";
                 }
             };
             xhr.send(); 
