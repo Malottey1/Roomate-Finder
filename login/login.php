@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <script src = "https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
     <title>Login Page</title>
     
@@ -42,26 +43,18 @@
             </form>
         </div>
     </div>
-    <script>
-        // const loginForm = document.getElementById('loginForm');
-
-        // // Add a submit event listener to the login form
-        // loginForm.addEventListener('submit', function(event) {
-        //     event.preventDefault();
-        //     window.location.href = '../view/dashboard-postlogin.html';
-        // });
-    
-        // const loginSubmitButton = document.getElementById('loginSubmitButton');
-
-        // loginSubmitButton.addEventListener('click', function(event) {
-    
-        //     event.preventDefault();
-            
-        //     window.location.href = '../view/dashboard-postlogin.html';
-        // });
-        function redirectToRegister() {
+<script>
+    function redirectToRegister() {
         window.location.href = "../login/register.php"; 
-        }
-    </script>
+    }
+</script>
 </body>
+<script>
+    document.addEventListener("DOMContentLoaded", function (){
+        <?php if (isset($_GET['msg']) && $_GET['msg'] == 'failed'): ?>
+            swal('Error','Your email/password is incorrect!', 'error');
+        <?php endif; ?>
+    })
+
+</script>
 </html>
