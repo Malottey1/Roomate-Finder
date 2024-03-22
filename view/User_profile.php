@@ -104,39 +104,33 @@
 
                     <!-- Input fields for other editable content -->
                     <label for="rectangle-4-content">Interest 1:</label><br>
-                    <input type="text" id="rectangle-4-content" name="rectangle-4-content"><br>
+                    <input type="text" id="rectangle-4-content" name="interest1"><br>
 
                     <label for="rectangle-5-content">Interest 2:</label><br>
-                    <input type="text" id="rectangle-5-content" name="rectangle-5-content"><br>
+                    <input type="text" id="rectangle-5-content" name="interest2"><br>
 
                     <label for="rectangle-6-content">Interest 3:</label><br>
-                    <input type="text" id="rectangle-6-content" name="rectangle-6-content"><br>
+                    <input type="text" id="rectangle-6-content" name="interest3"><br>
 
                     <label for="rectangle-7-content">Interest 4:</label><br>
-                    <input type="text" id="rectangle-7-content" name="rectangle-7-content"><br>
+                    <input type="text" id="rectangle-7-content" name="interest4"><br>
 
                     <label for="rectangle-3-content">Criteria:</label><br>
 
                     <label for="rectangle-10-content">Option 1:</label><br>
-                    <input type="text" id="rectangle-10-content" name="rectangle-10-content"><br>
+                    <input type="text" id="rectangle-10-content" name="criteria1"><br>
 
                     <label for="rectangle-11-content">Option 2:</label><br>
-                    <input type="text" id="rectangle-11-content" name="rectangle-11-content"><br>
+                    <input type="text" id="rectangle-11-content" name="criteria2"><br>
 
                     <label for="rectangle-12-content">Option 3:</label><br>
-                    <input type="text" id="rectangle-12-content" name="rectangle-12-content"><br>
+                    <input type="text" id="rectangle-12-content" name="criteria3"><br>
 
                     <label for="rectangle-13-content">Option 4:</label><br>
-                    <input type="text" id="rectangle-13-content" name="rectangle-13-content"><br>
-
-                    <!-- Input field for location details -->
-                    <label for="location-details-content">Location Details:</label><br>
-                    <input type="text" id="location-details-content" name="location-details-content"><br>
-
-                    
+                    <input type="text" id="rectangle-13-content" name="criteria4"><br>
 
 
-                    <input type="submit" value="Save Changes">
+                    <input type="submit" name="submit-btn" value="Save Changes">
                 </form>
             </div>
         </div>
