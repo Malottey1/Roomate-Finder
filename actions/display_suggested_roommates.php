@@ -59,7 +59,7 @@ function displaySimilarRoommates($currentUserId, $conn) {
             break; // Exit the loop if counter reaches three
         }
         echo '<div class="image-details">';
-        echo '<img src="../assets/images/' . $row['photo_name'] . '" alt="' . $row['first_name'] . ' ' . $row['last_name'] . '">';
+        echo '<img src="../images/' . $row['photo_name'] . '" alt="' . $row['first_name'] . ' ' . $row['last_name'] . '">';
         echo '<p style="margin-left: 41px; font-weight: bolder;">' . $row['first_name'] . ' ' . $row['last_name'] . '</p>';
         echo '<p style="margin-left: 41px; margin-top: -20px;">' . $row['hostel_name'] . '</p>';
         echo '</div>';
